@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conhecimento | Roohts</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        
+
+        body { font-family: 'Geist', sans-serif; background-color: #F8F8ED; }
+        .text-brand-blue { color: #6272FF; }
+        .bg-brand-blue { background-color: #6272FF; }
+        .bg-brand-yellow { background-color: #F0FF65; }
+        .text-brand-yellow { color: #F0FF65; }
+        .bg-dark { background-color: #101216; }
+        .text-dark { color: #101216; }
+        @keyframes orbit {
+            0% { transform: rotate(0deg) translateX(140px) rotate(0deg); }
+            100% { transform: rotate(360deg) translateX(140px) rotate(-360deg); }
+        }
+    
+        /* Animation classes */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(80px);
+            transition: opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1), transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+            will-change: opacity, transform;
+        }
+        .animate-on-scroll.scroll-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="text-dark antialiased overflow-x-hidden flex flex-col items-center">
+
+<!-- Navbar -->
+    <nav class="fixed top-4 w-[calc(100%-2rem)] max-w-6xl mx-auto z-50 bg-[#FCFCEE]/90 backdrop-blur-md rounded-full shadow-[0_14px_38px_rgba(17,19,24,0.1)] border border-black/10 px-6 py-3 flex justify-between items-center">
+        <div class="flex items-center">
+            <a href="#top" class="cursor-pointer">
+                <img src="images/logo-footer.png" alt="ROOHTS - Into the out of home" class="h-8 object-contain">
+            </a>
+        </div>
+        <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+            <a href="index.html" class="text-black/70 hover:text-black transition">Home</a>
+            <a href="sobre.html" class="text-black/70 hover:text-black transition">Sobre</a>
+            <a href="conhecimento.html" class="text-brand-blue">Conhecimento</a>
+            <a href="cases.html" class="text-black/70 hover:text-black transition">Cases</a>
+            <a href="contato.html" class="bg-brand-yellow text-dark px-5 py-2.5 rounded-full hover:bg-[#e4fc34] transition flex items-center gap-2">Contato <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline-block w-[1em] h-[1em] ml-1"><path d="M9.91638 9.91638V4.08398H4.08398M9.91638 4.08398L4.08398 9.91638" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></a>
+        </div>
+    
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="md:hidden bg-brand-yellow text-dark px-4 py-2 rounded-full text-[13px] font-medium uppercase tracking-wider">
+            Menu
+        </button>
+</nav>
+
+        <main id="top" class="w-full max-w-[1440px] mx-auto flex flex-col items-center relative pt-32 pb-16">
+        
+        <!-- Hero Section -->
+        <section class="animate-on-scroll w-full px-6 md:px-[56px] py-10 md:py-20 flex flex-col items-center gap-10 border-b border-black/10">
+            <div class="flex flex-col items-center gap-6 max-w-[1011px] mx-auto text-center px-4 mb-8">
+                <span class="text-black/50 text-xs uppercase tracking-[0.14em] font-medium">Conhecimento</span>
+                <h1 class="text-4xl md:text-[60px] leading-tight md:leading-[1.1] tracking-tight">
+                    Ideias para além<br>
+                    <span class="text-brand-blue">da superfície.</span>
+                </h1>
+            </div>
+            
+            <p class="text-black/50 text-lg md:text-xl text-center max-w-[550px] leading-relaxed">
+                Uma ponte direta com o mercado para trocas mais genuínas e discussões que elevam a visão do OOH.
+            </p>
+        </section>
+
+        <!-- Em destaque -->
+        <section class="animate-on-scroll w-full px-6 md:px-[56px] py-16 border-b border-black/10">
+            <div class="mb-8">
+                <span class="text-black/50 text-xs uppercase tracking-[0.14em] font-medium">Em destaque</span>
+            </div>
+            
+            <div class="w-full bg-brand-blue rounded-[36px] overflow-hidden flex flex-col md:flex-row min-h-[500px] relative">
+                <!-- Img -->
+                <div class="w-full md:w-[55%] h-[300px] md:h-auto bg-black/20 absolute right-0 top-0 bottom-0 z-0 hidden md:block">
+                    <img src="images/conhecimento_img_159_3688.png" alt="Em destaque" class="w-full h-full object-cover object-left">
+                </div>
+                <div class="w-full h-[250px] bg-black/20 md:hidden z-0">
+                    <img src="images/conhecimento_img_159_3688.png" alt="Em destaque" class="w-full h-full object-cover object-left">
+                </div>
+                
+                <!-- Content -->
+                <div class="w-full md:w-[45%] p-8 md:p-14 flex flex-col gap-6 relative z-10">
+                    <span class="text-white text-xs uppercase tracking-[0.14em] font-medium">ROOHTS UX</span>
+                    
+                    <h2 class="text-4xl md:text-[45px] leading-tight text-white tracking-tight mt-auto">
+                        Design para pessoas<br>
+                        <span class="text-brand-yellow">em movimento.</span>
+                    </h2>
+                    
+                    <p class="text-white text-lg leading-relaxed mb-6">
+                        Uma metodologia que combina UX Design, neurociência e heurísticas para orientar decisões criativas em OOH.
+                    </p>
+                    
+                    <div>
+                        <a href="#" class="inline-flex bg-white text-dark text-sm uppercase font-bold tracking-wide px-6 py-3 rounded-full hover:bg-gray-100 transition items-center gap-2">
+                            Ler publicação <span class="text-brand-blue font-normal"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline-block w-[1em] h-[1em] ml-1"><path d="M9.91638 9.91638V4.08398H4.08398M9.91638 4.08398L4.08398 9.91638" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ideias da roohts -->
+        <section class="animate-on-scroll w-full px-6 md:px-[56px] py-16 bg-[#F8F8ED]">
+            <div class="mb-12">
+                <span class="text-black/50 text-xs uppercase tracking-[0.14em] font-medium">ideias da roohts</span>
+                <h2 class="text-4xl md:text-[45px] leading-tight text-dark tracking-tight mt-2">Visão</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-[#F4F3E9] rounded-[42px] overflow-hidden border border-black/10 flex flex-col">
+                    <div class="h-[260px] bg-gray-300 relative overflow-hidden group">
+                        <img src="images/Image conhecimento 0001.png" alt="Thumb" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute bottom-4 right-4 bg-brand-yellow rounded-full px-3 py-1">
+                            <span class="text-[9px] text-dark tracking-wider">10.08.2026</span>
+                        </div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-1">
+                        <span class="text-brand-blue text-xs uppercase tracking-[0.14em] font-medium">ROOHTS UX</span>
+                        <h3 class="text-xl text-dark leading-snug mt-4 mb-8">Design para pessoas em movimento</h3>
+                        <div class="mt-auto">
+                            <a href="#" class="inline-flex bg-white text-dark text-sm uppercase font-bold tracking-wide px-6 py-3 rounded-full border border-dark hover:bg-gray-100 transition items-center gap-2">
+                                Ler matéria <span class="text-brand-blue font-normal"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline-block w-[1em] h-[1em] ml-1"><path d="M9.91638 9.91638V4.08398H4.08398M9.91638 4.08398L4.08398 9.91638" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="bg-[#F4F3E9] rounded-[42px] overflow-hidden border border-black/10 flex flex-col">
+                    <div class="h-[260px] bg-gray-300 relative overflow-hidden group">
+                        <img src="images/Image conhecimento 0002.png" alt="Thumb" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute bottom-4 right-4 bg-brand-yellow rounded-full px-3 py-1">
+                            <span class="text-[9px] text-dark tracking-wider">02.04.2026</span>
+                        </div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-1">
+                        <span class="text-brand-blue text-xs uppercase tracking-[0.14em] font-medium">Artigo</span>
+                        <h3 class="text-xl text-dark leading-snug mt-4 mb-8">TBA</h3>
+                        <div class="mt-auto">
+                            <a href="#" class="inline-flex bg-white text-dark text-sm uppercase font-bold tracking-wide px-6 py-3 rounded-full border border-dark hover:bg-gray-100 transition items-center gap-2">
+                                Ler matéria <span class="text-brand-blue font-normal"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline-block w-[1em] h-[1em] ml-1"><path d="M9.91638 9.91638V4.08398H4.08398M9.91638 4.08398L4.08398 9.91638" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="bg-[#F4F3E9] rounded-[42px] overflow-hidden border border-black/10 flex flex-col">
+                    <div class="h-[260px] bg-gray-300 relative overflow-hidden group">
+                        <img src="images/Image conhecimento 0001.png" alt="Thumb" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute bottom-4 right-4 bg-brand-yellow rounded-full px-3 py-1">
+                            <span class="text-[9px] text-dark tracking-wider">21.05.2026</span>
+                        </div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-1">
+                        <span class="text-brand-blue text-xs uppercase tracking-[0.14em] font-medium">Artigo</span>
+                        <h3 class="text-xl text-dark leading-snug mt-4 mb-8">TBA</h3>
+                        <div class="mt-auto">
+                            <a href="#" class="inline-flex bg-white text-dark text-sm uppercase font-bold tracking-wide px-6 py-3 rounded-full border border-dark hover:bg-gray-100 transition items-center gap-2">
+                                Ler matéria <span class="text-brand-blue font-normal"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline-block w-[1em] h-[1em] ml-1"><path d="M9.91638 9.91638V4.08398H4.08398M9.91638 4.08398L4.08398 9.91638" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ideias do mercado -->
+        <section class="animate-on-scroll w-full px-6 md:px-[56px] py-16 bg-[#F8F8ED]">
+            <div class="mb-12">
+                <span class="text-black/50 text-xs uppercase tracking-[0.14em] font-medium">ideias do mercado</span>
+                <h2 class="text-4xl md:text-[45px] leading-tight text-dark tracking-tight mt-2">Insights</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-[#F4F3E9] rounded-[42px] overflow-hidden border border-black/10 flex flex-col">
+                    <div class="h-[260px] bg-gray-300 relative overflow-hidden group">
+                        <img src="images/conhecimento_propmark.webp" alt="Thumb" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute bottom-4 right-4 bg-brand-yellow rounded-full px-3 py-1">
+                            <span class="text-[9px] text-dark tracking-wider">10.08.2026</span>
+                        </div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-1">
+                        <span class="text-brand-blue text-xs uppercase tracking-[0.14em] font-medium">PROPMARK</span>
+                        <h3 class="text-xl text-dark leading-snug mt-4 mb-8">OOH acelera crescimento e se consolida entre as maiores mídias do mercado</h3>
+                        <div class="mt-auto">
+                            <a href="https://propmark.com.br/out-of-home/ooh-acelera-crescimento-e-se-consolida-entre-as-maiores-midias-do-mercado/" target="_blank" rel="noopener noreferrer" class="inline-flex bg-white text-dark text-sm uppercase font-bold tracking-wide px-6 py-3 rounded-full border border-dark hover:bg-gray-100 transition items-center gap-2">
+                                Ler matéria <span class="text-brand-blue font-normal"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline-block w-[1em] h-[1em] ml-1"><path d="M9.91638 9.91638V4.08398H4.08398M9.91638 4.08398L4.08398 9.91638" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="bg-[#F4F3E9] rounded-[42px] overflow-hidden border border-black/10 flex flex-col">
+                    <div class="h-[260px] bg-gray-300 relative overflow-hidden group">
+                        <img src="images/conhecimento_fastcompany.png" alt="Thumb" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute bottom-4 right-4 bg-brand-yellow rounded-full px-3 py-1">
+                            <span class="text-[9px] text-dark tracking-wider">02.04.2026</span>
+                        </div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-1">
+                        <span class="text-brand-blue text-xs uppercase tracking-[0.14em] font-medium">FAST COMPANY</span>
+                        <h3 class="text-xl text-dark leading-snug mt-4 mb-8">Brands are getting more physical</h3>
+                        <div class="mt-auto">
+                            <a href="https://www.fastcompany.com/91519954/brands-are-getting-more-physical" target="_blank" rel="noopener noreferrer" class="inline-flex bg-white text-dark text-sm uppercase font-bold tracking-wide px-6 py-3 rounded-full border border-dark hover:bg-gray-100 transition items-center gap-2">
+                                Ler matéria <span class="text-brand-blue font-normal"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline-block w-[1em] h-[1em] ml-1"><path d="M9.91638 9.91638V4.08398H4.08398M9.91638 4.08398L4.08398 9.91638" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="bg-[#F4F3E9] rounded-[42px] overflow-hidden border border-black/10 flex flex-col">
+                    <div class="h-[260px] bg-gray-300 relative overflow-hidden group">
+                        <img src="images/conhecimento_wgsn.jpg" alt="Thumb" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute bottom-4 right-4 bg-brand-yellow rounded-full px-3 py-1">
+                            <span class="text-[9px] text-dark tracking-wider">21.05.2026</span>
+                        </div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-1">
+                        <span class="text-brand-blue text-xs uppercase tracking-[0.14em] font-medium">WGSN</span>
+                        <h3 class="text-xl text-dark leading-snug mt-4 mb-8">Meet the Restorers: your future consumer profile 2028</h3>
+                        <div class="mt-auto">
+                            <a href="https://www.wgsn.com/en/blog/meet-restorers-your-future-consumer-profile-2028" target="_blank" rel="noopener noreferrer" class="inline-flex bg-white text-dark text-sm uppercase font-bold tracking-wide px-6 py-3 rounded-full border border-dark hover:bg-gray-100 transition items-center gap-2">
+                                Ler matéria <span class="text-brand-blue font-normal"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline-block w-[1em] h-[1em] ml-1"><path d="M9.91638 9.91638V4.08398H4.08398M9.91638 4.08398L4.08398 9.91638" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+<!-- Footer -->
+        <footer class="w-full px-6 md:px-[56px] py-10 mt-10">
+            <div class="w-full border-t border-black/10 pt-10 flex flex-col md:flex-row justify-between items-center gap-4">
+                <img src="images/logo-footer.png" alt="ROOHTS" class="h-7 opacity-70">
+                <span class="text-black/40 text-xs">© 2026 ROOHTS · Powered by Grupo Dreamers</span>
+            </div>
+        </footer>
+
+
+    
+
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const delay = entry.target.getAttribute('data-delay');
+                        if (delay) {
+                            entry.target.style.transitionDelay = delay + 'ms';
+                        }
+                        entry.target.classList.add('scroll-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            const animatedElements = document.querySelectorAll('.animate-on-scroll');
+            animatedElements.forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu-overlay" class="fixed inset-0 z-[100] bg-dark/40 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300">
+        <div class="absolute top-4 left-4 right-4 bg-brand-yellow rounded-[40px] p-6 shadow-2xl transform -translate-y-full transition-transform duration-500 flex flex-col h-[calc(100vh-2rem)] overflow-hidden border-4 border-black/10">
+            <div class="flex justify-between items-center bg-[#FCFCEE] rounded-full px-4 py-2 shadow-sm border border-black/10">
+                <img src="images/logo-footer.png" alt="ROOHTS" class="h-6">
+                <button id="close-menu-btn" class="bg-dark text-[#FCFCEE] px-4 py-2 rounded-full text-[11px] font-bold uppercase tracking-wider">
+                    Fechar ✕
+                </button>
+            </div>
+            
+            <div class="flex-1 flex flex-col justify-center gap-6 mt-8 overflow-y-auto">
+                <span class="text-black/50 text-[11px] font-bold uppercase tracking-[1.68px]">Navegação</span>
+                
+                <a href="index.html" class="flex justify-between items-center border-b border-black/10 pb-4">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-dark font-medium text-sm">01</span>
+                        <span class="text-dark text-4xl">Home</span>
+                    </div>
+                    <span class="text-xl"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline-block w-[1em] h-[1em] ml-1"><path d="M9.91638 9.91638V4.08398H4.08398M9.91638 4.08398L4.08398 9.91638" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+                </a>
+                
+                <a href="sobre.html" class="flex justify-between items-center border-b border-black/10 pb-4">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-black/50 font-medium text-sm">02</span>
+                        <span class="text-dark text-4xl">Sobre</span>
+                    </div>
+                    <span class="text-xl"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline-block w-[1em] h-[1em] ml-1"><path d="M9.91638 9.91638V4.08398H4.08398M9.91638 4.08398L4.08398 9.91638" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+                </a>
+                
+                <a href="conhecimento.html" class="flex justify-between items-center border-b border-black/10 pb-4">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-black/50 font-medium text-sm">03</span>
+                        <span class="text-dark text-4xl">Conhecimento</span>
+                    </div>
+                    <span class="text-xl"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline-block w-[1em] h-[1em] ml-1"><path d="M9.91638 9.91638V4.08398H4.08398M9.91638 4.08398L4.08398 9.91638" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+                </a>
+                
+                <a href="cases.html" class="flex justify-between items-center border-b border-black/10 pb-4">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-black/50 font-medium text-sm">04</span>
+                        <span class="text-dark text-4xl">Cases</span>
+                    </div>
+                    <span class="text-xl"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline-block w-[1em] h-[1em] ml-1"><path d="M9.91638 9.91638V4.08398H4.08398M9.91638 4.08398L4.08398 9.91638" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+                </a>
+                
+                <a href="contato.html" class="flex justify-between items-center border-b border-black/10 pb-4">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-black/50 font-medium text-sm">05</span>
+                        <span class="text-dark text-4xl">Contato</span>
+                    </div>
+                    <span class="text-xl"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline-block w-[1em] h-[1em] ml-1"><path d="M9.91638 9.91638V4.08398H4.08398M9.91638 4.08398L4.08398 9.91638" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+                </a>
+            </div>
+            
+            <div class="flex justify-between items-center mt-auto pt-4">
+                <a href="https://br.linkedin.com/company/roohtsbr" target="_blank" rel="noopener noreferrer" class="text-black/50 text-xs">LinkedIn</a>
+                <a href="https://www.instagram.com/roohtsbr?stkn=OHpuZnhodWRyam1i" target="_blank" rel="noopener noreferrer" class="text-black/50 text-xs">Instagram</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const btnOpen = document.getElementById('mobile-menu-btn');
+            const btnClose = document.getElementById('close-menu-btn');
+            const overlay = document.getElementById('mobile-menu-overlay');
+            const panel = overlay ? overlay.querySelector('div') : null;
+
+            if (btnOpen && btnClose && overlay && panel) {
+                btnOpen.addEventListener('click', () => {
+                    overlay.classList.remove('hidden');
+                    void overlay.offsetWidth;
+                    overlay.classList.remove('opacity-0');
+                    panel.classList.remove('-translate-y-full');
+                    document.body.style.overflow = 'hidden';
+                });
+
+                const closeMenu = () => {
+                    overlay.classList.add('opacity-0');
+                    panel.classList.add('-translate-y-full');
+                    document.body.style.overflow = '';
+                    setTimeout(() => {
+                        overlay.classList.add('hidden');
+                    }, 500);
+                };
+
+                btnClose.addEventListener('click', closeMenu);
+            }
+        });
+    </script>
+</body>
+</html>

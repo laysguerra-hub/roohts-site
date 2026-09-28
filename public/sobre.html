@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROOHTS - Sobre</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        
+
+        body { font-family: 'Geist', sans-serif; background-color: #F8F8ED; }
+        .text-brand-blue { color: #6272FF; }
+        .bg-brand-blue { background-color: #6272FF; }
+        .bg-brand-yellow { background-color: #F0FF65; }
+        .text-brand-yellow { color: #F0FF65; }
+        .bg-dark { background-color: #101216; }
+        .text-dark { color: #101216; }
+        @keyframes orbit {
+            0% { transform: rotate(0deg) translateX(140px) rotate(0deg); }
+            100% { transform: rotate(360deg) translateX(140px) rotate(-360deg); }
+        }
+    
+        /* Animation classes */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(80px);
+            transition: opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1), transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+            will-change: opacity, transform;
+        }
+        .animate-on-scroll.scroll-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="text-dark antialiased overflow-x-hidden flex flex-col items-center">
+
+<!-- Navbar -->
+    <nav class="fixed top-4 w-[calc(100%-2rem)] max-w-6xl mx-auto z-50 bg-[#FCFCEE]/90 backdrop-blur-md rounded-full shadow-[0_14px_38px_rgba(17,19,24,0.1)] border border-black/10 px-6 py-3 flex justify-between items-center">
+        <div class="flex items-center">
+            <a href="#top" class="cursor-pointer">
+                <img src="images/logo-footer.png" alt="ROOHTS - Into the out of home" class="h-8 object-contain">
+            </a>
+        </div>
+        <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+            <a href="index.html" class="text-black/70 hover:text-black transition">Home</a>
+            <a href="sobre.html" class="text-brand-blue">Sobre</a>
+            <a href="conhecimento.html" class="text-black/70 hover:text-black transition">Conhecimento</a>
+            <a href="cases.html" class="text-black/70 hover:text-black transition">Cases</a>
+            <a href="contato.html" class="bg-brand-yellow text-dark px-5 py-2.5 rounded-full hover:bg-[#e4fc34] transition flex items-center gap-2">Contato <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline-block w-[1em] h-[1em] ml-1"><path d="M9.91638 9.91638V4.08398H4.08398M9.91638 4.08398L4.08398 9.91638" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></a>
+        </div>
+    
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="md:hidden bg-brand-yellow text-dark px-4 py-2 rounded-full text-[13px] font-medium uppercase tracking-wider">
+            Menu
+        </button>
+</nav>
+
+    <main id="top" class="w-full max-w-[1440px] mx-auto flex flex-col items-center relative pt-32 pb-16">
+        
+        <!-- Hero Section -->
+        <section class="animate-on-scroll w-full px-6 md:px-[56px] py-10 md:py-20 flex flex-col items-center gap-10">
+            <div class="w-full rounded-[40px] overflow-hidden bg-[#DFE2DE] h-[400px] md:h-[487px] relative max-w-[1011px] mx-auto">
+                <img src="images/sobre_img_154_2701.png" alt="Sobre" class="w-full h-full object-cover object-center">
+            </div>
+            
+            <div class="flex flex-col items-center gap-6 mt-10 md:mt-20 max-w-[1011px] mx-auto text-center px-4">
+                <span class="text-black/50 text-xs uppercase tracking-[0.14em] font-medium">Sobre</span>
+                <h1 class="text-4xl md:text-[60px] leading-tight md:leading-[1.1] tracking-tight">
+                    Não nascemos para ocupar um espaço no OOH <span class="text-brand-blue">mas para redefinir o valor dele</span>
+                </h1>
+            </div>
+        </section>
+
+        <!-- Statement Block -->
+        <section class="animate-on-scroll w-full px-6 md:px-[56px] py-16">
+            <div class="bg-black rounded-[40px] p-8 md:p-16 lg:p-24 flex flex-col gap-12 w-full">
+                <div class="max-w-[800px]">
+                    <p class="text-white text-lg md:text-xl leading-relaxed font-light">
+                        O mercado aprendeu a disputar atenção na superfície. formatos, impacto, frequência, cobertura.<br>
+                        Mas a cidade não funciona assim. ela carrega uma lógica invisível e humana.<br>
+                        Fluxos, ritmos, comportamentos, tensão, tempo.<br><br>
+                        Ninguém atravessa a cidade da mesma forma, ninguém percebe o espaço da mesma maneira.<br>
+                        E nenhuma mensagem deveria existir, sem carregar o contexto da sua raíz.<br><br>
+                        A Roohts nasce para transformar percepção em inteligência, aplicada ao comportamento humano<br>
+                        e ao ritmo das cidades, pra criar experiências que façam sentido no caminho.<br><br>
+                        É profundidade para entender. sensibilidade para conectar. e método para cocriar.
+                    </p>
+                </div>
+                <div class="max-w-[700px]">
+                    <p class="text-brand-yellow text-2xl md:text-[25px] leading-snug tracking-tight">
+                        PORQUE TUDO O QUE CRIA CONEXÃO DE VERDADE PULSA POR DEBAIXO DO CONCRETO.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Essência -->
+        <section class="animate-on-scroll w-full px-6 md:px-[56px] py-16 flex flex-col lg:flex-row gap-10 md:gap-20 justify-start max-w-[1128px] mx-auto">
+            <div class="flex flex-col lg:w-[480px]">
+                <span class="text-black/50 text-[11px] uppercase tracking-[0.2em] font-medium mb-6">Essência</span>
+                <h2 class="text-4xl md:text-[54px] leading-[1.05] tracking-tight text-black">
+                    Somos rebeldes<br>
+                    <span class="text-brand-blue">com causa</span>
+                </h2>
+                <div class="mt-6 ml-6">
+                    <img src="images/sobre_vector_1.svg" alt="Rebelde Vector" class="w-[185px] h-[275px]">
+                </div>
+            </div>
+            <div class="lg:w-[500px] pt-12">
+                <p class="text-[17px] leading-relaxed text-black mb-10">
+                    Nossa rebeldia é orientada por método, não só por<br>
+                    provocação. Questionamos o óbvio para revelar<br>
+                    todo o potencial do OOH. Aprofundamos a análise<br>
+                    e transformamos conhecimento em direção estratégica.<br>
+                    Valorizamos rigor, clareza e pensamento crítico.<br>
+                    Preferimos evidências a opiniões e lógica a achismos.<br>
+                    Somos diretos ao defender aquilo em que acreditamos,<br>
+                    mas sempre com respeito.
+                </p>
+                <p class="text-[22px] text-brand-blue/70 leading-snug font-medium">
+                    Rebeldes na forma de pensar.<br>
+                    Consistentes na forma de fazer.
+                </p>
+            </div>
+        </section>
+
+        <!-- Quote 1 -->
+        <section class="animate-on-scroll w-full px-6 md:px-[56px] py-16">
+            <div class="bg-[#EBF1FC] rounded-[42px] p-8 md:p-16 flex flex-col md:flex-row items-center gap-10 md:gap-[100px]">
+                <div class="w-full md:w-auto shrink-0 flex justify-center">
+                    <img src="images/sobre_img_154_2732_788fbd.png" alt="Bruno Guerrero" class="w-[116px] h-[116px] md:w-[150px] md:h-[150px] object-cover rounded-full">
+                </div>
+                <div class="flex flex-col gap-8 flex-1 relative">
+                    <span class="text-brand-blue text-[88px] absolute -top-8 -left-8 opacity-20 leading-none">"</span>
+                    <p class="text-xl md:text-2xl italic leading-relaxed text-black relative z-10">
+                        Traduzimos a complexidade do OOH em vantagem competitiva, conectando inteligência, criatividade e execução precisa para gerar campanhas mais relevantes o negócio das marcas.
+                    </p>
+                    <div class="flex flex-col border-l-2 border-brand-blue pl-4">
+                        <span class="text-sm font-semibold">Bruno Guerrero</span>
+                        <span class="text-[10px] uppercase tracking-wider text-black/70">CEO / SÓCIO ROOHTS</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dados são lei -->
+        <section class="animate-on-scroll w-full px-6 md:px-[56px] py-16">
+            <div class="bg-dark rounded-[42px] p-8 md:p-16 flex flex-col lg:flex-row items-center gap-16 justify-between overflow-hidden">
+                <div class="flex flex-col gap-6 lg:w-[460px]">
+                    <h2 class="text-4xl md:text-[45px] leading-tight text-white tracking-tight">Dados são lei</h2>
+                    <p class="text-white/60 text-lg leading-relaxed">
+                        Milhares de fontes formam uma camada anterior às decisões. É no Roohts OS, nosso sistema
+                        operacional e data lake, que informações isoladas passam a se conectar e orientar o caminho.
+                    </p>
+                </div>
+                <div class="relative w-[400px] h-[400px] flex items-center justify-center shrink-0 hidden md:flex">
+                    <!-- Central Node -->
+                    <div class="w-[110px] h-[110px] bg-brand-blue rounded-full flex items-center justify-center z-10 absolute shadow-[0_0_0_21px_rgba(98,114,255,0.1)]">
+                        <img src="images/sobre_vector_2.svg" alt="Roohts Vector" class="w-[51px] h-[76px]">
+                    </div>
+                    
+                    <!-- Bubbles Orbiting -->
+                    <!-- The negative animation-delay offsets them around the circle evenly (30s / 8 = 3.75s apart) -->
+                    <div class="absolute top-1/2 left-1/2 -mt-[14px] -ml-[40px] border border-white/10 bg-white/5 rounded-full px-[14px] py-1.5 animate-[orbit_30s_linear_infinite] [animation-delay:-0s] hover:[animation-play-state:paused]"><span class="text-[10px] text-white/60 tracking-[0.1em] uppercase">Cultura</span></div>
+                    
+                    <div class="absolute top-1/2 left-1/2 -mt-[14px] -ml-[36px] border border-white/10 bg-white/5 rounded-full px-[14px] py-1.5 animate-[orbit_30s_linear_infinite] [animation-delay:-3.75s] hover:[animation-play-state:paused]"><span class="text-[10px] text-white/60 tracking-[0.1em] uppercase">Ativos</span></div>
+                    
+                    <div class="absolute top-1/2 left-1/2 -mt-[14px] -ml-[44px] border border-white/10 bg-white/5 rounded-full px-[14px] py-1.5 animate-[orbit_30s_linear_infinite] [animation-delay:-7.5s] hover:[animation-play-state:paused]"><span class="text-[10px] text-white/60 tracking-[0.1em] uppercase">Audiência</span></div>
+                    
+                    <div class="absolute top-1/2 left-1/2 -mt-[14px] -ml-[44px] border border-white/10 bg-white/5 rounded-full px-[14px] py-1.5 animate-[orbit_30s_linear_infinite] [animation-delay:-11.25s] hover:[animation-play-state:paused]"><span class="text-[10px] text-white/60 tracking-[0.1em] uppercase">Território</span></div>
+                    
+                    <div class="absolute top-1/2 left-1/2 -mt-[14px] -ml-[32px] border border-white/10 bg-white/5 rounded-full px-[14px] py-1.5 animate-[orbit_30s_linear_infinite] [animation-delay:-15s] hover:[animation-play-state:paused]"><span class="text-[10px] text-white/60 tracking-[0.1em] uppercase">Mood</span></div>
+                    
+                    <div class="absolute top-1/2 left-1/2 -mt-[14px] -ml-[62px] border border-white/10 bg-white/5 rounded-full px-[14px] py-1.5 animate-[orbit_30s_linear_infinite] [animation-delay:-18.75s] hover:[animation-play-state:paused]"><span class="text-[10px] text-white/60 tracking-[0.1em] uppercase">Comportamento</span></div>
+                    
+                    <div class="absolute top-1/2 left-1/2 -mt-[14px] -ml-[50px] border border-white/10 bg-white/5 rounded-full px-[14px] py-1.5 animate-[orbit_30s_linear_infinite] [animation-delay:-22.5s] hover:[animation-play-state:paused]"><span class="text-[10px] text-white/60 tracking-[0.1em] uppercase">Mobilidade</span></div>
+                    
+                    <div class="absolute top-1/2 left-1/2 -mt-[14px] -ml-[34px] border border-white/10 bg-white/5 rounded-full px-[14px] py-1.5 animate-[orbit_30s_linear_infinite] [animation-delay:-26.25s] hover:[animation-play-state:paused]"><span class="text-[10px] text-white/60 tracking-[0.1em] uppercase">Clima</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quote 2 -->
+        <section class="animate-on-scroll w-full px-6 md:px-[56px] py-16">
+            <div class="bg-brand-yellow rounded-[42px] p-8 md:p-16 flex flex-col md:flex-row items-center gap-10 md:gap-[100px]">
+                <div class="w-full md:w-auto shrink-0 flex justify-center">
+                    <img src="images/sobre_img_154_2772_788fbd.png" alt="Victoria Costa" class="w-[116px] h-[116px] md:w-[150px] md:h-[150px] object-cover rounded-full">
+                </div>
+                <div class="flex flex-col gap-8 flex-1 relative">
+                    <span class="text-brand-blue text-[88px] absolute -top-8 -left-8 opacity-20 leading-none">"</span>
+                    <p class="text-xl md:text-2xl italic leading-relaxed text-black relative z-10">
+                        Uma nova forma de pensar o OOH nasce quando dados, criatividade e tecnologia passam a trabalhar juntos.
+                    </p>
+                    <div class="flex flex-col border-l-2 border-brand-blue pl-4">
+                        <span class="text-sm font-semibold">Victoria Costa</span>
+                        <span class="text-[10px] uppercase tracking-wider text-black/70">HEAD DE DADOS E TECNOLOGIA</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quatro Perspectivas -->
+        <section class="animate-on-scroll w-full px-6 md:px-[56px] py-16">
+            <div class="flex flex-col gap-4 mb-16 max-w-[600px]">
+                <span class="text-black/50 text-[14px] tracking-[0.2em] uppercase">Quatro Perspectivas Conectadas</span>
+                <h2 class="text-4xl md:text-[60px] leading-tight">
+                    Uma cidade.<br>
+                    <span class="text-brand-blue">Múltiplas camadas</span>
+                </h2>
+                <p class="text-black/60 text-lg mt-4">
+                    O que parece uma única paisagem é, na verdade, um sistema vivo de relações.
+                </p>
+            </div>
+            
+            <div class="flex flex-col gap-6 relative" style="padding-bottom: 20px;">
+                <!-- Mercado -->
+                <div class="sticky top-[120px] z-10 bg-brand-blue rounded-[40px] p-8 md:p-14 flex flex-col gap-4 shadow-sm border border-black/5">
+                    <h3 class="text-white text-3xl md:text-[45px] tracking-tight">Mercado</h3>
+                    <p class="text-white/80 text-lg md:text-xl max-w-[680px]">
+                        Movimentos, tensões e oportunidades que alteram o papel da comunicação.
+                    </p>
+                </div>
+                <!-- Pessoas -->
+                <div class="sticky top-[150px] z-20 bg-brand-yellow rounded-[40px] p-8 md:p-14 flex flex-col gap-4 shadow-md border border-black/5">
+                    <h3 class="text-dark text-3xl md:text-[45px] tracking-tight">Pessoas</h3>
+                    <p class="text-dark/80 text-lg md:text-xl max-w-[680px]">
+                        Comportamentos, repertórios e estados de atenção que mudam ao longo do dia.
+                    </p>
+                </div>
+                <!-- Jornada -->
+                <div class="sticky top-[180px] z-30 bg-[#66FF75] rounded-[40px] p-8 md:p-14 flex flex-col gap-4 shadow-md border border-black/5">
+                    <h3 class="text-dark text-3xl md:text-[45px] tracking-tight">Jornada</h3>
+                    <p class="text-dark/80 text-lg md:text-xl max-w-[680px]">
+                        Fluxos, ritmos, permanências e encontros que organizam a experiência urbana.
+                    </p>
+                </div>
+                <!-- Contexto -->
+                <div class="sticky top-[210px] z-40 bg-[#EBF1FC] rounded-[40px] p-8 md:p-14 flex flex-col gap-4 shadow-md border border-black/5">
+                    <h3 class="text-dark text-3xl md:text-[45px] tracking-tight">Contexto</h3>
+                    <p class="text-dark/80 text-lg md:text-xl max-w-[680px]">
+                        Lugar, luz, distância, velocidade e cultura que dão significado à mensagem.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quote 3 -->
+        <section class="animate-on-scroll w-full px-6 md:px-[56px] py-16">
+            <div class="bg-brand-blue rounded-[42px] p-8 md:p-16 flex flex-col md:flex-row items-center gap-10 md:gap-[100px]">
+                <div class="w-full md:w-auto shrink-0 flex justify-center">
+                    <img src="images/sobre_img_154_2831_62942d.png" alt="Bruno Putz" class="w-[116px] h-[116px] md:w-[150px] md:h-[150px] object-cover rounded-full">
+                </div>
+                <div class="flex flex-col gap-8 flex-1 relative">
+                    <span class="text-white text-[88px] absolute -top-8 -left-8 opacity-20 leading-none">"</span>
+                    <p class="text-xl md:text-2xl italic leading-relaxed text-white relative z-10">
+                        Entender o comportamento das pessoas faz o OOH deixar de ser paisagem urbana e gerar resultados de negócio.
+                    </p>
+                    <div class="flex flex-col border-l-2 border-white pl-4">
+                        <span class="text-sm font-semibold text-white">Bruno Putz</span>
+                        <span class="text-[10px] uppercase tracking-wider text-white/70">HEAD DE ESTRATÉGIA</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Jornada com borda infinita -->
+        <section class="animate-on-scroll w-full px-6 md:px-[56px] py-16 flex flex-col items-center gap-16">
+            <div class="flex flex-col items-center text-center gap-6 max-w-[800px]">
+                <span class="text-black/50 text-[14px] tracking-[0.2em] uppercase">CONEXÃO AO BRASIL PROFUNDO</span>
+                <h2 class="text-4xl md:text-[60px] leading-tight">
+                    Jornada com <span class="text-brand-blue">borda infinita</span>
+                </h2>
+                <p class="text-black/60 text-lg md:text-xl leading-relaxed max-w-[640px]">
+                    Do grande eixo à cidade do interior, a mídia ganha precisão quando entende a granularidade de cada território. Cruzamos cobertura, comportamento e contexto para alcançar a diversidade de públicos do Brasil com relevância local.
+                </p>
+            </div>
+            <div class="w-full max-w-[962px] rounded-[40px] overflow-hidden">
+                <img src="images/sobre_img_154_2841_45b288.png" alt="Mapa de conexões" class="w-full h-auto">
+            </div>
+        </section>
+
+        <!-- Quote 4 -->
+        <section class="animate-on-scroll w-full px-6 md:px-[56px] py-16">
+            <div class="bg-brand-yellow rounded-[42px] p-8 md:p-16 flex flex-col md:flex-row items-center gap-10 md:gap-[100px]">
+                <div class="w-full md:w-auto shrink-0 flex justify-center">
+                    <img src="images/sobre_img_154_2852_1a0a83.png" alt="Fabricio Nascimento" class="w-[116px] h-[116px] md:w-[150px] md:h-[150px] object-cover rounded-full">
+                </div>
+                <div class="flex flex-col gap-8 flex-1 relative">
+                    <span class="text-brand-blue text-[88px] absolute -top-8 -left-8 opacity-20 leading-none">"</span>
+                    <p class="text-xl md:text-2xl italic leading-relaxed text-black relative z-10">
+                        Partimos da jornada e da qualificação da audiência para construir uma arquitetura de mídia mais precisa, que reduz desperdícios e potencializa os resultados de cada projeto.
+                    </p>
+                    <div class="flex flex-col border-l-2 border-brand-blue pl-4">
+                        <span class="text-sm font-semibold">Fabricio Nascimento</span>
+                        <span class="text-[10px] uppercase tracking-wider text-black/70">HEAD DE MÍDIA</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Uma campanha -->
+        <section class="animate-on-scroll w-full px-6 md:px-[56px] py-16">
+            <div class="bg-[#EBF1FC] rounded-[40px] p-8 md:p-16 flex flex-col gap-16">
+                <div class="flex flex-col gap-6 max-w-[939px]">
+                    <span class="text-black/50 text-[14px] tracking-[0.12em] uppercase">ONDE A CRIAÇÃO GANHA PRECISÃO</span>
+                    <h2 class="text-4xl md:text-[60px] leading-tight">
+                        Uma campanha.<br>
+                        <span class="text-brand-blue">Múltiplos contextos</span>
+                    </h2>
+                    <p class="text-black/80 text-lg md:text-xl leading-relaxed max-w-[686px] mt-6">
+                        Da integração entre Dados, Estratégia e Mídia nasce uma criação mais eficaz e autêntica. Com a Roohts UX, nossa metodologia proprietária, unimos design, neurociência e experiência do usuário para criar campanhas que se integram à jornada das pessoas fortalecendo a presença e reputação das marcas.
+                    </p>
+                </div>
+                <div class="w-full rounded-[40px] overflow-hidden">
+                    <img src="images/sobre_img_154_2863_7caf08.png" alt="Festival" class="w-full h-auto">
+                </div>
+            </div>
+        </section>
+
+        <!-- Quote 5 -->
+        <section class="animate-on-scroll w-full px-6 md:px-[56px] py-16">
+            <div class="bg-[#D2E0FB] rounded-[42px] p-8 md:p-16 flex flex-col md:flex-row items-center gap-10 md:gap-[100px]">
+                <div class="w-full md:w-auto shrink-0 flex justify-center">
+                    <img src="images/sobre_img_154_2874_282efd.png" alt="Vinicius Cohin" class="w-[116px] h-[116px] md:w-[150px] md:h-[150px] object-cover rounded-full">
+                </div>
+                <div class="flex flex-col gap-8 flex-1 relative">
+                    <span class="text-brand-blue text-[88px] absolute -top-8 -left-8 opacity-20 leading-none">"</span>
+                    <p class="text-xl md:text-2xl italic leading-relaxed text-black relative z-10">
+                        Quando a criação estabelece critérios claros de design e considera a experiência das pessoas, as ideias ganham mais força e se transformam em campanhas mais relevantes.
+                    </p>
+                    <div class="flex flex-col border-l-2 border-brand-blue pl-4">
+                        <span class="text-sm font-semibold">Vinicius Cohin</span>
+                        <span class="text-[10px] uppercase tracking-wider text-black/70">HEAD DE CRIAÇÃO</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- +100 Variáveis -->
+        <section class="animate-on-scroll w-full px-6 md:px-[56px] py-16">
+            <div class="bg-brand-blue rounded-[40px] p-8 md:p-16 flex flex-col lg:flex-row items-center justify-between gap-16 overflow-hidden">
+                <div class="flex flex-col gap-6 max-w-[460px]">
+                    <span class="text-white/50 text-[11px] uppercase tracking-[0.15em] font-medium">MAIS PROFUNDIDADE</span>
+                    <h2 class="text-4xl md:text-[56px] font-bold leading-tight text-white tracking-tight">
+                        Analisamos mais<br>
+                        de <span class="text-brand-yellow">+100 variáveis</span><br>
+                        antes de criar<br>
+                        o primeiro layout.
+                    </h2>
+                </div>
+                <div class="relative w-[300px] h-[300px] md:w-[420px] md:h-[420px] flex items-center justify-center shrink-0">
+                    <div class="absolute w-[80%] h-[80%] bg-black rounded-full mix-blend-multiply opacity-50"></div>
+                    <div class="absolute w-[80%] h-[80%] bg-brand-yellow rounded-full ml-10 mt-10 mix-blend-screen opacity-90"></div>
+                    <div class="relative z-10 flex flex-col items-center">
+                        <span class="text-black text-[80px] md:text-[120px] font-semibold leading-none tracking-tighter">+100</span>
+                        <span class="text-black text-xl md:text-[25px] font-semibold tracking-wide">VARIÁVEIS</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Metodologia -->
+        <section class="animate-on-scroll w-full px-6 md:px-[56px] py-16 flex flex-col lg:flex-row gap-16 justify-between items-center">
+            <div class="flex flex-col gap-8 w-full lg:w-[426px]">
+                <span class="text-black/50 text-[14px] uppercase tracking-[0.18em] font-semibold">Quatro Disciplinas Conectadas</span>
+                <h2 class="text-4xl md:text-[45px] leading-tight">
+                    Campanhas mais<br>
+                    <span class="text-brand-blue">eficazes e autênticas</span>
+                </h2>
+                <p class="text-black/60 text-lg leading-relaxed mt-4">
+                    Um fluxo mais claro, mais ágil e mais estratégico para transformar insights em ação.
+                </p>
+                <div class="flex flex-col gap-3 mt-6">
+                    <div class="flex items-center gap-4 bg-white border border-black/10 rounded-[20px] p-4 shadow-sm">
+                        <div class="w-9 h-9 rounded-full bg-brand-blue flex items-center justify-center text-white font-bold text-sm">01</div>
+                        <span class="text-brand-blue font-semibold uppercase tracking-wider text-[12px]">Monitorar</span>
+                    </div>
+                    <div class="flex items-center gap-4 bg-white border border-black/10 rounded-[20px] p-4 shadow-sm">
+                        <div class="w-9 h-9 rounded-full bg-brand-blue flex items-center justify-center text-white font-bold text-sm">02</div>
+                        <span class="text-brand-blue font-semibold uppercase tracking-wider text-[12px]">Otimizar</span>
+                    </div>
+                    <div class="flex items-center gap-4 bg-white border border-black/10 rounded-[20px] p-4 shadow-sm">
+                        <div class="w-9 h-9 rounded-full bg-brand-blue flex items-center justify-center text-white font-bold text-sm">03</div>
+                        <span class="text-brand-blue font-semibold uppercase tracking-wider text-[12px]">Mensurar</span>
+                    </div>
+                    <div class="flex items-center gap-4 bg-white border border-black/10 rounded-[20px] p-4 shadow-sm">
+                        <div class="w-9 h-9 rounded-full bg-brand-blue flex items-center justify-center text-white font-bold text-sm">04</div>
+                        <span class="text-brand-blue font-semibold uppercase tracking-wider text-[12px]">Retroalimentar</span>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full lg:w-1/2">
+                <img src="images/sobre_img_154_2979_23f982.png" alt="Metodologia Roohts UX" class="w-full h-auto rounded-[40px]">
+            </div>
+        </section>
+
+        <!-- Powered by -->
+        <section class="animate-on-scroll w-full px-6 md:px-[56px] py-16">
+            <div class="bg-black rounded-[40px] p-8 md:p-16 flex flex-col md:flex-row items-center gap-16 justify-between">
+                <div class="flex flex-col gap-6 md:w-1/2">
+                    <span class="text-white/70 text-xs uppercase tracking-[0.15em]">origem</span>
+                    <h2 class="text-white text-4xl md:text-[55px] leading-[1.1] tracking-tight uppercase">
+                        Powered<br>
+                        by dreamers.<br>
+                        <span class="text-brand-blue">empowering<br>the ecosyStem.</span>
+                    </h2>
+                </div>
+                <div class="flex flex-col gap-8 md:w-1/2">
+                    <p class="text-white text-base md:text-lg leading-relaxed">
+                        O Grupo Dreamers é o maior ecossistema independente de comunicação e entretenimento do Brasil. Reúne empresas especialistas e competências complementares, transformando desafios de negócio em soluções integradas e vantagens competitivas para seus clientes.<br><br>
+                        É dessa potência que nasce a ROOHTS.
+                    </p>
+                    <div>
+                        <a href="#" class="inline-flex bg-brand-blue text-white text-[13px] uppercase tracking-wider font-semibold px-6 py-3 rounded-full hover:bg-brand-blue/80 transition items-center gap-2">
+                            Saiba mais <span><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline-block w-[1em] h-[1em] ml-1"><path d="M9.91638 9.91638V4.08398H4.08398M9.91638 4.08398L4.08398 9.91638" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+<!-- Footer -->
+        <footer class="w-full px-6 md:px-[56px] py-10 mt-10">
+            <div class="w-full border-t border-black/10 pt-10 flex flex-col md:flex-row justify-between items-center gap-4">
+                <img src="images/logo-footer.png" alt="ROOHTS" class="h-7 opacity-70">
+                <span class="text-black/40 text-xs">© 2026 ROOHTS · Powered by Grupo Dreamers</span>
+            </div>
+        </footer>
+
+
+    
+
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const delay = entry.target.getAttribute('data-delay');
+                        if (delay) {
+                            entry.target.style.transitionDelay = delay + 'ms';
+                        }
+                        entry.target.classList.add('scroll-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            const animatedElements = document.querySelectorAll('.animate-on-scroll');
+            animatedElements.forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu-overlay" class="fixed inset-0 z-[100] bg-dark/40 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300">
+        <div class="absolute top-4 left-4 right-4 bg-brand-yellow rounded-[40px] p-6 shadow-2xl transform -translate-y-full transition-transform duration-500 flex flex-col h-[calc(100vh-2rem)] overflow-hidden border-4 border-black/10">
+            <div class="flex justify-between items-center bg-[#FCFCEE] rounded-full px-4 py-2 shadow-sm border border-black/10">
+                <img src="images/logo-footer.png" alt="ROOHTS" class="h-6">
+                <button id="close-menu-btn" class="bg-dark text-[#FCFCEE] px-4 py-2 rounded-full text-[11px] font-bold uppercase tracking-wider">
+                    Fechar ✕
+                </button>
+            </div>
+            
+            <div class="flex-1 flex flex-col justify-center gap-6 mt-8 overflow-y-auto">
+                <span class="text-black/50 text-[11px] font-bold uppercase tracking-[1.68px]">Navegação</span>
+                
+                <a href="index.html" class="flex justify-between items-center border-b border-black/10 pb-4">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-dark font-medium text-sm">01</span>
+                        <span class="text-dark text-4xl">Home</span>
+                    </div>
+                    <span class="text-xl"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline-block w-[1em] h-[1em] ml-1"><path d="M9.91638 9.91638V4.08398H4.08398M9.91638 4.08398L4.08398 9.91638" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+                </a>
+                
+                <a href="sobre.html" class="flex justify-between items-center border-b border-black/10 pb-4">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-black/50 font-medium text-sm">02</span>
+                        <span class="text-dark text-4xl">Sobre</span>
+                    </div>
+                    <span class="text-xl"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline-block w-[1em] h-[1em] ml-1"><path d="M9.91638 9.91638V4.08398H4.08398M9.91638 4.08398L4.08398 9.91638" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+                </a>
+                
+                <a href="conhecimento.html" class="flex justify-between items-center border-b border-black/10 pb-4">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-black/50 font-medium text-sm">03</span>
+                        <span class="text-dark text-4xl">Conhecimento</span>
+                    </div>
+                    <span class="text-xl"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline-block w-[1em] h-[1em] ml-1"><path d="M9.91638 9.91638V4.08398H4.08398M9.91638 4.08398L4.08398 9.91638" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+                </a>
+                
+                <a href="cases.html" class="flex justify-between items-center border-b border-black/10 pb-4">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-black/50 font-medium text-sm">04</span>
+                        <span class="text-dark text-4xl">Cases</span>
+                    </div>
+                    <span class="text-xl"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline-block w-[1em] h-[1em] ml-1"><path d="M9.91638 9.91638V4.08398H4.08398M9.91638 4.08398L4.08398 9.91638" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+                </a>
+                
+                <a href="contato.html" class="flex justify-between items-center border-b border-black/10 pb-4">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-black/50 font-medium text-sm">05</span>
+                        <span class="text-dark text-4xl">Contato</span>
+                    </div>
+                    <span class="text-xl"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline-block w-[1em] h-[1em] ml-1"><path d="M9.91638 9.91638V4.08398H4.08398M9.91638 4.08398L4.08398 9.91638" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+                </a>
+            </div>
+            
+            <div class="flex justify-between items-center mt-auto pt-4">
+                <a href="https://br.linkedin.com/company/roohtsbr" target="_blank" rel="noopener noreferrer" class="text-black/50 text-xs">LinkedIn</a>
+                <a href="https://www.instagram.com/roohtsbr?stkn=OHpuZnhodWRyam1i" target="_blank" rel="noopener noreferrer" class="text-black/50 text-xs">Instagram</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const btnOpen = document.getElementById('mobile-menu-btn');
+            const btnClose = document.getElementById('close-menu-btn');
+            const overlay = document.getElementById('mobile-menu-overlay');
+            const panel = overlay ? overlay.querySelector('div') : null;
+
+            if (btnOpen && btnClose && overlay && panel) {
+                btnOpen.addEventListener('click', () => {
+                    overlay.classList.remove('hidden');
+                    void overlay.offsetWidth;
+                    overlay.classList.remove('opacity-0');
+                    panel.classList.remove('-translate-y-full');
+                    document.body.style.overflow = 'hidden';
+                });
+
+                const closeMenu = () => {
+                    overlay.classList.add('opacity-0');
+                    panel.classList.add('-translate-y-full');
+                    document.body.style.overflow = '';
+                    setTimeout(() => {
+                        overlay.classList.add('hidden');
+                    }, 500);
+                };
+
+                btnClose.addEventListener('click', closeMenu);
+            }
+        });
+    </script>
+</body>
+</html>
