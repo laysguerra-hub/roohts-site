@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ROOHTS UX · Design para pessoas em movimento | Roohts</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: #F8F8ED;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+    [id^="sec-"] { scroll-margin-top: 110px; }
+    @media (max-width: 1320px) {
+      #sidebar-left, #sidebar-right {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Floating Pill Navbar (Figma exact match + fixed) -->
+  <header style="width: 100%; position: fixed; top: 18px; left: 0; z-index: 50; display: flex; justify-content: center; pointer-events: none;">
+    <div style="width: 1180px; max-width: calc(100% - 32px); height: 64px; padding-left: 24px; padding-right: 14px; background: rgba(252, 252, 238, 0.92); box-shadow: 0px 14px 38px rgba(17, 19, 24, 0.10); border-radius: 999px; outline: 1px rgba(17, 19, 24, 0.12) solid; outline-offset: -1px; backdrop-filter: blur(20px); justify-content: space-between; align-items: center; display: inline-flex; pointer-events: auto;">
+      <div style="justify-content: flex-start; align-items: center; display: flex">
+        <a href="index.html" style="display: flex; align-items: center; text-decoration: none">
+          <img style="width: 128px; height: 36px; object-fit: contain" src="images/logo-footer.png" alt="ROOHTS" />
+        </a>
+      </div>
+      <div style="justify-content: flex-end; align-items: center; display: flex">
+        <nav style="justify-content: flex-start; align-items: center; gap: 30px; display: flex">
+          <a href="index.html" style="text-decoration: none; color: rgba(17, 19, 24, 0.68); font-size: 14px; font-family: Geist, sans-serif; font-weight: 400; line-height: 14px; transition: color 0.2s" onmouseover="this.style.color='#111318'" onmouseout="this.style.color='rgba(17, 19, 24, 0.68)'">Home</a>
+          <a href="sobre.html" style="text-decoration: none; color: rgba(17, 19, 24, 0.68); font-size: 14px; font-family: Geist, sans-serif; font-weight: 400; line-height: 14px; transition: color 0.2s" onmouseover="this.style.color='#111318'" onmouseout="this.style.color='rgba(17, 19, 24, 0.68)'">Sobre</a>
+          <a href="conhecimento.html" style="text-decoration: none; color: #6272FF; font-size: 14px; font-family: Geist, sans-serif; font-weight: 600; line-height: 14px">Conhecimento</a>
+          <a href="cases.html" style="text-decoration: none; color: rgba(17, 19, 24, 0.68); font-size: 14px; font-family: Geist, sans-serif; font-weight: 400; line-height: 14px; transition: color 0.2s" onmouseover="this.style.color='#111318'" onmouseout="this.style.color='rgba(17, 19, 24, 0.68)'">Cases</a>
+          <a href="contato.html" style="text-decoration: none; min-height: 40px; padding-left: 18px; padding-right: 18px; background: #F0FF65; border-radius: 999px; justify-content: flex-start; align-items: center; display: flex; color: #101216; font-size: 14px; font-family: Geist, sans-serif; font-weight: 500; line-height: 14px; transition: background-color 0.2s" onmouseover="this.style.backgroundColor='#e4fc34'" onmouseout="this.style.backgroundColor='#F0FF65'">Contato ↗</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+<div style="width: 1512px; min-height: 100vh; position: relative; background: #F8F8ED; margin: 0 auto; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+  <div style="align-self: stretch; height: 33309px; background: #F8F8ED; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+    <div style="align-self: stretch; height: 33309px; position: relative">
+      <!-- Left Fixed Sidebar: NESTA PUBLICAÇÃO -->
+      <aside id="sidebar-left" style="width: 210px; position: fixed; top: 132px; left: max(20px, calc(50vw - 756px + 60.48px)); z-index: 40; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex; transition: opacity 0.2s">
+        <div style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+          <div style="color: #777D79; font-size: 11.52px; font-family: Geist, sans-serif; font-weight: 500; text-transform: uppercase; line-height: 17.28px; letter-spacing: 1.38px; word-wrap: break-word">NESTA PUBLICAÇÃO</div>
+        </div>
+        <div style="align-self: stretch; padding-top: 14px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+          <a href="#sec-01" class="toc-item" data-target="sec-01" style="text-decoration: none; width: 100%; display: flex; flex-direction: row; align-items: flex-start; gap: 14px; padding-top: 12px; padding-bottom: 12px; border-top: 1px rgba(17, 19, 24, 0.14) solid; transition: opacity 0.2s">
+            <div class="toc-num" style="width: 18px; flex-shrink: 0; color: #6272FF; font-size: 11.5px; font-family: Geist, sans-serif; font-weight: 600; line-height: 17.71px">01</div>
+            <div class="toc-text" style="flex: 1; color: #6272FF; font-size: 13.12px; font-family: Geist, sans-serif; font-weight: 500; line-height: 17.71px">Jornada, contexto e carga cognitiva</div>
+          </a>
+          <a href="#sec-02" class="toc-item" data-target="sec-02" style="text-decoration: none; width: 100%; display: flex; flex-direction: row; align-items: flex-start; gap: 14px; padding-top: 12px; padding-bottom: 12px; border-top: 1px rgba(17, 19, 24, 0.14) solid; transition: opacity 0.2s">
+            <div class="toc-num" style="width: 18px; flex-shrink: 0; color: #6272FF; font-size: 11.5px; font-family: Geist, sans-serif; font-weight: 600; line-height: 17.71px">02</div>
+            <div class="toc-text" style="flex: 1; color: #555B57; font-size: 13.12px; font-family: Geist, sans-serif; font-weight: 400; line-height: 17.71px">Grid e composição por ativo</div>
+          </a>
+          <a href="#sec-03" class="toc-item" data-target="sec-03" style="text-decoration: none; width: 100%; display: flex; flex-direction: row; align-items: flex-start; gap: 14px; padding-top: 12px; padding-bottom: 12px; border-top: 1px rgba(17, 19, 24, 0.14) solid; transition: opacity 0.2s">
+            <div class="toc-num" style="width: 18px; flex-shrink: 0; color: #6272FF; font-size: 11.5px; font-family: Geist, sans-serif; font-weight: 600; line-height: 17.71px">03</div>
+            <div class="toc-text" style="flex: 1; color: #555B57; font-size: 13.12px; font-family: Geist, sans-serif; font-weight: 400; line-height: 17.71px">Hierarquia visual</div>
+          </a>
+          <a href="#sec-04" class="toc-item" data-target="sec-04" style="text-decoration: none; width: 100%; display: flex; flex-direction: row; align-items: flex-start; gap: 14px; padding-top: 12px; padding-bottom: 12px; border-top: 1px rgba(17, 19, 24, 0.14) solid; transition: opacity 0.2s">
+            <div class="toc-num" style="width: 18px; flex-shrink: 0; color: #6272FF; font-size: 11.5px; font-family: Geist, sans-serif; font-weight: 600; line-height: 17.71px">04</div>
+            <div class="toc-text" style="flex: 1; color: #555B57; font-size: 13.12px; font-family: Geist, sans-serif; font-weight: 400; line-height: 17.71px">Cores, contraste e acessibilidade</div>
+          </a>
+          <a href="#sec-05" class="toc-item" data-target="sec-05" style="text-decoration: none; width: 100%; display: flex; flex-direction: row; align-items: flex-start; gap: 14px; padding-top: 12px; padding-bottom: 12px; border-top: 1px rgba(17, 19, 24, 0.14) solid; transition: opacity 0.2s">
+            <div class="toc-num" style="width: 18px; flex-shrink: 0; color: #6272FF; font-size: 11.5px; font-family: Geist, sans-serif; font-weight: 600; line-height: 17.71px">05</div>
+            <div class="toc-text" style="flex: 1; color: #555B57; font-size: 13.12px; font-family: Geist, sans-serif; font-weight: 400; line-height: 17.71px">Tipografia, legibilidade e escala</div>
+          </a>
+          <a href="#sec-06" class="toc-item" data-target="sec-06" style="text-decoration: none; width: 100%; display: flex; flex-direction: row; align-items: flex-start; gap: 14px; padding-top: 12px; padding-bottom: 12px; border-top: 1px rgba(17, 19, 24, 0.14) solid; transition: opacity 0.2s">
+            <div class="toc-num" style="width: 18px; flex-shrink: 0; color: #6272FF; font-size: 11.5px; font-family: Geist, sans-serif; font-weight: 600; line-height: 17.71px">06</div>
+            <div class="toc-text" style="flex: 1; color: #555B57; font-size: 13.12px; font-family: Geist, sans-serif; font-weight: 400; line-height: 17.71px">Fotografia (imagens e vídeos)</div>
+          </a>
+          <a href="#sec-07" class="toc-item" data-target="sec-07" style="text-decoration: none; width: 100%; display: flex; flex-direction: row; align-items: flex-start; gap: 14px; padding-top: 12px; padding-bottom: 12px; border-top: 1px rgba(17, 19, 24, 0.14) solid; transition: opacity 0.2s">
+            <div class="toc-num" style="width: 18px; flex-shrink: 0; color: #6272FF; font-size: 11.5px; font-family: Geist, sans-serif; font-weight: 600; line-height: 17.71px">07</div>
+            <div class="toc-text" style="flex: 1; color: #555B57; font-size: 13.12px; font-family: Geist, sans-serif; font-weight: 400; line-height: 17.71px">Animação</div>
+          </a>
+          <a href="#sec-08" class="toc-item" data-target="sec-08" style="text-decoration: none; width: 100%; display: flex; flex-direction: row; align-items: flex-start; gap: 14px; padding-top: 12px; padding-bottom: 12px; border-top: 1px rgba(17, 19, 24, 0.14) solid; border-bottom: 1px rgba(17, 19, 24, 0.14) solid; transition: opacity 0.2s">
+            <div class="toc-num" style="width: 18px; flex-shrink: 0; color: #6272FF; font-size: 11.5px; font-family: Geist, sans-serif; font-weight: 600; line-height: 17.71px">08</div>
+            <div class="toc-text" style="flex: 1; color: #555B57; font-size: 13.12px; font-family: Geist, sans-serif; font-weight: 400; line-height: 17.71px">Objetivo de comunicação</div>
+          </a>
+        </div>
+      </aside>
+      <!-- Right Sidebar: PUBLICADO POR (sobe com o conteúdo) -->
+      <aside id="sidebar-right" style="width: 175px; position: absolute; top: 132px; left: 1276.52px; z-index: 20; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
+        <div style="align-self: stretch; padding-bottom: 24px; border-bottom: 1px rgba(17, 19, 24, 0.14) solid; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+          <div style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+            <div style="color: #777D79; font-size: 11.52px; font-family: Geist, sans-serif; font-weight: 500; text-transform: uppercase; line-height: 17.28px; letter-spacing: 1.38px; word-wrap: break-word">PUBLICADO POR</div>
+          </div>
+          <div style="width: 175px; height: 38px; padding-top: 16px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+            <div style="color: #101216; font-size: 14.40px; font-family: Geist, sans-serif; font-weight: 600; line-height: 21.60px; word-wrap: break-word">Vinicius Cohin</div>
+          </div>
+          <div style="width: 175px; height: 22px; padding-top: 4px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+            <div style="color: #777C79; font-size: 12.80px; font-family: Geist, sans-serif; font-weight: 400; line-height: 17.92px; word-wrap: break-word">Head de Criação</div>
+          </div>
+        </div>
+        <div style="align-self: stretch; padding-top: 24px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+          <div style="align-self: stretch; padding-bottom: 24px; border-bottom: 1px rgba(17, 19, 24, 0.14) solid; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+            <div style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+              <div style="color: #777D79; font-size: 11.52px; font-family: Geist, sans-serif; font-weight: 500; text-transform: uppercase; line-height: 17.28px; letter-spacing: 1.38px; word-wrap: break-word">PUBLICADO EM</div>
+            </div>
+            <div style="width: 175px; height: 38px; padding-top: 16px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+              <div style="color: #101216; font-size: 14.40px; font-family: Geist, sans-serif; font-weight: 600; line-height: 21.60px; word-wrap: break-word">Setembro de 2026</div>
+            </div>
+          </div>
+        </div>
+        <div style="align-self: stretch; padding-top: 24px; padding-bottom: 24px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+          <div style="align-self: stretch; padding-bottom: 24px; border-bottom: 1px rgba(17, 19, 24, 0.14) solid; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+            <div style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+              <div style="color: #777D79; font-size: 11.52px; font-family: Geist, sans-serif; font-weight: 500; text-transform: uppercase; line-height: 17.28px; letter-spacing: 1.38px; word-wrap: break-word">COMPARTILHAR</div>
+            </div>
+            <div style="width: 175px; padding-top: 16px; display: flex; flex-direction: column; gap: 8px">
+              <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://roohts.com.br/conhecimento_roohtsux.html" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: #111318; font-size: 12.80px; font-family: Geist, sans-serif; font-weight: 400; line-height: 19.20px; display: flex; justify-content: space-between; align-items: center; transition: color 0.2s" onmouseover="this.style.color='#6272FF'" onmouseout="this.style.color='#111318'">
+                <span>LinkedIn</span>
+                <span style="font-size: 11px">↗</span>
+              </a>
+              <a href="https://twitter.com/intent/tweet?text=ROOHTS%20UX%20-%20Design%20para%20pessoas%20em%20movimento&url=https://roohts.com.br/conhecimento_roohtsux.html" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: #111318; font-size: 12.80px; font-family: Geist, sans-serif; font-weight: 400; line-height: 19.20px; display: flex; justify-content: space-between; align-items: center; transition: color 0.2s" onmouseover="this.style.color='#6272FF'" onmouseout="this.style.color='#111318'">
+                <span>X</span>
+                <span style="font-size: 11px">↗</span>
+              </a>
+              <a href="mailto:?subject=ROOHTS%20UX%20-%20Design%20para%20pessoas%20em%20movimento&body=Confira%20este%20artigo:%20https://roohts.com.br/conhecimento_roohtsux.html" style="text-decoration: none; color: #111318; font-size: 12.80px; font-family: Geist, sans-serif; font-weight: 400; line-height: 19.20px; display: flex; justify-content: space-between; align-items: center; transition: color 0.2s" onmouseover="this.style.color='#6272FF'" onmouseout="this.style.color='#111318'">
+                <span>E-mail</span>
+                <span style="font-size: 11px">↗</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <div style="height: 22065.53px; padding-bottom: 112px; left: 340px; top: 132px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 12px; display: inline-flex">
+        <div style="align-self: stretch; height: 1067px; position: relative">
+          <div style="width: 866.95px; height: 38px; left: 0px; top: 12px; position: absolute">
+            <div style="height: 38px; min-height: 38px; left: 0px; top: 0px; position: absolute; justify-content: flex-start; align-items: center; display: inline-flex">
+              <a href="conhecimento.html" style="text-decoration: none; color: #3F4541; font-size: 12.80px; font-family: Geist, sans-serif; font-weight: 400; line-height: 19.20px; word-wrap: break-word; transition: opacity 0.2s">← Todas as publicações</a>
+            </div>
+          </div>
+          <div style="width: 850px; max-width: 850px; padding-top: 22px; left: -0.03px; top: 123px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: center; display: inline-flex">
+            <div style="width: 606px; height: 120px; text-align: center; justify-content: center; display: flex; flex-direction: column"><span style="color: #101216; font-size: 60px; font-family: Geist; font-weight: 380; line-height: 60px; word-wrap: break-word">Design para pessoas<br/></span><span style="color: #6272FF; font-size: 60px; font-family: Geist; font-weight: 400; line-height: 60px; word-wrap: break-word">em movimento.</span></div>
+          </div>
+          <div style="width: 618px; height: 75px; left: 138.97px; top: 292px; position: absolute; text-align: center; color: #505652; font-size: 18px; font-family: Geist; font-weight: 400; line-height: 25px; word-wrap: break-word">Uma metodologia que traduz princípios de UX Design, neurociência e heurísticas para a realidade do OOH, orientando decisões criativas a partir de como as pessoas percebem, processam e interagem com a cidade.</div>
+          <div style="width: 786px; height: 16px; left: 31.97px; top: 121px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: center; display: inline-flex">
+            <div style="color: rgba(17, 19, 24, 0.52); font-size: 12px; font-family: Geist; font-weight: 400; text-transform: uppercase; line-height: 15.60px; letter-spacing: 1.68px; word-wrap: break-word">ROOHTS UX</div>
+          </div>
+          <div style="width: 867px; height: 455px; padding-top: 64px; left: 0px; top: 422px; position: absolute; border-radius: 40px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
+            <div style="width: 866.95px; height: 487.66px; background: #DFE2DE; overflow: hidden; border-radius: 40px; outline: 1px #6272FF solid; outline-offset: -1px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+              <img style="align-self: stretch; height: 487.66px; position: relative; border-radius: 40px" src="images/conhecimento_ux/ux_img_1_483_1200.png" />
+            </div>
+          </div>
+        </div>
+        <div id="sec-01" style="scroll-margin-top: 110px; align-self: stretch; height: 4196px; position: relative; border-top: 1px rgba(17, 19, 24, 0.16) solid">
+          <div style="width: 867px; height: 192px; left: 0px; top: 109px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: center; display: inline-flex">
+            <div style="max-width: 760px; width: 100%; flex-direction: row; justify-content: flex-start; align-items: flex-start; gap: 32px; display: flex">
+                <div style="padding-top: 18px; flex-shrink: 0; display: flex; align-items: flex-start">
+                  <div style="width: 42px; height: 26px; border-radius: 999px; outline: 1px rgba(98, 114, 255, 0.40) solid; outline-offset: -1px; justify-content: center; align-items: center; display: inline-flex">
+                    <div style="color: #6272FF; font-size: 11.20px; font-family: Geist; font-weight: 600; line-height: 16.80px; letter-spacing: 1.12px; word-wrap: break-word">01</div>
+                  </div>
+                </div>
+                <div style="flex: 1; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                  <div style="width: 100%; max-width: 680px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                    <div style="color: #101216; font-size: 64.26px; font-family: Geist; font-weight: 380; line-height: 62.97px; word-wrap: break-word">Jornada, contexto<br>e carga cognitiva</div>
+                  </div>
+                  <div style="width: 100%; max-width: 680px; padding-top: 22px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                    <div style="width: 100%; color: #555B57; font-size: 18px; font-family: Geist; font-weight: 400; line-height: 25px; word-wrap: break-word">O contexto, o ambiente e o comportamento influenciam quanto e como<br>a informação pode ser processada.</div>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div style="width: 866.95px; padding-top: 64px; left: 0px; top: 325.61px; position: absolute; border-radius: 40px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
+            <div style="width: 866.95px; height: 487.66px; background: #DFE2DE; overflow: hidden; border-radius: 40px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+              <img style="align-self: stretch; height: 487.66px; position: relative" src="images/conhecimento_ux/ux_img_2_476_871.png" />
+            </div>
+          </div>
+          <div style="width: 867px; height: 1063px; padding-top: 72px; left: -0.03px; top: 877px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: center; display: inline-flex">
+            <div style="width: 720px; height: 1108px; max-width: 720px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+              <div style="width: 720px; height: 346px; padding-top: 10px; border-bottom: 1px rgba(0, 0, 0, 0.20) solid; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                <div style="width: 674px"><span style="color: #343936; font-size: 18px; font-family: Geist; font-weight: 400; line-height: 30.33px; word-wrap: break-word">Uma mensagem pode permanecer dez segundos em uma tela, mas cada pessoa                 a encontra de uma maneira diferente. Algumas percebem o ativo à distância. Outras cruzam com ele por poucos instantes. Há ainda quem esteja olhando naquela direção sem que a mensagem efetivamente capture sua atenção. <p></p>  Entre o ativo e o olhar existem movimento, distância, iluminação e concorrência visual. Também existem atenção, intenção, repertório, estado emocional e tudo                 o que aquela pessoa já está vivendo naquele momento.       <p>
+
+                </p>         </span><span style="color: #6272FF; font-size: 18px; font-family: Geist; font-weight: 600; line-height: 30.33px; word-wrap: break-word">É nesse encontro que a mensagem começa a ganhar sentido.</span></div>
+              </div>
+              <div style="width: 680px; height: 86px; max-width: 680px; padding-top: 52px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                <div style="width: 680px; height: 52px"><span style="color: #111318; font-size: 30px; font-family: Geist; font-weight: 400; line-height: 40px; word-wrap: break-word">Compreensão em um </span><span style="color: #6272FF; font-size: 30px; font-family: Geist; font-weight: 400; line-height: 40px; word-wrap: break-word">ambiente descontrolado</span></div>
+              </div>
+              <div style="width: 677px; height: 652px; padding-top: 24px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                <div style="align-self: stretch"><span style="color: #343936; font-size: 18px; font-family: Geist; font-weight: 400; line-height: 30.33px; word-wrap: break-word">O estudo </span><span style="color: #343936; font-size: 18px; font-family: Geist; font-weight: 600; line-height: 30.33px; word-wrap: break-word">“Detecting Meaning in RSVP at 13 ms per Picture”</span><span style="color: #343936; font-size: 18px; font-family: Geist; font-weight: 400; line-height: 30.33px; word-wrap: break-word">, publicado por Mary Potter em 2014, demonstrou que o sistema visual consegue reconhecer o significado de imagens apresentadas por apenas 13 milissegundos em laboratório.     <p>
+
+                </p>           Na cidade, esse primeiro relance ainda precisa atravessar movimento, distância                 e concorrência visual.    <p></p>            O dado revela a velocidade do sistema visual, mas não define quanto tempo uma pessoa levará para compreender uma mensagem. Reconhecimento, leitura                 e construção de sentido não são a mesma coisa.</span></div>
+                <div style="align-self: stretch; height: 228px; padding-top: 60px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                  <div style="align-self: stretch; padding-left: 30px; border-left: 3px #6272FF solid; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                    <div style="width: 687px; color: black; font-size: 27.20px; font-family: Geist; font-weight: 500; line-height: 38.62px; word-wrap: break-word">Uma imagem pode ser reconhecida em apenas                     13 milissegundos. Na cidade, o movimento, distância                    e a concorrência visual tornam a clareza, a hierarquia                    e a síntese decisivas para transformar o primeiro relance em compreensão.</div>
+                  </div>
+                </div>
+              </div>
+              <div style="width: 680px; height: 69px; max-width: 680px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                <div style="width: 422px; height: 122px"><span style="color: #111318; font-size: 35px; font-family: Geist; font-weight: 400; line-height: 45px; word-wrap: break-word">Light mode </span><span style="color: #6272FF; font-size: 35px; font-family: Geist; font-weight: 400; line-height: 45px; word-wrap: break-word">e Dark Mode</span></div>
+              </div>
+            </div>
+          </div>
+          <div style="width: 719px; height: 67px; left: 74px; top: 3695px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
+            <div style="align-self: stretch; padding-left: 30px; border-left: 3px #6272FF solid; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+              <div style="width: 687px; height: 65px; color: #343936; font-size: 27px; font-family: Geist; font-weight: 600; line-height: 38px; word-wrap: break-word">Mais importante do que contar elementos é entender              a função de cada um dentro da mensagem.</div>
+            </div>
+          </div>
+          <div style="width: 749px; height: 36px; left: 73.97px; top: 3821px; position: absolute"><span style="color: #343936; font-size: 35px; font-family: Geist; font-weight: 400; line-height: 40px; word-wrap: break-word">A criação com critérios </span><span style="color: #6272FF; font-size: 35px; font-family: Geist; font-weight: 400; line-height: 40px; word-wrap: break-word">organiza possibilidades</span></div>
+          <div style="width: 720px; height: 325px; left: 73px; top: 2057px; position: absolute; background: #DFE2DE; overflow: hidden; border-radius: 20px">
+            <img style="width: 720px; height: 341px; left: 0px; top: 0px; position: absolute" src="images/conhecimento_ux/ux_img_3_476_890.png" />
+          </div>
+          <div style="width: 700px; height: 664px; left: 83px; top: 2413px; position: absolute"><span style="color: #343936; font-size: 18px; font-family: Geist; font-weight: 400; line-height: 30px; word-wrap: break-word">A cidade muda com a luz, o layout também deveria. Luz natural, sombras, reflexos, iluminação artificial e o brilho do entorno alteram a maneira como cores, formas e textos são percebidos.<p>
+
+          </p>          <br/>Pensar em dia e noite não significa simplesmente criar uma versão clara e outra escura. Significa entender como a mensagem se comporta diante de diferentes condições de luminância, concorrência visual e condição de cada ativo.<br/><br/></span><span style="color: #343936; font-size: 18px; font-family: Geist; font-weight: 600; line-height: 30px; word-wrap: break-word">Light Mode<br/></span><span style="color: #343936; font-size: 18px; font-family: Geist; font-weight: 400; line-height: 30px; word-wrap: break-word">Durante o dia, um ativo de OOH pode disputar atenção com pessoas, carros, ônibus, vegetação, prédios, sinalizações, cores, texturas, tudo o que já ocupa naturalmente uma cidade. <p>
+
+          </p>          A incidência intensa de sol ou chuva, reflexos e sombras, pode prejudicar a visibilidade, alterar a percepção das cores e reduzir a legibilidade. Nesse contexto, a atenção ao contraste precisa ser ainda maior.<br/><br/></span><span style="color: #6272FF; font-size: 18px; font-family: Geist; font-weight: 600; line-height: 30px; word-wrap: break-word">Dark Mode<br/></span><span style="color: #343936; font-size: 18px; font-family: Geist; font-weight: 400; line-height: 30px; word-wrap: break-word">À noite, o contraste entre o ativo iluminado e a cidade mais escura pode favorecer o destaque da mensagem e reduzir parte da concorrência visual. Ainda assim, permanecem os cuidados           com contraste, cores e legibilidade.<p>
+
+          </p>          Uma tela com brilho excessivo pode provocar ofuscamento e comprometer a leitura, mesmo quando o ativo parece mais evidente.</span></div>
+          <div style="width: 720px; height: 361px; left: 74px; top: 3277px; position: absolute; background: #F0FF65; border-radius: 40px"></div>
+          <div style="width: 614px; height: 242px; left: 127px; top: 3344px; position: absolute; color: #343936; font-size: 18px; font-family: Geist; font-weight: 400; line-height: 30.33px; word-wrap: break-word">O estudo de Nelson Cowan, publicado em 2001, reúne evidências de que nossa capacidade ativa de processamento opera, sob determinadas condições, com cerca de quatro unidades significativas (chunks).          Essas unidades não correspondem diretamente ao número de elementos presentes em um layout, não sendo esse número tratado como um limite universal para OOH. Ele ajuda a lembrar que elementos relacionados podem ser percebidos como um único agrupamento, enquanto uma composição desorganizada pode fragmentar a atenção. </div>
+          <div style="width: 749px; height: 210px; left: 73.97px; top: 3881px; position: absolute; color: #343936; font-size: 18px; font-family: Geist; font-weight: 400; line-height: 30px; word-wrap: break-word">Nem todas essas variáveis podem ser controladas. Ainda assim, a criação pode ampliar          as possibilidades de compreensão ao estabelecer critérios e combinar síntese visual<br/>e verbal, signos, símbolos e elementos reconhecíveis.<br/><br/>Quanto mais coerente for a relação entre imagem, texto e contexto, mais evidente se torna          a intenção da mensagem. Isso reduz o esforço necessário para compreendê-la e contribui para campanhas mais eficientes e autênticas.</div>
+        </div>
+        <div id="sec-02" style="scroll-margin-top: 110px; width: 867px; height: 4550px; position: relative">
+          <div style="width: 867px; height: 4239px; padding-top: 108px; padding-bottom: 108px; left: 0px; top: 0px; position: absolute; border-top: 1px rgba(17, 19, 24, 0.16) solid; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
+            <div style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: center; display: flex">
+              <div style="max-width: 720px; width: 100%; flex-direction: row; justify-content: flex-start; align-items: flex-start; gap: 32px; display: flex">
+                <div style="padding-top: 18px; flex-shrink: 0; display: flex; align-items: flex-start">
+                  <div style="width: 42px; height: 26px; border-radius: 999px; outline: 1px rgba(98, 114, 255, 0.40) solid; outline-offset: -1px; justify-content: center; align-items: center; display: inline-flex">
+                    <div style="color: #6272FF; font-size: 11.20px; font-family: Geist; font-weight: 600; line-height: 16.80px; letter-spacing: 1.12px; word-wrap: break-word">02</div>
+                  </div>
+                </div>
+                <div style="flex: 1; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                  <div style="width: 100%; max-width: 646px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                    <div style="color: #101216; font-size: 64.26px; font-family: Geist; font-weight: 380; line-height: 62.97px; word-wrap: break-word">Grid e composição por ativo</div>
+                  </div>
+                  <div style="width: 100%; max-width: 646px; padding-top: 22px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                    <div style="width: 100%; max-width: 650px; color: #555B57; font-size: 23.20px; font-family: Geist; font-weight: 400; line-height: 34.34px; word-wrap: break-word">O grid transforma as características de cada ativo em uma estrutura capaz de orientar alinhamentos, proporções e relações dentro do layout.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div style="padding-top: 64px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+              <div style="width: 866.95px; height: 487.66px; background: #DFE2DE; overflow: hidden; border-radius: 20px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                <img style="align-self: stretch; height: 487.66px; position: relative" src="images/conhecimento_ux/ux_img_4_476_909.png" />
+              </div>
+            </div>
+            <div style="align-self: stretch; height: 3871px; padding-top: 72px; position: relative; flex-direction: column; justify-content: flex-start; align-items: center; gap: 35px; display: flex">
+              <div style="width: 720px; height: 1886px; max-width: 720px; border-bottom: 1px rgba(0, 0, 0, 0.20) solid; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                <div style="align-self: stretch; height: 244px; border-bottom: 1px rgba(0, 0, 0, 0.20) solid; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                  <div style="width: 720px; color: #343936; font-size: 18px; font-family: Geist; font-weight: 400; line-height: 25px; word-wrap: break-word">Formatos diferentes não oferecem o mesmo espaço nem estabelecem as mesmas relações entre os elementos. Uma composição pensada para um relógio de rua não pode simplesmente ser ampliada para uma empena ou adaptada para uma tela horizontal.<br/><br/>O grid começa pela leitura dessas diferenças. Ele divide o formato em áreas que ajudam a posicionar título, imagem, produto, marca e demais conteúdos de maneira proporcional, criando uma base comum para as decisões do layout.</div>
+                </div>
+                <div style="width: 680px; height: 132px; max-width: 680px; padding-top: 88px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                  <div><span style="color: #111318; font-size: 35px; font-family: Geist; font-weight: 400; line-height: 43.27px; word-wrap: break-word">Uma estrutura </span><span style="color: #6272FF; font-size: 35px; font-family: Geist; font-weight: 400; line-height: 43.27px; word-wrap: break-word">para criar relações</span></div>
+                </div>
+                <div style="align-self: stretch; padding-top: 24px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                  <div style="width: 720px"><span style="color: #343936; font-size: 18px; font-family: Geist; font-weight: 400; line-height: 25px; word-wrap: break-word">Em </span><span style="color: #343936; font-size: 18px; font-family: Geist; font-weight: 600; line-height: 25px; word-wrap: break-word">“Grid Systems in Graphic Design”</span><span style="color: #343936; font-size: 18px; font-family: Geist; font-weight: 400; line-height: 25px; word-wrap: break-word">, Josef Müller-Brockmann apresenta o grid como                  um sistema capaz de organizar conteúdos por meio de relações consistentes entre proporção, alinhamento e espaço.<br/><br/>Timothy Samara amplia essa discussão em </span><span style="color: #343936; font-size: 18px; font-family: Geist; font-weight: 600; line-height: 25px; word-wrap: break-word">“Making and Breaking the Grid”</span><span style="color: #343936; font-size: 18px; font-family: Geist; font-weight: 400; line-height: 25px; word-wrap: break-word">, mostrando que o grid não precisa produzir composições rígidas ou previsíveis. Ele oferece uma estrutura que pode ser seguida, combinada ou tensionada de acordo com a intenção do projeto.<br/><br/>No OOH, essa lógica ganha uma nova escala. Margens, colunas, linhas, intervalos e módulos ajudam a relacionar a criação ao formato físico do ativo e às condições em                  que ele será percebido.</span></div>
+                </div>
+                <div style="align-self: stretch; padding-top: 29px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                  <div style="align-self: stretch; padding-top: 28px; padding-left: 30px; border-left: 3px #6272FF solid; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                    <div style="width: 687px; color: #111318; font-size: 27px; font-family: Geist; font-weight: 560; line-height: 38px; word-wrap: break-word">O grid não determina o layout. Ele cria uma estrutura para que diferentes decisões possam conviver dentro dele.</div>
+                  </div>
+                </div>
+                <div style="align-self: stretch; padding-top: 48px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                  <div style="align-self: stretch; height: 74.36px; position: relative; border-top: 1px rgba(17, 19, 24, 0.12) solid"></div>
+                  <div style="width: 720px; height: 400px; position: relative; background: #DFE2DE; overflow: hidden; border-radius: 20px">
+                    <img style="width: 721px; height: 400px; left: -0.53px; top: 0.04px; position: absolute" src="images/conhecimento_ux/ux_img_5_476_924.png" />
+                  </div>
+                </div>
+                <div style="width: 680px; height: 94px; max-width: 680px; padding-top: 29px; padding-bottom: 48px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                  <div><span style="color: #111318; font-size: 35px; font-family: Geist; font-weight: 400; line-height: 43.27px; word-wrap: break-word">O grid começa </span><span style="color: #6272FF; font-size: 35px; font-family: Geist; font-weight: 400; line-height: 43.27px; word-wrap: break-word">antes do layout</span></div>
+                </div>
+                <div style="width: 720px"><span style="color: #343936; font-size: 18px; font-family: Geist; font-weight: 400; line-height: 25px; word-wrap: break-word">Na experiência do usuário, uma estrutura visual não é definida apenas pelas dimensões da superfície. Ela também considera como o conteúdo será encontrado.<br/><br/>Contexto, distância, ângulo de visão, direção, velocidade, permanência e interferências do entorno ajudam a definir a composição do grid, Área Hero e a disposição dos elementos no layout.<br/><br/>Um relógio percebido por um motorista que passa a 60 km/h estabelece uma relação diferente daquele painel no abrigo de ônibus encontrado por pedestres em um momento de circulação ou espera forçada. Da mesma forma, uma tela parcialmente bloqueada por passantes no metrô não deve concentrar informações importantes em sua faixa inferior.<br/><br/></span><span style="color: #6272FF; font-size: 18px; font-family: Geist; font-weight: 600; line-height: 25px; word-wrap: break-word">O grid transforma a experiência da audiência em uma estrutura para a criação.</span></div>
+              </div>
+              <div style="align-self: stretch; height: 54px; position: relative"></div>
+              <div style="width: 720px; height: 381px; position: relative; border-radius: 40px">
+                <div style="width: 720px; height: 381px; left: 0px; top: 0px; position: absolute; background: #F0FF65; border-radius: 40px"></div>
+                <div style="width: 614px; height: 225px; left: 52.50px; top: 77.40px; position: absolute"><span style="color: #343936; font-size: 18px; font-family: Geist; font-weight: 400; line-height: 25px; word-wrap: break-word">As margens definem a área útil e mantêm o conteúdo afastado das extremidades do ativo. Colunas e linhas orientam larguras, alturas, posições e alinhamentos. Os intervalos dão respiro aos elementos, enquanto os módulos formados pelo encontro das linhas com as colunas podem ser combinados para criar diferentes áreas na composição.<br/><br/></span><span style="color: #343936; font-size: 18px; font-family: Geist; font-weight: 600; line-height: 25px; word-wrap: break-word">Mesmo invisível, o grid cria conforto visual e apoio cognitivo ao organizar os espaços e tornar mais claras as relações entre os elementos e o que é prioridade na peça.</span></div>
+              </div>
+              <div style="left: 73px; top: 2003.40px; position: absolute"><span style="color: #111318; font-size: 35px; font-family: Geist; font-weight: 400; line-height: 43.27px; word-wrap: break-word">Cada parte </span><span style="color: #6272FF; font-size: 35px; font-family: Geist; font-weight: 400; line-height: 43.27px; word-wrap: break-word">cumpre uma função.</span></div>
+              <div style="width: 720px; height: 385px; padding-top: 6px; position: relative; border-radius: 40px; outline: 1px black solid; outline-offset: -1px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                <div style="width: 720px; height: 385px; left: 0.47px; top: 0.40px; position: absolute; overflow: hidden; border-radius: 40px; outline: 1px black solid; outline-offset: -1px">
+                  <div style="width: 752px; height: 406px; left: 1px; top: -21px; position: absolute; overflow: hidden; border-radius: 40px">
+                    <img style="width: 719px; height: 385px; left: -1px; top: 21px; position: absolute; border-radius: 40px" src="images/conhecimento_ux/ux_img_6_476_936.png" />
+                  </div>
+                </div>
+              </div>
+              <div style="width: 680px; height: 94px; max-width: 680px; left: 73.97px; top: 2918.40px; position: absolute">
+                <div style="left: 0px; top: 29px; position: absolute"><span style="color: #111318; font-size: 35px; font-family: Geist; font-weight: 400; line-height: 43.27px; word-wrap: break-word">Um formato, </span><span style="color: #6272FF; font-size: 35px; font-family: Geist; font-weight: 400; line-height: 43.27px; word-wrap: break-word">diferentes composições</span></div>
+              </div>
+              <div style="width: 720px; height: 308px; left: 73.97px; top: 3023.40px; position: absolute"><span style="color: #343936; font-size: 18px; font-family: Geist; font-weight: 400; line-height: 25px; word-wrap: break-word">Um mesmo grid pode sustentar diferentes soluções visuais. Seus módulos podem ser combinados para criar áreas maiores ou menores, permitindo que marca, título, imagem, vídeo ou produto assumam diferentes posições e proporções.<br/><br/>Em um relógio de rua, por exemplo, observamos que uma mesma estrutura permite construir pelo menos </span><span style="color: #343936; font-size: 18px; font-family: Geist; font-weight: 600; line-height: 25px; word-wrap: break-word">14 possibilidades de composição</span><span style="color: #343936; font-size: 18px; font-family: Geist; font-weight: 400; line-height: 25px; word-wrap: break-word">. A área de prioridade da peça permanece como referência, enquanto título, produto, imagem, vídeo e marca podem variar de posição, proporção e alinhamento dentro dela.<br/><br/></span><span style="color: #6272FF; font-size: 18px; font-family: Geist; font-weight: 600; line-height: 25px; word-wrap: break-word">Por isso, o grid não deve ser entendido como um template pronto. Ele oferece critérios de organização capazes de preservar alinhamentos e relações, sem determinar uma única resposta criativa.</span></div>
+              <div style="width: 719px; height: 212px; left: 73.97px; top: 3387.40px; position: absolute">
+                <div style="width: 719px; height: 143px; padding-left: 30px; left: 0px; top: 0px; position: absolute; border-left: 3px #6272FF solid; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
+                  <div style="width: 687px; height: 104px; color: #101216; font-size: 27px; font-family: Geist; font-weight: 600; line-height: 38px; word-wrap: break-word">O grid não deve ser entendido como um template pronto. Ele oferece critérios de organização capazes de preservar alinhamentos e relações, sem determinar uma única resposta criativa.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="width: 867px; height: 133px; position: relative">
+          <div style="width: 866.95px; height: 187.98px; left: 0px; top: 627px; position: absolute"></div>
+          <div id="sec-03" style="scroll-margin-top: 110px; width: 867px; height: 9728px; left: 0px; top: 18px; position: absolute; border-top: 1px rgba(17, 19, 24, 0.16) solid">
+            <div style="width: 867px; left: 0px; top: 109px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: center; display: inline-flex">
+              <div style="max-width: 720px; width: 100%; flex-direction: row; justify-content: flex-start; align-items: flex-start; gap: 32px; display: flex">
+                <div style="padding-top: 18px; flex-shrink: 0; display: flex; align-items: flex-start">
+                  <div style="width: 42px; height: 26px; border-radius: 999px; outline: 1px rgba(98, 114, 255, 0.40) solid; outline-offset: -1px; justify-content: center; align-items: center; display: inline-flex">
+                    <div style="color: #6272FF; font-size: 11.20px; font-family: Geist; font-weight: 600; line-height: 16.80px; letter-spacing: 1.12px; word-wrap: break-word">03</div>
+                  </div>
+                </div>
+                <div style="flex: 1; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                  <div style="width: 100%; max-width: 646px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                    <div style="color: #101216; font-size: 64.26px; font-family: Geist; font-weight: 380; line-height: 62.97px; word-wrap: break-word">Hierarquia visual</div>
+                  </div>
+                  <div style="width: 100%; max-width: 646px; padding-top: 22px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                    <div style="width: 100%; max-width: 650px; color: #555B57; font-size: 23.20px; font-family: Geist; font-weight: 400; line-height: 34.34px; word-wrap: break-word">A hierarquia visual e o objetivo de comunicação determinam o que assume protagonismo na peça, Área Hero, e o que orienta a percepção da audiência.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div style="width: 867px; padding-top: 64px; left: 0px; top: 296.98px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
+              <div style="width: 866.95px; height: 487.66px; background: #DFE2DE; overflow: hidden; border-radius: 40px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                <img style="align-self: stretch; height: 487.66px; position: relative; border-radius: 40px" src="images/conhecimento_ux/ux_img_7_476_958.png" />
+              </div>
+            </div>
+            <div style="width: 867px; padding-top: 72px; left: 0px; top: 848.63px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: center; display: inline-flex">
+              <div style="width: 720px; max-width: 720px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                <div style="align-self: stretch; height: 377px; border-bottom: 1px rgba(0, 0, 0, 0.20) solid; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                  <div style="width: 720px"><span style="color: #343936; font-size: 18px; font-family: Geist; font-weight: 400; line-height: 30px; word-wrap: break-word">Uma peça pode reunir vários elementos como: título, logotipo, imagem, vídeo, texturas, cores, mas o olhar não encontra tudo ao mesmo tempo, nem atribui a mesma importância a cada um deles. Posição, escala, contraste, agrupamento e espaços, criam diferentes relações. Essas relações oferecem um ponto de entrada, conectam os conteúdos e constroem um percurso possível.<p>
+
+                  </p>                   No OOH, essa organização precisa continuar reconhecível à distância, em movimento                  e dentro do tempo real de exposição, em sua maioria, os clássicos 10 segundos. <p>
+
+                  </p>                 </span><span style="color: #6272FF; font-size: 18px; font-family: Geist; font-weight: 600; line-height: 30px; word-wrap: break-word">A mensagem encontra a audiência quando a composição deixa claro o que merece atenção.</span></div>
+                </div>
+                <div style="width: 680px; height: 132px; max-width: 680px; padding-top: 58px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                  <div><span style="color: #111318; font-size: 35px; font-family: Geist; font-weight: 400; line-height: 43.27px; word-wrap: break-word">O olhar organiza </span><span style="color: #6272FF; font-size: 35px; font-family: Geist; font-weight: 400; line-height: 43.27px; word-wrap: break-word">antes de interpretar</span></div>
+                </div>
+                <div style="align-self: stretch; height: 395px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                  <div style="width: 720px"><span style="color: #343936; font-size: 17.84px; font-family: Geist; font-weight: 400; line-height: 30.33px; word-wrap: break-word">No estudo </span><span style="color: #343936; font-size: 17.84px; font-family: Geist; font-weight: 600; line-height: 30.33px; word-wrap: break-word">“A Century of Gestalt Psychology in Visual Perception”</span><span style="color: #343936; font-size: 17.84px; font-family: Geist; font-weight: 400; line-height: 30.33px; word-wrap: break-word">, publicado em 2012, Johan Wagemans revisita princípios clássicos da Gestalt para mostrar como o sistema visual agrupa informações por proximidade, similaridade, continuidade e relação entre figura e fundo.<br/><br/>Mais de uma década depois, Jiayang Ma parte desses mesmos fundamentos para investigar sua aplicação na organização hierárquica de informações. Seu estudo “A Study on Perceptual Design of Hierarchical Graphic Information in Interfaces Based on Gestalt Principles”, publicado em 2025, amplia essa discussão ao observar como escala, distância e agrupamento atuam conjuntamente na percepção das prioridades visuais.<br/><br/>Um título grande pode perder força diante de uma imagem mais contrastante. Um produto pode ganhar destaque pelo espaço ao redor. Informações menores podem ser percebidas como uma unidade quando permanecem visualmente conectadas.</span></div>
+                </div>
+                <div style="width: 720px; height: 27.65px; padding-top: 27.65px; position: relative; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                  <div style="width: 720px; height: 71px; left: 0.50px; top: 89.37px; position: absolute">
+                    <div style="width: 720px; height: 71px; left: 0px; top: 0px; position: absolute; border-left: 3px #6272FF solid">
+                      <div style="width: 687px; left: 32.50px; top: -0.29px; position: absolute; color: #111318; font-size: 27.20px; font-family: Geist; font-weight: 560; line-height: 38.62px; word-wrap: break-word">O protagonismo nasce da relação entre as partes,                      não do tamanho isolado de uma delas.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div style="left: 85px; top: 8751px; position: absolute"><span style="color: #101216; font-size: 35px; font-family: Geist; font-weight: 400; line-height: 43.27px; word-wrap: break-word">Contraste bom é</span><span style="color: #6272FF; font-size: 35px; font-family: Geist; font-weight: 400; line-height: 43.27px; word-wrap: break-word"> design inclusivo</span></div>
+            <div style="width: 680px; height: auto; max-width: 680px; padding-top: 58px; left: 73px; top: 3053px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
+              <div><span style="color: #111318; font-size: 35px; font-family: Geist; font-weight: 400; line-height: 43.27px; word-wrap: break-word">Diferentes intenções,<br></span><span style="color: #6272FF; font-size: 35px; font-family: Geist; font-weight: 400; line-height: 43.27px; word-wrap: break-word">diferentes protagonistas</span></div>
+            </div>
+            <div style="width: 680px; height: 171px; max-width: 680px; padding-top: 58px; left: 73px; top: 3750px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
+              <div><span style="color: #111318; font-size: 35px; font-family: Geist; font-weight: 400; line-height: 43.27px; word-wrap: break-word">Como a Área Hero conduz               </span><span style="color: #6272FF; font-size: 35px; font-family: Geist; font-weight: 400; line-height: 43.27px; word-wrap: break-word">a composição do layout</span></div>
+            </div>
+            <div style="width: 720px; left: 73px; top: 3213px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
+              <div style="width: 720px"><span style="color: #343936; font-size: 18px; font-family: Geist; font-weight: 400; line-height: 30.33px; word-wrap: break-word">Definida a Área Hero, o restante da composição passa a responder a ela. No estudo </span><span style="color: #343936; font-size: 18px; font-family: Geist; font-weight: 600; line-height: 30.33px; word-wrap: break-word">“Visual Hierarchy and Viewing Behavior: An Eye Tracking Study”</span><span style="color: #343936; font-size: 18px; font-family: Geist; font-weight: 400; line-height: 30.33px; word-wrap: break-word">, publicado em 2011, Soussan Djamasbi observou que hierarquias mais claras favorecem padrões de visualização mais organizados e orientam a distribuição da atenção.<br/><br/>Levando esse princípio para o OOH e somando o que observamos nos diferentes contextos da cidade, destacar a marca favorece o reconhecimento; colocar o conceito              em primeiro plano abre uma narrativa; dar protagonismo ao produto pode apoiar sua apresentação, seu lançamento ou uma decisão mais imediata de compra; enquanto destacar a chamada orienta o público para uma ação.</span></div>
+            </div>
+            <div style="left: 73.50px; top: 2060px; position: absolute"><span style="color: #111318; font-size: 35px; font-family: Geist; font-weight: 400; line-height: 43.27px; word-wrap: break-word">O destaque visual </span><span style="color: #6272FF; font-size: 35px; font-family: Geist; font-weight: 400; line-height: 43.27px; word-wrap: break-word">da forma à intenção</span></div>
+            <div style="width: 720px; height: 510px; left: 53px; top: 2142px; position: absolute; background: #F0FF65; border-radius: 40px"></div>
+            <div style="width: 614px; height: 357px; left: 108px; top: 2209px; position: absolute"><span style="color: #343936; font-size: 25px; font-family: Geist; font-weight: 600; line-height: 30.33px; word-wrap: break-word">Área Hero<br/></span><span style="color: #343936; font-size: 18px; font-family: Geist; font-weight: 400; line-height: 30.33px; word-wrap: break-word">A Área Hero é a região de maior destaque visual do layout e funciona como a principal porta de entrada para a compreensão da mensagem. Sua construção considera o sentido de leitura da audiência, sua posição em relação ao ativo e o fluxo do entorno.<br/><br/>É a partir desse ponto de vista, combinado ao objetivo de comunicação, que se define qual elemento ocupará esse espaço. Por isso, a Área Hero não pertence automaticamente à imagem, ao texto, ao vídeo ou ao logotipo.<br/><br/></span><span style="color: #343936; font-size: 18px; font-family: Geist; font-weight: 600; line-height: 30.33px; word-wrap: break-word">Não se trata de controlar o olhar, mas orientá-lo para tornar a intenção criativa mais evidente.</span></div>
+            <div style="width: 385px; height: 425px; left: 24px; top: 4041px; position: absolute; background: #D2E0FB; border-radius: 20px"></div>
+            <div style="width: 385px; height: 425px; left: 24px; top: 4505px; position: absolute; background: #F0FF65; border-radius: 20px"></div>
+            <div id="sec-05" style="scroll-margin-top: 110px; width: 867px; height: 13346px; padding-top: 108px; padding-bottom: 108px; left: 0px; top: 9868px; position: absolute; border-top: 1px rgba(17, 19, 24, 0.16) solid; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 41px; display: inline-flex">
+              <div style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: center; display: flex">
+                <div style="max-width: 720px; width: 100%; flex-direction: row; justify-content: flex-start; align-items: flex-start; gap: 32px; display: flex">
+                <div style="padding-top: 18px; flex-shrink: 0; display: flex; align-items: flex-start">
+                  <div style="width: 42px; height: 26px; border-radius: 999px; outline: 1px rgba(98, 114, 255, 0.40) solid; outline-offset: -1px; justify-content: center; align-items: center; display: inline-flex">
+                    <div style="color: #6272FF; font-size: 11.20px; font-family: Geist; font-weight: 600; line-height: 16.80px; letter-spacing: 1.12px; word-wrap: break-word">05</div>
+                  </div>
+                </div>
+                <div style="flex: 1; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                  <div style="width: 100%; max-width: 646px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                    <div style="color: #101216; font-size: 64.26px; font-family: Geist; font-weight: 380; line-height: 62.97px; word-wrap: break-word">Tipografia,<br>legibilidade e escala</div>
+                  </div>
+                  <div style="width: 100%; max-width: 646px; padding-top: 22px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                    <div style="width: 100%; max-width: 650px; color: #555B57; font-size: 23.20px; font-family: Geist; font-weight: 400; line-height: 34.34px; word-wrap: break-word">A distância, o tamanho das letras e o tempo de contato influenciam se um texto poderá ser lido pela audiência.</div>
+                  </div>
+                </div>
+              </div>
+              </div>
+              <div style="align-self: stretch; padding-top: 64px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                <div style="width: 866.95px; height: 487.66px; background: #DFE2DE; overflow: hidden; border-radius: 40px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                  <img style="align-self: stretch; height: 487.66px; position: relative" src="images/conhecimento_ux/ux_img_8_476_996.png" />
+                </div>
+              </div>
+              <div style="align-self: stretch; height: 3468px; padding-top: 72px; flex-direction: column; justify-content: flex-start; align-items: center; display: flex">
+                <div style="width: 720px; max-width: 720px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                  <div style="align-self: stretch; height: 440px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                    <div style="width: 720px; color: #343936; font-size: 18px; font-family: Geist; font-weight: 400; line-height: 30.33px; word-wrap: break-word">Já passou por uma campanha nas ruas e não conseguiu ler o que estava escrito? Muitas vezes, o texto está adequado dentro do layout e na tela do computador, mas não para a distância e o tempo em que será encontrado no ambiente real.<br/><br/>No OOH, o tamanho das letras precisa responder ao ativo, momento e contexto. Um texto visto de perto durante uma espera permite uma escala diferente daquele percebido de longe ou em movimento. Ângulo de visão, contraste e posição do ativo também mudam essa relação.<br/><br/>Por isso, não existe um tamanho que funcione da mesma maneira em todos os formatos. A tipografia precisa ser dimensionada a partir das condições reais em que a audiência encontrará a mensagem.</div>
+                  </div>
+                  <div style="align-self: stretch; height: 155px; padding-left: 30px; border-left: 3px #6272FF solid; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                    <div style="width: 687px; color: #343936; font-size: 27.20px; font-family: Geist; font-weight: 560; line-height: 38.60px; word-wrap: break-word">Por isso, não existe um tamanho que funcione da mesma maneira em todos os formatos. A tipografia precisa ser dimensionada a partir das condições reais em que a audiência encontrará a mensagem.</div>
+                  </div>
+                  <div style="width: 680px; height: 132px; max-width: 680px; padding-top: 88px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                    <div><span style="color: #111318; font-size: 35px; font-family: Geist; font-weight: 400; line-height: 43.27px; word-wrap: break-word">O tamanho começa </span><span style="color: #6272FF; font-size: 35px; font-family: Geist; font-weight: 400; line-height: 43.27px; word-wrap: break-word">pelo contexto</span></div>
+                  </div>
+                  <div style="align-self: stretch; padding-top: 24px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                    <div style="width: 720px"><span style="color: #343936; font-size: 17.84px; font-family: Geist; font-weight: 400; line-height: 30.33px; word-wrap: break-word">Espessura, proporção, espaçamento e desenho das letras também ajudam a distinguir os caracteres e reconhecer as palavras.<br/><br/>A </span><span style="color: #343936; font-size: 17.84px; font-family: Geist; font-weight: 600; line-height: 30.33px; word-wrap: break-word">DIN 1450</span><span style="color: #343936; font-size: 17.84px; font-family: Geist; font-weight: 400; line-height: 30.33px; word-wrap: break-word">, norma alemã dedicada à legibilidade, reúne critérios para o desenho, o espaçamento e a proporção das letras. A </span><span style="color: #343936; font-size: 17.84px; font-family: Geist; font-weight: 600; line-height: 30.33px; word-wrap: break-word">ADA</span><span style="color: #343936; font-size: 17.84px; font-family: Geist; font-weight: 400; line-height: 30.33px; word-wrap: break-word">, legislação norte-americana de acessibilidade aplicada também à sinalização visual, permite textos em caixa alta, caixa baixa ou uma combinação das duas. Em todos os casos, recomenda caracteres com formas convencionais e fáceis de identificar.<br/><br/>No estudo </span><span style="color: #343936; font-size: 17.84px; font-family: Geist; font-weight: 600; line-height: 30.33px; word-wrap: break-word">Letter Case and Text Legibility in Normal and Low Vision (2007)</span><span style="color: #343936; font-size: 17.84px; font-family: Geist; font-weight: 400; line-height: 30.33px; word-wrap: break-word">, Arditi e Cho observaram que, quando um texto é visto muito pequeno, como pode acontecer à distância, palavras em caixa alta podem ser mais fáceis de identificar. A vantagem desapareceu na velocidade de leitura quando as letras eram suficientemente grandes. <br/><br/>Para OOH, a pergunta deixa de ser apenas “caixa alta ou baixa?” e passa a ser:                     a mensagem continua legível na distância real de contato com o ativo?</span></div>
+                  </div>
+                  <div style="width: 720px; height: 43px; padding-top: 12px"></div>
+                  <div style="height: 295px; padding-top: 1px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 99px; display: flex">
+                    <div style="width: 720px; height: 294px; position: relative; background: #DFE2DE; overflow: hidden; border-radius: 20px">
+                      <img style="width: 721px; height: 400px; left: -0.51px; top: -0.27px; position: absolute" src="images/conhecimento_ux/ux_img_9_476_1010.png" />
+                    </div>
+                  </div>
+                  <div style="width: 680px; height: 132px; max-width: 680px; padding-top: 88px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                    <div><span style="color: #111318; font-size: 35px; font-family: Geist; font-weight: 400; line-height: 43.27px; word-wrap: break-word">O texto não pode </span><span style="color: #6272FF; font-size: 35px; font-family: Geist; font-weight: 400; line-height: 43.27px; word-wrap: break-word">desaparecer no caminho</span></div>
+                  </div>
+                  <div style="align-self: stretch; height: 24px; padding-top: 24px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                    <div style="width: 720px; height: 268px"><span style="color: #343936; font-size: 17.84px; font-family: Geist; font-weight: 400; line-height: 30.33px; word-wrap: break-word">Ao aplicar um gradiente ao texto, a cor varia ao longo das letras. Com isso, alguns trechos podem se aproximar da cor do fundo e desaparecer, dificultando o reconhecimento da palavra como um todo.<br/><br/>A </span><span style="color: #343936; font-size: 17.84px; font-family: Geist; font-weight: 600; line-height: 30.33px; word-wrap: break-word">WCAG 2.2</span><span style="color: #343936; font-size: 17.84px; font-family: Geist; font-weight: 400; line-height: 30.33px; word-wrap: break-word"> orienta que, nesses casos, a verificação considere o trecho de menor contraste, e não uma média entre as cores. Como essa relação pode mudar ao longo de uma mesma palavra, o uso de gradientes na tipografia não é indicado para DOOH.</span></div>
+                    <p>
+
+                    </p>
+                    <div style="align-self: stretch; height: 145px; padding-left: 30px; border-left: 3px #6272FF solid; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                      <div style="width: 687px; height: 145px; color: #343936; font-size: 27.20px; font-family: Geist; font-weight: 560; line-height: 38.60px; word-wrap: break-word">Parado na tela, um texto com gradiente pode parecer legível. Na rua, visto em movimento, trechos de menor contraste podem desaparecer antes que                      a palavra seja reconhecida.</div>
+                    </div>
+                    <div style="width: 680px; height: 250px; max-width: 680px; padding-top: 76px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                      <div><span style="color: #111318; font-size: 35px; font-family: Geist; font-weight: 400; line-height: 43.27px; word-wrap: break-word">Mais inclinação, </span><span style="color: #6272FF; font-size: 35px; font-family: Geist; font-weight: 400; line-height: 43.27px; word-wrap: break-word">menos compreensão</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="sec-06" style="scroll-margin-top: 110px; align-self: stretch; height: auto; padding-top: 108px; padding-bottom: 108px; border-top: 1px rgba(17, 19, 24, 0.16) solid; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                <div style="align-self: stretch; height: 221px; flex-direction: column; justify-content: flex-start; align-items: center; display: flex">
+                  <div style="max-width: 720px; width: 100%; flex-direction: row; justify-content: flex-start; align-items: flex-start; gap: 32px; display: flex">
+                <div style="padding-top: 18px; flex-shrink: 0; display: flex; align-items: flex-start">
+                  <div style="width: 42px; height: 26px; border-radius: 999px; outline: 1px rgba(98, 114, 255, 0.40) solid; outline-offset: -1px; justify-content: center; align-items: center; display: inline-flex">
+                    <div style="color: #6272FF; font-size: 11.20px; font-family: Geist; font-weight: 600; line-height: 16.80px; letter-spacing: 1.12px; word-wrap: break-word">06</div>
+                  </div>
+                </div>
+                <div style="flex: 1; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                  <div style="width: 100%; max-width: 646px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                    <div style="color: #101216; font-size: 64.26px; font-family: Geist; font-weight: 380; line-height: 62.97px; word-wrap: break-word">Fotografia <br>(imagens e vídeos)</div>
+                  </div>
+                  <div style="width: 100%; max-width: 646px; padding-top: 22px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                    <div style="width: 100%; max-width: 650px; color: #555B57; font-size: 23.20px; font-family: Geist; font-weight: 400; line-height: 34.34px; word-wrap: break-word">A escolha das imagens, vídeos, suas cores e enquadramentos, constroem conexões, despertam reconhecimento e participam da compreensão de uma campanha de forma direta.</div>
+                  </div>
+                </div>
+              </div>
+                </div>
+                <div style="align-self: stretch; height: 578px; padding-top: 90px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                  <div style="width: 866.95px; height: 487.66px; background: #DFE2DE; overflow: hidden; border-radius: 20px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                    <img style="align-self: stretch; height: 487.66px; position: relative" src="images/conhecimento_ux/ux_img_10_476_1032.png" />
+                  </div>
+                </div>
+                <div style="align-self: stretch; height: auto; padding-top: 67px; flex-direction: column; justify-content: flex-start; align-items: center; display: flex">
+                  <div style="width: 720px; height: auto; max-width: 720px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                    <div style="height: 871px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                      <div style="width: 720px; height: 499px"><span style="color: #343936; font-size: 18px; font-family: Geist; font-weight: 400; line-height: 30.33px; word-wrap: break-word">Uma imagem tem força para chamar a atenção antes mesmo que a mensagem seja interpretada. Cor, saturação, contraste, escala e enquadramento determinam o que se destaca e quanto da cena pode ser reconhecido em poucos segundos.<br/><br/>Em contextos de maior velocidade, imagens mais diretas, cores mais saturadas e enquadramentos próximos, como o close-up, potencializam a presença de rostos, produtos e detalhes importantes. Já em momentos de espera ou permanência, a cena pode se abrir para incluir o ambiente e construir uma narrativa com mais contexto.<br/><br/>Não existe um enquadramento único para todos os ativos. A imagem precisa responder ao tempo e à forma como será encontrada pela audiência.<br/><br/></span><span style="color: #6272FF; font-size: 18px; font-family: Geist; font-weight: 600; line-height: 30.33px; word-wrap: break-word">Quanto mais breve o encontro, mais direta precisa ser a imagem. Quanto maior <br/>a permanência, mais contexto ela pode revelar.</span></div>
+                      <div style="height: 332px; padding-top: 1px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                        <div style="width: 720px; height: 331px; position: relative; background: #DFE2DE; overflow: hidden; border-radius: 20px; flex-shrink: 0">
+                          <img style="width: 721px; height: 332px; left: -0.50px; top: -0.56px; position: absolute" src="images/conhecimento_ux/ux_img_11_476_1039.png" />
+                        </div>
+                      </div>
+                    </div>
+                    <div style="align-self: stretch; height: 83px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                      <div style="align-self: stretch; height: 83px; padding-left: 30px; border-left: 3px #6272FF solid; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                        <div style="width: 687px; color: #111318; font-size: 27.20px; font-family: Geist; font-weight: 560; line-height: 38.62px; word-wrap: break-word">A fotografia não mostra apenas o que a marca vende. Ela pode mostrar o que a marca significa.</div>
+                      </div>
+                    </div>
+                    <div style="width: 680px; height: 120px; max-width: 680px; padding-top: 84px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                      <div><span style="color: #111318; font-size: 35px; font-family: Geist; font-weight: 400; line-height: 43.27px; word-wrap: break-word">O olhar encontra </span><span style="color: #6272FF; font-size: 35px; font-family: Geist; font-weight: 400; line-height: 43.27px; word-wrap: break-word">outros olhares</span></div>
+                    </div>
+                    <div style="align-self: stretch; padding-top: 24px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                      <div style="width: 720px"><span style="color: #343936; font-size: 17.84px; font-family: Geist; font-weight: 400; line-height: 30.33px; word-wrap: break-word">Rostos estabelecem uma conexão rápida com a audiência, mas sua presença não garante que os demais elementos da peça também serão percebidos. A direção do olhar da pessoa na peça interfere na forma como a atenção se distribui dentro da composição.<br/><br/>No estudo </span><span style="color: #343936; font-size: 17.84px; font-family: Geist; font-weight: 600; line-height: 30.33px; word-wrap: break-word">“The Influence of Banner Advertisements on Attention and Memory</span><span style="color: #343936; font-size: 17.84px; font-family: Geist; font-weight: 400; line-height: 30.33px; word-wrap: break-word">”, publicado em 2014, Pitch Sajjacholapunt e Linden Ball acompanharam os movimentos dos olhos diante de anúncios digitais. Quando o rosto olhava diretamente para a audiência, a atenção se concentrava mais nele. Quando seu olhar apontava para o texto ou para o produto, a atenção também seguia nessa direção, favorecendo a memorização desses conteúdos. Esse efeito é conhecido como gaze cueing.</span></div>
+                    </div>
+                    <div style="width: 680px; height: auto; max-width: 680px; padding-top: 69px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                      <div><span style="color: #111318; font-size: 35px; font-family: Geist; font-weight: 400; line-height: 43.27px; word-wrap: break-word">Uma imagem pode </span><span style="color: #6272FF; font-size: 35px; font-family: Geist; font-weight: 400; line-height: 43.27px; word-wrap: break-word">condensar uma ideia</span></div>
+                    </div>
+                    <div style="width: 720px; background: #F0FF65; border-radius: 40px; padding: 48px; margin-top: 36px; box-sizing: border-box;">
+                      <div style="color: #343936; font-size: 18px; font-family: Geist; font-weight: 400; line-height: 30.33px; word-wrap: break-word">Um rosto, um gesto ou um produto em cena podem expressar uma atitude, uma situação ou o lugar que a marca deseja ocupar. Em <span style="font-weight: 600;">Thinking Into It: Consumer Interpretation of Complex Advertising Images (1997)</span>, Barbara J. Phillips investigou como as pessoas interpretam anúncios com metáforas visuais a partir de referências que já conhecem.<br/><br/>Algumas interpretações foram compartilhadas pelos participantes e se aproximaram da intenção de quem criou os anúncios. Outras variaram de pessoa para pessoa. Para construir esses sentidos, os participantes recorreram ao que sabiam sobre cultura, produtos e publicidade.<br/><br/>A imagem, portanto, pode sugerir uma mensagem sem escrevê-la, mas o significado pretendido pela direção de arte nem sempre será o significado percebido pelo público.</div>
+                    </div>
+                  </div>
+                </div>
+                <div style="width: 867px; background: #6272FF; border-radius: 40px; padding: 48px 73px; margin-top: 48px; box-sizing: border-box; align-self: center;">
+                  <div style="color: white; font-size: 18px; font-family: Geist; font-weight: 400; line-height: 25px; word-wrap: break-word">Para o OOH, a síntese visual está em escolher uma cena cujo significado possa ser percebido rapidamente e associado à marca. Quando a fotografia exige que a audiência procure o assunto, relacione muitos elementos ou decifre uma metáfora complexa, aumenta a carga cognitiva. A imagem precisa oferecer informação suficiente para que a ideia chegue no tempo de contato com a peça.</div>
+                </div>
+              </div>
+              <div id="sec-07" style="scroll-margin-top: 110px; align-self: stretch; height: auto; margin-top: 40px; padding-top: 108px; padding-bottom: 108px; border-top: 1px rgba(17, 19, 24, 0.16) solid; flex-direction: column; justify-content: flex-start; align-items: center; display: flex">
+                <div style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: center; display: flex">
+                  <div style="max-width: 720px; width: 100%; flex-direction: row; justify-content: flex-start; align-items: flex-start; gap: 32px; display: flex">
+                    <div style="padding-top: 18px; flex-shrink: 0; display: flex; align-items: flex-start">
+                      <div style="width: 42px; height: 26px; border-radius: 999px; outline: 1px rgba(98, 114, 255, 0.40) solid; outline-offset: -1px; justify-content: center; align-items: center; display: inline-flex">
+                        <div style="color: #6272FF; font-size: 11.20px; font-family: Geist; font-weight: 600; line-height: 16.80px; letter-spacing: 1.12px; word-wrap: break-word">07</div>
+                      </div>
+                    </div>
+                    <div style="flex: 1; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                      <div style="width: 100%; max-width: 646px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                        <div style="color: #101216; font-size: 64.26px; font-family: Geist; font-weight: 380; line-height: 62.97px; word-wrap: break-word">Animação</div>
+                      </div>
+                      <div style="width: 100%; max-width: 646px; padding-top: 22px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                        <div style="width: 100%; max-width: 650px; color: #555B57; font-size: 23.20px; font-family: Geist; font-weight: 400; line-height: 34.34px; word-wrap: break-word">O fluxo, a velocidade e o tempo de permanência da audiência orientam a complexidade do movimento e a quantidade de etapas da narrativa de uma animação.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div style="align-self: stretch; padding-top: 64px; flex-direction: column; justify-content: flex-start; align-items: center; display: flex">
+                  <div style="width: 866.95px; height: 487.66px; background: #DFE2DE; overflow: hidden; border-radius: 40px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                    <img style="align-self: stretch; height: 487.66px; position: relative" src="images/conhecimento_ux/ux_img_12_476_1062.png" />
+                  </div>
+                </div>
+                <div style="align-self: stretch; padding-top: 72px; flex-direction: column; justify-content: flex-start; align-items: center; display: flex">
+                  <div style="width: 720px; max-width: 720px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                    <div style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                      <div style="width: 720px"><span style="color: #343936; font-size: 17.84px; font-family: Geist; font-weight: 400; line-height: 30.33px; word-wrap: break-word">O movimento pode destacar uma informação, apresentar um produto ou construir uma narrativa. Mas acrescentar animações, transições e steps não torna necessariamente uma peça mais eficiente.<br/><br/>Em ambientes de maior fluxo e velocidade, a audiência dispõe de menos tempo para acompanhar mudanças. Por isso, a animação precisa ser mais objetiva, com movimentos diretos, ritmo desacelerado e poucas etapas.<br/><br/>Em contextos de circulação moderada, a peça pode combinar movimentos em 2D ou 3D e desenvolver uma sequência um pouco mais ampla. Já em situações de espera ou permanência, existe espaço para animações mais complexas e narrativas construídas em mais etapas.<br/><br/></span><span style="color: #6272FF; font-size: 17.84px; font-family: Geist; font-weight: 600; line-height: 30.33px; word-wrap: break-word">Quanto maior a velocidade da audiência, mais simples deve ser a animação e menor o número de steps da peça.</span></div>
+                    </div>
+                    <div style="align-self: stretch; padding-top: 50px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                      <div style="align-self: stretch; padding-left: 30px; border-left: 3px #6272FF solid; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                        <div style="width: 687px; color: #111318; font-size: 27.20px; font-family: Geist; font-weight: 560; line-height: 38.62px; word-wrap: break-word">Mais movimento não significa mais atenção. Uma animação sutil pode conduzir o olhar e dar força à mensagem sem disputar atenção com ela.</div>
+                      </div>
+                    </div>
+                    <div style="width: 680px; max-width: 680px; padding-top: 60px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                      <div><span style="color: #111318; font-size: 35px; font-family: Geist; font-weight: 400; line-height: 43.27px; word-wrap: break-word">O movimento certo </span><span style="color: #6272FF; font-size: 35px; font-family: Geist; font-weight: 400; line-height: 43.27px; word-wrap: break-word">para cada encontro</span></div>
+                    </div>
+                    <div style="align-self: stretch; padding-top: 24px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                      <div style="width: 720px"><span style="color: #343936; font-size: 17.84px; font-family: Geist; font-weight: 400; line-height: 30.33px; word-wrap: break-word">O estudo “<span style="font-weight: 600;">Science in Motion</span>”, publicado pela Vistar Media em parceria com Omnicom Media e JCDecaux em 2026, comparou criativos estáticos, motion limitado, full motion e 3D em DOOH.<br/><br/>Realizada com 7.513 participantes em ambiente simulado, a pesquisa indica que a presença de movimento pode ampliar o recall e o reconhecimento de marca. Os resultados também mostram que maior complexidade não significa necessariamente maior eficácia, pois movimentos sutis podem apresentar bom desempenho quando associados a objetivos claros de comunicação.</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div style="width: 867px; background: #6272FF; border-radius: 40px; padding: 48px 73px; margin-top: 64px; box-sizing: border-box; align-self: center;">
+                  <div style="color: white; font-size: 18px; font-family: Geist; font-weight: 400; line-height: 25px; word-wrap: break-word">A escolha do movimento exige sensibilidade. Um ciclo de 10 segundos não garante que o público verá a animação inteira, e um movimento familiar à marca em outras mídias pode não funcionar da mesma forma no OOH. É preciso ajustar ritmo, duração e complexidade ao tempo real de contato, preservando o que torna a marca reconhecível.</div>
+                </div>
+              </div>
+                <div id="sec-08" style="scroll-margin-top: 110px; align-self: stretch; height: 3224px; padding-top: 108px; padding-bottom: 108px; border-top: 1px rgba(17, 19, 24, 0.16) solid; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                  <div style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: center; display: flex">
+                    <div style="max-width: 720px; width: 100%; flex-direction: row; justify-content: flex-start; align-items: flex-start; gap: 32px; display: flex">
+                <div style="padding-top: 18px; flex-shrink: 0; display: flex; align-items: flex-start">
+                  <div style="width: 42px; height: 26px; border-radius: 999px; outline: 1px rgba(98, 114, 255, 0.40) solid; outline-offset: -1px; justify-content: center; align-items: center; display: inline-flex">
+                    <div style="color: #6272FF; font-size: 11.20px; font-family: Geist; font-weight: 600; line-height: 16.80px; letter-spacing: 1.12px; word-wrap: break-word">08</div>
+                  </div>
+                </div>
+                <div style="flex: 1; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                  <div style="width: 100%; max-width: 646px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                    <div style="color: #101216; font-size: 64.26px; font-family: Geist; font-weight: 380; line-height: 62.97px; word-wrap: break-word">Objetivo de comunicação</div>
+                  </div>
+                  <div style="width: 100%; max-width: 646px; padding-top: 22px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                    <div style="width: 100%; max-width: 650px; color: #555B57; font-size: 23.20px; font-family: Geist; font-weight: 400; line-height: 34.34px; word-wrap: break-word">O objetivo define o que a mensagem busca provocar e conecta as decisões criativas à resposta esperada da audiência.</div>
+                  </div>
+                </div>
+              </div>
+                  </div>
+                  <div style="align-self: stretch; padding-top: 64px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                    <div style="width: 866.95px; height: 487.66px; background: #DFE2DE; overflow: hidden; border-radius: 40px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                      <img style="align-self: stretch; height: 487.66px; position: relative" src="images/conhecimento_ux/ux_img_13_476_1087.png" />
+                    </div>
+                  </div>
+                  <div style="align-self: stretch; padding-top: 72px; flex-direction: column; justify-content: flex-start; align-items: center; display: flex">
+                    <div style="width: 720px; height: auto; max-width: 720px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                      <div style="align-self: stretch; height: auto; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                        <div style="width: 720px"><span style="color: #343936; font-size: 17.84px; font-family: Geist; font-weight: 400; line-height: 30.33px; word-wrap: break-word">Uma campanha pode fortalecer o reconhecimento de uma marca, apresentar uma ideia, destacar uma oferta ou orientar uma ação. Antes de definir seus elementos, é preciso deixar claro qual resultado a comunicação pretende alcançar e no OOH não é diferente.<br/><br/>O objetivo não descreve apenas o que estará presente na peça. Ele estabelece o que a audiência deve perceber, compreender ou fazer depois do contato com a mensagem.<br/><br/>Essa definição orienta escolhas de imagem, texto, cor, escala, movimento e quantidade<br/>de informações. <br/><br/></span><span style="color: #6272FF; font-size: 17.84px; font-family: Geist; font-weight: 600; line-height: 30.33px; word-wrap: break-word">Um objetivo claro transforma escolhas visuais em direção.</span></div>
+                      </div>
+                      <div style="align-self: stretch; height: auto; padding-top: 32px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                        <div style="align-self: stretch; padding-left: 30px; border-left: 3px #6272FF solid; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                          <div style="width: 687px; color: #343936; font-size: 27.20px; font-family: Geist; font-weight: 600; line-height: 28.80px; word-wrap: break-word">Quando diferentes intenções disputam o mesmo espaço, a comunicação perde clareza e dificulta a compreensão da audiência.</div>
+                        </div>
+                      </div>
+                      <div style="width: 680px; height: auto; max-width: 680px; padding-top: 48px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                        <div><span style="color: #111318; font-size: 35px; font-family: Geist; font-weight: 400; line-height: 43.27px; word-wrap: break-word">A intenção </span><span style="color: #6272FF; font-size: 35px; font-family: Geist; font-weight: 400; line-height: 43.27px; word-wrap: break-word">encontra o público</span></div>
+                      </div>
+                      <div style="align-self: stretch; height: auto; padding-top: 24px; padding-bottom: 8px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                        <div style="width: 720px; color: #343936; font-size: 17.84px; font-family: Geist; font-weight: 400; line-height: 30.33px; word-wrap: break-word">As práticas da Geopath, organização norte-americana especializada na mensuração de audiência em OOH, recomendam que as campanhas partam de objetivos definidos e relacionados à audiência, ao contexto de exposição e aos indicadores de desempenho.<br/><br/>Essa relação também aparece no estudo PULSE, realizado pela Bauer Media Outdoor em parceria com a Kantar, com 1.350 participantes. Na pesquisa, 64% dos entrevistados consideraram úteis anúncios relacionados ao local. Os resultados também apontam que relevância e criatividade influenciam a atenção, a apreciação e a resposta ao DOOH.<br/><br/>Uma mensagem sobre mobilidade próxima a uma estação, uma orientação relacionada ao entorno ou uma oferta conectada ao momento da jornada não utilizam o contexto apenas como cenário. Elas criam uma relação mais direta entre o objetivo da campanha e a situação vivida pela audiência.</div>
+                      </div>
+                      <div style="width: 720px; height: 405px; margin-top: 36px; position: relative; background: #DFE2DE; overflow: hidden; border-radius: 20px; flex-shrink: 0">
+                        <img style="width: 100%; height: 100%; object-fit: cover; display: block" src="images/conhecimento_ux/ux_img_14_476_1100.png" />
+                      </div>
+                      <div style="width: 867px; background: #6272FF; border-radius: 40px; padding: 48px 73px; margin-top: 40px; box-sizing: border-box; align-self: center;">
+                        <div style="color: white; font-size: 18px; font-family: Geist; font-weight: 400; line-height: 25px; word-wrap: break-word">Contexto, hierarquia, grid, contraste, tipografia, imagem e movimento não funcionam como decisões isoladas. Cada critério contribui para aproximar o objetivo da campanha das condições reais em que a mensagem será encontrada.<br/><br/>A criação continua aberta a diferentes linguagens e possibilidades. O que muda é a capacidade de fazer escolhas conscientes, observar seus efeitos, transformar cada campanha em aprendizado para a próxima.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div style="width: 385px; height: 425px; left: 449px; top: 4505px; position: absolute; background: #101216; border-radius: 20px"></div>
+            <div style="width: 385px; height: 425px; left: 449px; top: 4041px; position: absolute; background: #F5D6FD; border-radius: 20px"></div>
+            <div style="width: 333px; height: 86px; left: 50px; top: 4287px; position: absolute"><span style="color: black; font-size: 25px; font-family: Geist; font-weight: 600; line-height: 30.33px; word-wrap: break-word">Reconhecimento<br/></span><span style="color: black; font-size: 16px; font-family: Geist; font-weight: 400; line-height: 22px; word-wrap: break-word">A marca ganha a Área Hero. Conceito, mensagem, imagem ou vídeo entram<br/>para ampliar sua presença.</span></div>
+            <div style="width: 333px; height: 118px; left: 50px; top: 4769px; position: absolute"><span style="color: black; font-size: 25px; font-family: Geist; font-weight: 600; line-height: 30.33px; word-wrap: break-word">Oferta<br/></span><span style="color: black; font-size: 16px; font-family: Geist; font-weight: 400; line-height: 22px; word-wrap: break-word">Apresentar uma oferta, o produto, imagem ou vídeo ocupam a Área Hero. Título com a condição comercial tornam a proposta mais clara.</span></div>
+            <div style="width: 333px; height: 118px; left: 475px; top: 4769px; position: absolute"><span style="color: white; font-size: 25px; font-family: Geist; font-weight: 600; line-height: 30.33px; word-wrap: break-word">Ação<br/></span><span style="color: white; font-size: 16px; font-family: Geist; font-weight: 400; line-height: 22px; word-wrap: break-word">Provocar uma resposta, a instrução assume<br/>a Área Hero. As informações de apoio mostram onde, como ou quando agir.</span></div>
+            <div style="width: 328px; height: 95px; left: 480px; top: 4287px; position: absolute"><span style="color: black; font-size: 25px; font-family: Geist; font-weight: 600; line-height: 30.33px; word-wrap: break-word">Conceito<br/></span><span style="color: black; font-size: 16px; font-family: Geist; font-weight: 400; line-height: 22px; word-wrap: break-word">Comunicar uma ideia ou um posicionamento, o título assume<br/>a Área Hero. </span></div>
+            <img style="width: 384px; height: 216px; left: 24px; top: 4037px; position: absolute; border-top-left-radius: 20px; border-top-right-radius: 20px" src="images/conhecimento_ux/ux_img_15_476_1107.png" />
+            <img style="width: 384px; height: 216px; left: 24px; top: 4505px; position: absolute; border-top-left-radius: 20px; border-top-right-radius: 20px" src="images/conhecimento_ux/ux_img_16_476_1108.png" />
+            <img style="width: 384px; height: 216px; left: 450px; top: 4501px; position: absolute; border-top-left-radius: 20px; border-top-right-radius: 20px" src="images/conhecimento_ux/ux_img_17_476_1109.png" />
+            <img style="width: 384px; height: 216px; left: 450px; top: 4041px; position: absolute; border-top-left-radius: 20px; border-top-right-radius: 20px" src="images/conhecimento_ux/ux_img_18_476_1110.png" />
+            <div style="width: 867px; height: 179px; left: 0px; top: 5259px; position: absolute; background: #6272FF; border-radius: 40px"></div>
+            <div style="width: 720px; height: 363px; left: 53px; top: 2690px; position: absolute; overflow: hidden; border-radius: 40px; outline: 1px #6272FF solid; outline-offset: -1px">
+              <img style="width: 720px; height: 403px; left: 0px; top: -23px; position: absolute; outline: 1px #6272FF solid" src="images/conhecimento_ux/ux_img_19_476_1113.png" />
+            </div>
+            <div style="width: 720px; height: 338px; padding-top: 34px; left: 73px; top: 3517px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
+              <div style="align-self: stretch; height: 199px; padding-top: 28px; padding-left: 30px; border-left: 3px #6272FF solid; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                <div style="width: 687px; color: black; font-size: 27.20px; font-family: Geist; font-weight: 500; line-height: 38.62px; word-wrap: break-word">A Área Hero define o primeiro olhar. Quando marca, conceito, produto ou chamada ganha protagonismo,                a composição organiza a atenção em torno do que<br/>a campanha precisa comunicar.</div>
+              </div>
+            </div>
+            <div style="width: 720px; height: 199px; left: 73px; top: 4998px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
+              <div style="align-self: stretch; height: 199px; padding-top: 1px; padding-left: 30px; border-left: 3px #6272FF solid; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                <div style="width: 687px; color: #101216; font-size: 27px; font-family: Geist; font-weight: 500; line-height: 38px; word-wrap: break-word">Depois que o objetivo de comunicação define o que assume protagonismo, o grid ajuda a dimensionar                e posicionar a Área Hero. Os demais conteúdos se organizam a partir dela, mantendo conexão com                a hierarquia proposta.</div>
+              </div>
+            </div>
+            <div style="width: 720px; height: 90px; left: 73px; top: 3921px; position: absolute; color: #101216; font-size: 18px; font-family: Geist; font-weight: 400; line-height: 22px; word-wrap: break-word">Essas possibilidades não são modelos rígidos, mas pontos de partida             para organizar a composição.</div>
+            <div style="width: 720px; left: 73px; top: 5298px; position: absolute; color: white; font-size: 18px; font-family: Geist; font-weight: 400; line-height: 25px; word-wrap: break-word">Cada escolha dentro do sistema visual contribui para aproximar a composição de seu objetivo de comunicação. Assim, o layout deixa de ser uma reunião de elementos isolados e passa a funcionar como uma unidade, construindo uma expressão própria, reconhecível e memorável para a marca.</div>
+            <div style="width: 867px; height: 228px; left: 0px; top: 9500px; position: absolute; background: #6272FF; border-radius: 40px"></div>
+            <div style="width: 720px; left: 83px; top: 9539px; position: absolute; color: white; font-size: 18px; font-family: Geist; font-weight: 400; line-height: 25px; word-wrap: break-word">A cor pode carregar identidade, significado e códigos próprios de uma marca.<br/>Mas esse valor só se realiza na comunicação quando as relações visuais também<br/>tornam perceptíveis seus demais elementos e signos.<br/><br/>Visibilidade e expressão de marca não são decisões separadas. A primeira cria as condições para que a segunda aconteça.</div>
+            <div style="width: 867px; height: 301px; left: 0px; top: 13869px; position: absolute; background: #6272FF; border-radius: 40px"></div>
+            <div style="width: 720px; left: 83px; top: 13924px; position: absolute; color: white; font-size: 18px; font-family: Geist; font-weight: 400; line-height: 25px; word-wrap: break-word">A tipografia constrói identidade, organiza a mensagem e define o tom da comunicação. Para cumprir essas funções no OOH, precisa permanecer reconhecível à distância, em movimento e sob diferentes condições de exposição. <br/><br/>Dimensionar, alinhar, colorir e posicionar o texto são partes de uma mesma decisão: fazer com que a mensagem preserve sua forma e sua intenção quando ocupar a cidade <br/>e encontrar seu público.</div>
+            
+            <div id="sec-04" style="scroll-margin-top: 110px; width: 867px; height: 3927px; padding-top: 108px; padding-bottom: 108px; left: 0px; top: 5573px; position: absolute; border-top: 1px rgba(17, 19, 24, 0.16) solid; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
+              <div style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: center; display: flex">
+                <div style="max-width: 720px; width: 100%; flex-direction: row; justify-content: flex-start; align-items: flex-start; gap: 32px; display: flex">
+                <div style="padding-top: 18px; flex-shrink: 0; display: flex; align-items: flex-start">
+                  <div style="width: 42px; height: 26px; border-radius: 999px; outline: 1px rgba(98, 114, 255, 0.40) solid; outline-offset: -1px; justify-content: center; align-items: center; display: inline-flex">
+                    <div style="color: #6272FF; font-size: 11.20px; font-family: Geist; font-weight: 600; line-height: 16.80px; letter-spacing: 1.12px; word-wrap: break-word">04</div>
+                  </div>
+                </div>
+                <div style="flex: 1; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                  <div style="width: 100%; max-width: 646px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                    <div style="color: #101216; font-size: 64.26px; font-family: Geist; font-weight: 380; line-height: 62.97px; word-wrap: break-word">Cores, contraste e acessibilidade</div>
+                  </div>
+                  <div style="width: 100%; max-width: 646px; padding-top: 22px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                    <div style="width: 100%; max-width: 650px; color: #555B57; font-size: 23.20px; font-family: Geist; font-weight: 400; line-height: 34.34px; word-wrap: break-word">A relação entre cores, contraste e condições de exposição determina se os elementos do layout podem ser percebidos e compreendidos pela audiência.</div>
+                  </div>
+                </div>
+              </div>
+              </div>
+              <div style="align-self: stretch; padding-top: 64px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                <div style="width: 866.95px; height: 487.66px; background: #DFE2DE; overflow: hidden; border-radius: 40px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                  <img style="align-self: stretch; height: 487.66px; position: relative" src="images/conhecimento_ux/ux_img_20_476_1150.png" />
+                </div>
+              </div>
+              <div style="align-self: stretch; padding-top: 72px; flex-direction: column; justify-content: flex-start; align-items: center; display: flex">
+                <div style="width: 720px; max-width: 720px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                  <div style="flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                    <div style="width: 720px"><span style="color: #343936; font-size: 17.84px; font-family: Geist; font-weight: 400; line-height: 30.33px; word-wrap: break-word">Uma combinação pode parecer precisa na tela do computador e desaparecer em um relógio de rua digital diante do sol, dos reflexos ou da luz do entorno. O contraste não vive apenas entre duas cores. Ele acontece entre mensagem, suporte, ambiente e olhar.<br/><br/>Com a expansão e a digitalização do OOH, o meio passa a incorporar processos e critérios próprios do design digital, desenvolvidos para ampliar a acessibilidade da comunicação.<br/><br/>Entre as principais referências está a WCAG 2.2, criada pelo W3C. Suas diretrizes estabelecem relações mínimas de contraste entre texto e fundo: 4,5:1 para textos regulares e 3:1 para textos grandes no nível AA; 7:1 e 4,5:1 no nível AAA.<br/><br/></span><span style="color: #6272FF; font-size: 17.84px; font-family: Geist; font-weight: 600; line-height: 30.33px; word-wrap: break-word">Medir o contraste permite detectar combinações que podem dificultar a leitura ainda na criação. O resultado orienta as escolhas do layout, mas não prevê, sozinho, como a peça será percebida.</span></div>
+                  </div>
+                  <div style="align-self: stretch; padding-top: 50px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                    <div style="align-self: stretch; padding-left: 30px; border-left: 3px #6272FF solid; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                      <div style="width: 687px; color: #111318; font-size: 27.20px; font-family: Geist; font-weight: 560; line-height: 38.62px; word-wrap: break-word">O contraste deixa de depender apenas da avaliação visual e passa a contar também com critérios mensuráveis antes de o layout chegar às cidades.</div>
+                    </div>
+                  </div>
+                  <div style="width: 720px; height: 41px; padding-top: 27.65px"></div>
+                  <div style="align-self: stretch; padding-top: 24px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                    <div style="width: 720px; color: black; font-size: 22px; font-family: Geist; font-weight: 600; text-decoration: underline; line-height: 30.33px; word-wrap: break-word">TESTE AQUI O CONTRASTE</div>
+                  </div>
+                  <div style="align-self: stretch; height: 73px; padding-top: 12px"></div>
+                </div>
+              </div>
+              <div style="width: 867px; height: 418px; left: 0px; top: 1668px; position: absolute">
+                <div style="width: 720px; height: 400px; left: 73px; top: 87px; position: absolute; background: #DFE2DE; overflow: hidden; border-radius: 20px">
+                  <img style="width: 780px; height: 427px; left: -17.51px; top: -14px; position: absolute" src="images/conhecimento_ux/ux_img_21_476_1164.png" />
+                </div>
+                <div style="width: 680px; height: 132px; max-width: 680px; padding-top: 58px; left: 73px; top: 487px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
+                  <div><span style="color: #111318; font-size: 35px; font-family: Geist; font-weight: 400; line-height: 43.27px; word-wrap: break-word">Uma cor </span><span style="color: #6272FF; font-size: 35px; font-family: Geist; font-weight: 400; line-height: 43.27px; word-wrap: break-word">nunca aparece sozinha</span></div>
+                </div>
+                <div style="width: 867px; left: 73px; top: 619px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
+                  <div style="width: 720px"><span style="color: #343936; font-size: 17.84px; font-family: Geist; font-weight: 400; line-height: 30.33px; word-wrap: break-word">No estudo </span><span style="color: #343936; font-size: 17.84px; font-family: Geist; font-weight: 600; line-height: 30.33px; word-wrap: break-word">“The Effects of Luminance Contrast, Colour Combinations, Font, and Search Time on Brand Icon Legibility”</span><span style="color: #343936; font-size: 17.84px; font-family: Geist; font-weight: 400; line-height: 30.33px; word-wrap: break-word">, publicado em 2017, Ya-Hsien Ko realizou uma pesquisa com ícones de marca exibidos em uma tela de computador. Os participantes precisavam localizar e reconhecer os ícones em diferentes combinações de cores, níveis de contraste de luminância, fontes e tempos de busca.<br/><br/>Entre as combinações avaliadas, amarelo sobre preto, amarelo sobre azul e branco sobre azul apresentaram os melhores resultados de legibilidade. O contraste de 18:1 teve o melhor desempenho entre os níveis testados, Arial foi mais legível que Times New Roman e, quando tiveram mais tempo para procurar os ícones, os participantes conseguiram identificá-los com maior precisão.<br/><br/>A legibilidade não depende só de um índice de contraste. A combinação das cores e a escolha da fonte também fazem diferença. E, como vimos ao falar de carga cognitiva, o tempo disponível para encontrar e reconhecer a informação interfere na compreensão da mensagem.</span></div>
+                </div>
+              </div>
+              <div style="width: 720px; height: 620px; left: 72.49px; top: 3249px; position: absolute; background: #F0FF65; border-radius: 40px"></div>
+              <div style="width: 614px; height: 455px; left: 126.49px; top: 3325px; position: absolute"><span style="color: #343936; font-size: 18px; font-family: Geist; font-weight: 400; line-height: 30.33px; word-wrap: break-word">Pessoas com baixa visão podem encontrar maior dificuldade para distinguir elementos com pouca diferença de luminância. Diferentes tipos de daltonismo também podem aproximar cores que, para outras pessoas, parecem claramente separadas.<br/><br/>Por isso, uma mensagem não deve depender exclusivamente da cor para ser compreendida. Textos legíveis e dimensionados para o contexto, imagens claras, ícones, símbolos, formas e outros elementos reconhecíveis da marca criam diferentes caminhos para identificar o conteúdo.<br/><br/>A cor constrói identidade, mas o acesso à mensagem não deve depender somente dela.<br/></span><span style="color: #343936; font-size: 18px; font-family: Geist; font-weight: 600; line-height: 30.33px; word-wrap: break-word"><br/>Simule diferentes formas de percepção das cores:<br/></span><span style="color: #343936; font-size: 18px; font-family: Geist; font-weight: 600; text-decoration: underline; line-height: 30.33px; word-wrap: break-word">Adobe Color — Ferramentas de acessibilidade</span></div>
+            </div>
+            <div style="width: 720px; height: 612px; left: 72px; top: 13206px; position: absolute; background: #F0FF65; border-radius: 40px"></div>
+            <div style="width: 614px; height: 508px; left: 126px; top: 13247px; position: absolute"><span style="color: #343936; font-size: 18px; font-family: Geist; font-weight: 400; line-height: 30.33px; word-wrap: break-word">A inclinação pode contribuir para a expressão visual, mas também muda a forma como uma palavra é percebida. No estudo </span><span style="color: #343936; font-size: 18px; font-family: Geist; font-weight: 600; line-height: 30.33px; word-wrap: break-word">“Reading Sentences of Words With Rotated Letters”</span><span style="color: #343936; font-size: 18px; font-family: Geist; font-weight: 400; line-height: 30.33px; word-wrap: break-word">, publicado em 2019, Barbara J. Juhasz e outros pesquisadores observaram o movimento dos olhos durante a leitura de frases em inglês.<br/><br/>Quanto maior a rotação das letras, maior a interferência na leitura. O efeito era ainda mais evidente quando as letras de uma mesma palavra seguiam inclinações diferentes, quebrando sua continuidade visual.<br/><br/>No ambiente veloz e pouco controlado das cidades, palavras ou letras anguladas exigem mais tempo e esforço para serem reconhecidas, aumentando o risco de a mensagem não ser identificada durante o período de exposição.<br/><br/>Por isso para o OOH, prefira textos alinhados a esquerda ou centro sem inclinação.</span></div>
+            <div style="width: 720px; height: 238px; left: 73px; top: 8409px; position: absolute; background: #DFE2DE; overflow: hidden; border-radius: 20px">
+              <img style="width: 721px; height: 400px; left: -0.53px; top: 0.04px; position: absolute" src="images/conhecimento_ux/ux_img_22_476_1176.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="align-self: stretch; padding-top: 80px; flex-direction: column; justify-content: flex-start; align-items: center; display: flex">
+      <div style="align-self: stretch; padding-left: 75.60px; padding-right: 75.60px; padding-top: 36px; padding-bottom: 36px; border-top: 1px rgba(16, 18, 22, 0.16) solid; justify-content: space-between; align-items: center; display: inline-flex">
+        <img style="width: 100px; height: 28.39px; position: relative; opacity: 0.70" src="images/logo-footer.png" />
+        <div style="flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
+          <div style="color: rgba(17, 19, 24, 0.44); font-size: 12px; font-family: Geist; font-weight: 400; line-height: 18px; word-wrap: break-word">© 2026 ROOHTS · Powered by Grupo Dreamers</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Scroll-Spy Script for Left Sidebar and Active State -->
+  <script>
+    const sectionIds = ['sec-01', 'sec-02', 'sec-03', 'sec-04', 'sec-05', 'sec-06', 'sec-07', 'sec-08'];
+    const tocItems = document.querySelectorAll('.toc-item');
+
+    function updateActiveToc() {
+      const scrollPos = window.scrollY + 180;
+      let currentActive = 'sec-01';
+
+      for (const id of sectionIds) {
+        const el = document.getElementById(id);
+        if (el) {
+          const top = el.getBoundingClientRect().top + window.scrollY;
+          if (top <= scrollPos) {
+            currentActive = id;
+          }
+        }
+      }
+
+      tocItems.forEach(item => {
+        const target = item.getAttribute('data-target');
+        const textEl = item.querySelector('.toc-text');
+        if (target === currentActive) {
+          if (textEl) {
+            textEl.style.color = '#6272FF';
+            textEl.style.fontWeight = '600';
+          }
+        } else {
+          if (textEl) {
+            textEl.style.color = '#555B57';
+            textEl.style.fontWeight = '400';
+          }
+        }
+      });
+    }
+
+    window.addEventListener('scroll', updateActiveToc, { passive: true });
+    window.addEventListener('load', updateActiveToc);
+  </script>
+</body>
+</html>

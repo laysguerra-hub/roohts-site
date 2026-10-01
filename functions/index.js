@@ -130,7 +130,7 @@ exports.enviarContato = onRequest(
 
             sgMail.setApiKey(apiKey);
 
-            const toEmail = process.env.CONTACT_TO_EMAIL || "lays.guerra@roohts.com.br";
+            const toEmail = process.env.CONTACT_TO_EMAIL || "contato@roohts.com.br";
             const fromEmail = process.env.CONTACT_FROM_EMAIL || "roohts@roohts.com.br";
 
             const msg = {

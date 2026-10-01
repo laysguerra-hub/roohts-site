@@ -50,7 +50,7 @@
         </div>
     
         <!-- Mobile Menu Button -->
-        <button id="mobile-menu-btn" class="md:hidden bg-brand-yellow text-dark px-4 py-2 rounded-full text-[13px] font-medium uppercase tracking-wider">
+        <button id="mobile-menu-btn" class="md:hidden bg-brand-yellow text-dark px-4 py-2 rounded-full text-[13px] font-medium tracking-wider">
             Menu
         </button>
 </nav>
@@ -65,9 +65,10 @@
         <!-- Inner container to keep text aligned with the rest of the site -->
         <div class="w-full max-w-[1440px] mx-auto relative z-10">
             <div class="w-full max-w-[586px]">
-                <h1 class="text-white text-[54px] leading-[50px] md:text-[70px] font-light uppercase md:leading-[70px]">
+                <h1 class="text-white text-[54px] leading-[50px] md:text-[70px] md:leading-[70px] font-light uppercase">
                     INTO THE<br>
-                    <span class="text-brand-blue">OUT OF<br class="hidden md:block">HOME</span>
+                    <span class="text-brand-blue">OUT OF</span><br>
+                    <span class="text-brand-blue">HOME</span>
                 </h1>
             </div>
         </div>
@@ -76,14 +77,21 @@
     <!-- Rest of the page content -->
     <main class="w-full max-w-[1440px] mx-auto flex flex-col items-center relative">
         <!-- Nossa Visão -->
-        <section class="animate-on-scroll w-full px-4 md:px-[56px] py-12 md:py-[90px] -mt-6 md:-mt-10 relative z-20">
-            <div class="bg-white rounded-[32px] md:rounded-[46px] border border-black/10 pt-[57px] pb-6 px-5 md:p-[78px] flex flex-col gap-5 md:gap-8 shadow-sm">
+        <section class="animate-on-scroll w-full px-4 md:px-[56px] py-12 md:py-[50px] -mt-6 md:-mt-10 relative z-20">
+            <div class="bg-white rounded-[32px] md:rounded-[46px] border-none pt-[57px] pb-6 px-5 md:px-[110px] md:py-[100px] flex flex-col gap-5 md:gap-8 shadow-sm">
                 <span class="text-brand-blue text-xs uppercase tracking-[1.76px]">Nossa Visão</span>
-                <p class="text-dark text-[18px] md:text-[35px] italic font-light leading-[25px] md:leading-[43px]">
-                    Nascemos para ir além da superfície e entender o que está por debaixo do concreto. Integramos Dados, Estratégia, Mídia e Criação para transformar campanhas de OOH em influência, escala e experiência.
+                <p class="text-dark text-[15px] md:text-[32px] lg:text-[36px] italic font-normal leading-[22px] md:leading-[42px] tracking-tight">
+                    Nascemos para ir além da superfície<br class="block md:hidden">
+                    e entender o que está<br class="hidden md:inline">
+                    por debaixo do<br class="block md:hidden">
+                    concreto. Integramos Dados, Estratégia,<br class="block md:hidden">
+                    Mídia<br class="hidden md:inline">
+                    e Criação para transformar<br class="block md:hidden">
+                    campanhas de OOH em influência,<br>
+                    escala e experiência.
                 </p>
                 <div>
-                    <a href="sobre.html" class="inline-flex bg-dark text-white text-sm uppercase tracking-wide px-6 py-3 rounded-full hover:bg-black/80 transition items-center gap-2">
+                    <a href="sobre.html" class="inline-flex bg-dark text-white text-[11px] md:text-[13px] uppercase tracking-[1.2px] md:tracking-[0.1em] px-6 py-[14px] md:px-6 md:py-4 rounded-full hover:bg-black/80 transition items-center gap-2">
                         Saiba mais <span><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline-block w-[1em] h-[1em] ml-1"><path d="M9.91638 9.91638V4.08398H4.08398M9.91638 4.08398L4.08398 9.91638" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
                     </a>
                 </div>
@@ -91,77 +99,86 @@
         </section>
 
         <!-- Quem Somos / Do briefing ao checking -->
-        <section class="animate-on-scroll w-full px-6 md:px-[56px] py-16 flex flex-col lg:flex-row gap-16 items-start justify-between">
+        <section class="animate-on-scroll w-full px-7 md:px-[56px] py-8 md:py-[100px] flex flex-col lg:flex-row gap-6 md:gap-[130px] items-start justify-center max-w-[1300px] mx-auto">
             <!-- Left: Intro -->
-            <div class="w-full lg:flex-1 flex flex-col gap-6 lg:max-w-[460px]">
+            <div class="w-full lg:flex-1 flex flex-col gap-4 md:gap-8 lg:max-w-[420px]">
                 <span class="text-black/50 text-xs uppercase tracking-[1.68px] font-medium">Quem somos</span>
-                <h2 class="text-[40px] leading-[40px] md:text-[54px] tracking-tight md:leading-[1.05]">
+                <h2 class="text-[40px] leading-[40px] md:text-[54px] lg:text-[60px] tracking-tight md:leading-[1.05]">
                     Uma business<br>
                     <span class="text-brand-blue">powerhouse<br>em OOH</span>
                 </h2>
-                <p class="text-black/60 text-base leading-[26px]">
+                <p class="text-black/60 text-[16px] leading-[22px] md:leading-[26px]">
                     Transformamos desafios de negócio em campanhas de OOH eficazes e autênticas, que geram resultados e ampliam a presença das marcas nas cidades.
                 </p>
             </div>
             
             <!-- Right: List -->
-            <div class="w-full lg:w-[480px] flex flex-col gap-3">
-                <div class="grid grid-cols-2 gap-3">
-                    <div class="bg-white rounded-2xl border border-black/5 px-6 py-5 flex flex-col gap-1 shadow-sm h-[104px] justify-center hover:scale-[1.03] transition-transform duration-300 hover:shadow-md cursor-default">
-                        <span class="text-brand-blue text-[9px] uppercase tracking-[1.2px] font-semibold">01</span>
-                        <h3 class="text-[20px] font-normal tracking-tight">Pensamos</h3>
+            <div class="w-full lg:w-[560px] flex flex-col gap-3">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    <div class="bg-white rounded-[24px] border-none p-5 md:px-6 md:py-5 flex flex-col gap-2 md:gap-1 shadow-sm h-auto md:h-[104px] justify-center hover:scale-[1.03] transition-transform duration-300 hover:shadow-md cursor-default">
+                        <span class="text-brand-blue text-[10px] md:text-[9px] uppercase tracking-[1.2px] font-medium">01</span>
+                        <h3 class="text-[24px] md:text-[20px] font-normal leading-none tracking-tight">Pensamos</h3>
                     </div>
-                    <div class="bg-white rounded-2xl border border-black/5 px-6 py-5 flex flex-col gap-1 shadow-sm h-[104px] justify-center hover:scale-[1.03] transition-transform duration-300 hover:shadow-md cursor-default">
-                        <span class="text-brand-blue text-[9px] uppercase tracking-[1.2px] font-semibold">02</span>
-                        <h3 class="text-[20px] font-normal tracking-tight">Estruturamos</h3>
+                    <div class="bg-white rounded-[24px] border-none p-5 md:px-6 md:py-5 flex flex-col gap-2 md:gap-1 shadow-sm h-auto md:h-[104px] justify-center hover:scale-[1.03] transition-transform duration-300 hover:shadow-md cursor-default">
+                        <span class="text-brand-blue text-[10px] md:text-[9px] uppercase tracking-[1.2px] font-medium">02</span>
+                        <h3 class="text-[24px] md:text-[20px] font-normal leading-none tracking-tight">Estruturamos</h3>
                     </div>
-                    <div class="bg-white rounded-2xl border border-black/5 px-6 py-5 flex flex-col gap-1 shadow-sm h-[104px] justify-center hover:scale-[1.03] transition-transform duration-300 hover:shadow-md cursor-default">
-                        <span class="text-brand-blue text-[9px] uppercase tracking-[1.2px] font-semibold">03</span>
-                        <h3 class="text-[20px] font-normal tracking-tight">Criamos</h3>
+                    <div class="bg-white rounded-[24px] border-none p-5 md:px-6 md:py-5 flex flex-col gap-2 md:gap-1 shadow-sm h-auto md:h-[104px] justify-center hover:scale-[1.03] transition-transform duration-300 hover:shadow-md cursor-default">
+                        <span class="text-brand-blue text-[10px] md:text-[9px] uppercase tracking-[1.2px] font-medium">03</span>
+                        <h3 class="text-[24px] md:text-[20px] font-normal leading-none tracking-tight">Criamos</h3>
                     </div>
-                    <div class="bg-white rounded-2xl border border-black/5 px-6 py-5 flex flex-col gap-1 shadow-sm h-[104px] justify-center hover:scale-[1.03] transition-transform duration-300 hover:shadow-md cursor-default">
-                        <span class="text-brand-blue text-[9px] uppercase tracking-[1.2px] font-semibold">04</span>
-                        <h3 class="text-[20px] font-normal tracking-tight">Cocriamos</h3>
+                    <div class="bg-white rounded-[24px] border-none p-5 md:px-6 md:py-5 flex flex-col gap-2 md:gap-1 shadow-sm h-auto md:h-[104px] justify-center hover:scale-[1.03] transition-transform duration-300 hover:shadow-md cursor-default">
+                        <span class="text-brand-blue text-[10px] md:text-[9px] uppercase tracking-[1.2px] font-medium">04</span>
+                        <h3 class="text-[24px] md:text-[20px] font-normal leading-none tracking-tight">Cocriamos</h3>
                     </div>
-                    <div class="bg-white rounded-2xl border border-black/5 px-6 py-5 flex flex-col gap-1 shadow-sm h-[104px] justify-center hover:scale-[1.03] transition-transform duration-300 hover:shadow-md cursor-default">
-                        <span class="text-brand-blue text-[9px] uppercase tracking-[1.2px] font-semibold">05</span>
-                        <h3 class="text-[20px] font-normal tracking-tight">Executamos</h3>
+                    <div class="bg-white rounded-[24px] border-none p-5 md:px-6 md:py-5 flex flex-col gap-2 md:gap-1 shadow-sm h-auto md:h-[104px] justify-center hover:scale-[1.03] transition-transform duration-300 hover:shadow-md cursor-default">
+                        <span class="text-brand-blue text-[10px] md:text-[9px] uppercase tracking-[1.2px] font-medium">05</span>
+                        <h3 class="text-[24px] md:text-[20px] font-normal leading-none tracking-tight">Executamos</h3>
                     </div>
-                    <div class="bg-white rounded-2xl border border-black/5 px-6 py-5 flex flex-col gap-1 shadow-sm h-[104px] justify-center hover:scale-[1.03] transition-transform duration-300 hover:shadow-md cursor-default">
-                        <span class="text-brand-blue text-[9px] uppercase tracking-[1.2px] font-semibold">06</span>
-                        <h3 class="text-[20px] font-normal tracking-tight">Mensuramos</h3>
+                    <div class="bg-white rounded-[24px] border-none p-5 md:px-6 md:py-5 flex flex-col gap-2 md:gap-1 shadow-sm h-auto md:h-[104px] justify-center hover:scale-[1.03] transition-transform duration-300 hover:shadow-md cursor-default">
+                        <span class="text-brand-blue text-[10px] md:text-[9px] uppercase tracking-[1.2px] font-medium">06</span>
+                        <h3 class="text-[24px] md:text-[20px] font-normal leading-none tracking-tight">Mensuramos</h3>
                     </div>
                 </div>
-                <div class="bg-brand-blue rounded-[18px] py-4 px-6 flex justify-center mt-1">
-                    <span class="text-white text-[13px] uppercase tracking-[1.68px] font-medium">Do briefing ao checking</span>
+                <div class="bg-brand-blue rounded-[24px] py-5 md:py-[22px] px-6 md:px-8 flex justify-start items-center mt-1 md:mt-1 w-full">
+                    <span class="text-white text-[15px] md:text-[13px] uppercase tracking-[1.68px] font-medium">Do briefing ao checking</span>
                 </div>
             </div>
         </section>
 
         <!-- Nossos Pilares -->
-        <section class="animate-on-scroll w-full px-6 md:px-[56px] py-16">
-            <div class="bg-[#E7E9E7] rounded-[42px] p-8 md:p-[112px] flex flex-col gap-8 w-full">
-                <span class="text-black/50 text-xs uppercase tracking-[1.68px]">Nossos Pilares</span>
-                <h2 class="text-4xl md:text-[45px] leading-tight mb-6">
-                    O que sustenta <span class="text-brand-blue">cada decisão</span>
+        <section class="animate-on-scroll w-full px-4 md:px-[56px] py-4 md:py-[100px] flex flex-col items-center w-full mx-auto">
+            <div class="bg-[#E7E9E7] rounded-[32px] lg:rounded-[42px] pt-[70px] pb-6 px-5 lg:px-[110px] lg:py-[112px] flex flex-col items-start w-full mx-auto gap-6 lg:gap-0">
+                <span class="text-black/50 text-xs uppercase tracking-[1.68px] lg:mb-2">Nossos Pilares</span>
+                <h2 class="text-[34px] leading-[39px] md:text-[45px] md:leading-tight mb-0 lg:mb-8">
+                    O que sustenta <br class="block md:hidden"><span class="text-brand-blue">cada decisão</span>
                 </h2>
-                <div class="flex flex-col gap-4">
-                    <div class="bg-white rounded-[28px] border border-black/10 p-8 md:p-12 flex flex-col md:flex-row md:items-center gap-6 justify-between group hover:bg-[#6272FF] hover:border-[#6272FF] transition-colors duration-500 cursor-default">
-                        <h3 class="text-3xl md:text-5xl group-hover:text-white transition-colors duration-500">Pessoas → Inteligência</h3>
-                        <p class="text-lg text-black/70 md:max-w-[310px] leading-relaxed group-hover:text-white/90 transition-colors duration-500">
-                            Um time multidisciplinar conecta repertórios e transforma diferentes perspectivas em inteligência aplicada ao negócio.
+                <div class="flex flex-col gap-4 w-full">
+                    <div class="bg-white rounded-[24px] md:rounded-[28px] border-none shadow-sm md:shadow-md pt-[75px] pb-6 px-5 lg:pl-[39px] lg:pr-[78px] lg:py-[33px] lg:min-h-[230px] flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-[57px] justify-between group hover:bg-[#6272FF] transition-colors duration-500 cursor-default w-full">
+                        <h3 class="text-[21px] sm:text-[26px] md:text-[45px] lg:text-[50px] leading-[26px] md:leading-[36px] group-hover:text-white transition-colors duration-500 flex-1 whitespace-normal sm:whitespace-nowrap md:whitespace-nowrap">Pessoas → Inteligência</h3>
+                        <p class="text-[16px] md:text-[17px] text-black/70 md:max-w-[350px] lg:max-w-none leading-[22px] md:leading-relaxed group-hover:text-white/90 transition-colors duration-500 shrink-0">
+                            Um time multidisciplinar conecta <br class="hidden lg:block">
+                            repertórios e transforma diferentes <br class="hidden lg:block">
+                            perspectivas em inteligência <br class="hidden lg:block">
+                            aplicada ao negócio.
                         </p>
                     </div>
-                    <div class="bg-white rounded-[28px] border border-black/10 p-8 md:p-12 flex flex-col md:flex-row md:items-center gap-6 justify-between group hover:bg-[#F0FF65] hover:border-[#F0FF65] transition-colors duration-500 cursor-default">
-                        <h3 class="text-3xl md:text-5xl group-hover:text-black transition-colors duration-500">Método → Eficiência</h3>
-                        <p class="text-lg text-black/70 md:max-w-[310px] leading-relaxed group-hover:text-black/80 transition-colors duration-500">
-                            Processos agéis e metodologia que integram disciplinas, organizam decisões e reduzem complexidade para gerar eficiência em cada etapa.
+                    <div class="bg-white rounded-[24px] md:rounded-[28px] border-none shadow-sm md:shadow-md pt-[75px] pb-6 px-5 lg:pl-[39px] lg:pr-[78px] lg:py-[33px] lg:min-h-[230px] flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-[57px] justify-between group hover:bg-[#F0FF65] transition-colors duration-500 cursor-default w-full">
+                        <h3 class="text-[21px] sm:text-[26px] md:text-[45px] lg:text-[50px] leading-[26px] md:leading-[36px] group-hover:text-black transition-colors duration-500 flex-1 whitespace-normal sm:whitespace-nowrap md:whitespace-nowrap">Método → Eficiência</h3>
+                        <p class="text-[16px] md:text-[17px] text-black/70 md:max-w-[350px] lg:max-w-none leading-[22px] md:leading-relaxed group-hover:text-black/80 transition-colors duration-500 shrink-0">
+                            Processos agéis e metodologia que <br class="hidden lg:block">
+                            integram disciplinas, organizam <br class="hidden lg:block">
+                            decisões e reduzem complexidade <br class="hidden lg:block">
+                            para gerar eficiência em cada etapa.
                         </p>
                     </div>
-                    <div class="animate-on-scroll bg-white rounded-[28px] border border-black/10 p-8 md:p-12 flex flex-col md:flex-row md:items-center gap-6 justify-between group hover:bg-[#101216] hover:border-[#101216] transition-colors duration-500 cursor-default">
-                        <h3 class="text-3xl md:text-5xl group-hover:text-white transition-colors duration-500">Tecnologia → Escala</h3>
-                        <p class="text-lg text-black/70 md:max-w-[310px] leading-relaxed group-hover:text-white/90 transition-colors duration-500">
-                            Sistema proprietário que acelera criações de campanhas em escala sem perder a consistência visual e verbal das marcas.
+                    <div class="animate-on-scroll bg-white rounded-[24px] md:rounded-[28px] border-none shadow-sm md:shadow-md pt-[75px] pb-6 px-5 lg:pl-[39px] lg:pr-[78px] lg:py-[33px] lg:min-h-[230px] flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-[57px] justify-between group hover:bg-[#101216] transition-colors duration-500 cursor-default w-full">
+                        <h3 class="text-[21px] sm:text-[26px] md:text-[45px] lg:text-[50px] leading-[26px] md:leading-[36px] group-hover:text-white transition-colors duration-500 flex-1 whitespace-normal sm:whitespace-nowrap md:whitespace-nowrap">Tecnologia → Escala</h3>
+                        <p class="text-[16px] md:text-[17px] text-black/70 md:max-w-[350px] lg:max-w-none leading-[22px] md:leading-relaxed group-hover:text-white/90 transition-colors duration-500 shrink-0">
+                            Sistema proprietário que acelera <br class="hidden lg:block">
+                            criações de campanhas em escala <br class="hidden lg:block">
+                            sem perder a consistência visual <br class="hidden lg:block">
+                            e verbal das marcas.
                         </p>
                     </div>
                 </div>
@@ -169,114 +186,133 @@
         </section>
 
         <!-- Conhecimento & Cases -->
-        <section class="animate-on-scroll w-full px-6 md:px-[56px] py-16 flex flex-col lg:grid lg:grid-cols-2 gap-6 relative lg:min-h-[1100px]">
+        <section class="animate-on-scroll w-full px-4 md:px-[56px] py-4 md:py-[100px] flex flex-col gap-6 w-full max-w-[1412px] mx-auto">
             <!-- Conhecimento -->
-            <div class="animate-on-scroll bg-[#F4F3E9] rounded-[32px] md:rounded-[36px] border border-black/10 pt-[70px] pb-6 px-5 md:p-10 flex flex-col justify-between overflow-hidden relative lg:absolute lg:top-0 lg:left-[56px] lg:w-[calc(100%-112px)] lg:h-[500px]">
-                <div class="w-full lg:w-[450px] relative z-10 flex flex-col gap-6">
-                    <span class="text-black/50 text-xs uppercase tracking-[1.68px]">Conhecimento</span>
-                    <h2 class="text-[40px] leading-[40px] md:text-[60px] md:leading-tight">
-                        Enxergar além<br>
-                        <span class="text-brand-blue">da superfície</span>
-                    </h2>
-                    <p class="text-lg max-w-[320px]">
-                        Uma ponte direta com o mercado para trocas mais genuínas e discussões que elevam a visão do meio OOH
+            <div class="animate-on-scroll bg-[#F4F3E9] rounded-[32px] md:rounded-[42px] border border-black/[0.08] shadow-sm p-6 sm:p-10 md:p-12 lg:py-10 lg:pl-16 lg:pr-10 xl:py-12 xl:pl-20 xl:pr-12 flex flex-col lg:flex-row items-start lg:items-center justify-between overflow-hidden relative w-full">
+                <!-- Text content -->
+                <div class="w-full lg:w-[46%] flex flex-col items-start gap-6 lg:gap-7 relative z-10 shrink-0">
+                    <span class="text-black/50 text-xs uppercase tracking-[1.68px] font-normal">Conhecimento</span>
+                    <h3 class="text-[32px] sm:text-[46px] md:text-[54px] lg:text-[62px] leading-[1.02] md:leading-[0.98] font-normal tracking-tight text-dark">
+                        Enxergar<br class="hidden md:block"> além<br class="block md:hidden">
+                        <span class="text-brand-blue">da<br class="hidden md:block"> superfície.</span>
+                    </h3>
+                    <p class="text-[16px] md:text-[17px] lg:text-[18px] text-black/75 leading-[1.4] max-w-[390px]">
+                        Uma ponte direta com o mercado para<br>
+                        trocas mais genuínas e discussões<br> 
+                        que elevam a visão do meio OOH
                     </p>
-                    <div>
-                        <a href="conhecimento.html" class="inline-flex bg-brand-blue text-white text-sm uppercase tracking-wide px-6 py-3 rounded-full hover:bg-blue-600 transition items-center gap-2">
-                            Acesse <span class="text-brand-yellow"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline-block w-[1em] h-[1em] ml-1"><path d="M9.91638 9.91638V4.08398H4.08398M9.91638 4.08398L4.08398 9.91638" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+                    <div class="hidden lg:block pt-2">
+                        <a href="conhecimento.html" class="inline-flex bg-brand-blue text-white text-[12px] md:text-[13px] font-medium uppercase tracking-[1.2px] px-8 py-3.5 rounded-full hover:bg-blue-600 transition items-center gap-2.5">
+                            ACESSE <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5"><path d="M9.91638 9.91638V4.08398H4.08398M9.91638 4.08398L4.08398 9.91638" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
                         </a>
                     </div>
                 </div>
-                <!-- Image right side overlapping -->
-                <div class="mt-8 lg:mt-0 lg:absolute lg:right-[-50px] lg:top-10 w-[100%] lg:w-[550px] h-[220px] lg:h-[450px] rounded-[24px] lg:rounded-3xl overflow-hidden">
-                    <img src="images/editorial-conhecimento-32c967.png" alt="Conhecimento" class="w-full h-full object-cover">
+
+                <!-- Image right side -->
+                <div class="w-full lg:w-[52%] flex items-center justify-center lg:justify-end my-4 lg:my-0 relative z-10">
+                    <img src="images/editorial-conhecimento-32c967.png" alt="Conhecimento - Enxergar além da superfície" class="w-full max-w-[440px] sm:max-w-[480px] lg:max-w-[560px] xl:max-w-[600px] h-auto object-contain">
+                </div>
+
+                <!-- Button mobile only (under image) -->
+                <div class="block lg:hidden mt-2 z-10 relative">
+                    <a href="conhecimento.html" class="inline-flex bg-brand-blue text-white text-[12px] font-medium uppercase tracking-[1.2px] px-7 py-3 rounded-full hover:bg-blue-600 transition items-center gap-2">
+                        ACESSE <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5"><path d="M9.91638 9.91638V4.08398H4.08398M9.91638 4.08398L4.08398 9.91638" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    </a>
                 </div>
             </div>
 
             <!-- Cases -->
-            <div class="animate-on-scroll bg-brand-yellow rounded-[32px] md:rounded-[36px] pt-[70px] pb-6 px-5 md:p-6 flex flex-col lg:flex-row items-center gap-5 md:gap-16 overflow-hidden relative lg:absolute lg:top-[540px] lg:left-[56px] lg:w-[calc(100%-112px)] lg:h-[400px]" data-delay="150">
-                <!-- Image left side -->
-                <div class="w-full lg:w-[380px] h-[220px] lg:h-[352px] rounded-[24px] lg:rounded-3xl overflow-hidden shrink-0 order-2 lg:order-1">
-                    <img src="images/cases-projetos.png" alt="Cases" class="w-full h-full object-cover">
-                </div>
-                <!-- Content right side -->
+            <div class="animate-on-scroll bg-brand-yellow rounded-[32px] md:rounded-[42px] pt-[70px] pb-8 px-5 md:p-[80px] lg:px-[112px] lg:py-[80px] flex flex-col lg:flex-row items-start lg:items-center gap-5 md:gap-[150px] overflow-hidden relative w-full lg:h-[420px]" data-delay="150">
+                <!-- Content right side (Mobile top) -->
                 <div class="w-full flex flex-col gap-4 relative z-10 py-0 md:py-6 order-1 lg:order-2">
                     <span class="text-black/50 text-[11px] uppercase tracking-[1.68px] font-medium">Cases</span>
-                    <h2 class="text-[40px] leading-[40px] md:text-[54px] tracking-tight md:leading-[1.05] mt-2 mb-2">
-                        Trabalhos<br>em movimento
+                    <h2 class="text-[32px] sm:text-[40px] md:text-[54px] leading-[36px] md:leading-[1.05] tracking-tight mt-2 mb-2">
+                        Trabalhos<br class="hidden md:block"> em<br class="block md:hidden">
+                        movimento.
                     </h2>
-                    <p class="text-black/80 text-[18px] leading-[26px]">
+                    <p class="text-black/80 text-[16px] md:text-[18px] leading-[22px] md:leading-[26px]">
                         Nossa visão aplicada aos desafios dos nossos clientes.
                     </p>
-                    <div class="mt-4">
+                    <div class="mt-4 hidden md:block">
                         <a href="cases.html" class="inline-flex bg-dark text-white text-[13px] font-medium uppercase tracking-[0.78px] px-6 py-3 rounded-full hover:bg-black/80 transition items-center gap-3">
                             Explorar cases <span class="font-normal"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline-block w-[1em] h-[1em] ml-1"><path d="M9.91638 9.91638V4.08398H4.08398M9.91638 4.08398L4.08398 9.91638" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
                         </a>
                     </div>
                 </div>
+                <!-- Image left side (Mobile middle) -->
+                <div class="w-full lg:w-[380px] h-[220px] lg:h-[352px] rounded-[24px] lg:rounded-3xl overflow-hidden shrink-0 order-2 lg:order-1 mt-2 md:mt-0">
+                    <img src="images/cases-projetos.png" alt="Cases" class="w-full h-full object-cover">
+                </div>
+                <!-- Button mobile only (Mobile bottom) -->
+                <div class="block md:hidden order-3 mt-0 w-full relative z-10">
+                    <a href="cases.html" class="inline-flex bg-dark text-white text-[11px] font-medium uppercase tracking-[1.2px] px-6 py-[14px] rounded-full hover:bg-black/80 transition items-center gap-3 w-fit">
+                        Explorar cases <span class="font-normal"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline-block w-[1em] h-[1em] ml-1"><path d="M9.91638 9.91638V4.08398H4.08398M9.91638 4.08398L4.08398 9.91638" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+                    </a>
+                </div>
+                </div>
             </div>
         </section>
 
         <!-- Lideranças -->
-        <section class="animate-on-scroll w-full px-6 md:px-[56px] py-16">
+        <section class="animate-on-scroll w-full px-4 md:px-[56px] py-4 md:py-[100px] flex flex-col items-center max-w-[1412px] mx-auto">
             <div class="animate-on-scroll bg-dark rounded-[32px] md:rounded-[42px] pt-[70px] pb-6 px-5 md:p-[80px] lg:p-[112px] flex flex-col gap-12 md:gap-12 w-full">
                 <div class="flex flex-col gap-4">
                     <span class="text-white/45 text-[11px] uppercase tracking-[1.68px] font-medium">Lideranças</span>
-                    <h2 class="text-[40px] leading-[40px] md:text-[54px] tracking-tight md:leading-[1.05] text-white">
-                        Diferentes disciplinas.<br>
-                        <span class="text-brand-yellow">Uma mesma visão.</span>
+                    <h2 class="text-[34px] leading-[39px] sm:text-[34px] md:text-[54px] tracking-tight md:leading-[1.05] text-white">
+                        Diferentes<br class="block md:hidden"> disciplinas.<br class="hidden md:block">
+                        <span class="text-brand-yellow">Uma<br class="block md:hidden"> mesma visão.</span>
                     </h2>
                 </div>
                 <!-- Grids -->
-                <div class="flex flex-col items-center md:grid md:grid-cols-3 lg:grid-cols-5 gap-10 md:gap-6">
+                <div class="flex flex-col items-center md:grid md:grid-cols-3 lg:grid-cols-5 gap-8 md:gap-6 w-full">
                     <!-- Leader 1 -->
-                    <div class="animate-on-scroll flex flex-col gap-3 group cursor-pointer w-[253px] md:w-auto" data-delay="0">
-                        <div class="bg-gradient-to-br from-[#1E2028] to-[#2A2D3A] rounded-[18px] h-[220px] overflow-hidden flex items-end justify-center">
+                    <div class="animate-on-scroll flex flex-col group cursor-pointer w-[253px] md:w-auto bg-white/5 md:bg-transparent border border-white/10 md:border-transparent rounded-[20px] overflow-hidden shadow-lg md:shadow-none" data-delay="0">
+<div class="bg-gradient-to-br from-[#1E2028] to-[#2A2D3A] md:bg-none rounded-t-[20px] md:rounded-[20px] h-[220px] overflow-hidden flex items-end justify-center">
                             <img src="images/lider-bruno-guerrero-746d0a.png" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" alt="Bruno Guerrero">
                         </div>
-                        <div class="flex flex-col gap-1">
-                            <h4 class="text-white text-[17px] font-medium tracking-tight">Bruno Guerrero</h4>
-                            <p class="text-white/50 text-[11px]">CEO / Sócio ROOHTS</p>
+<div class="flex flex-col gap-1 items-center md:items-start justify-center md:justify-start p-5 pb-6 md:px-0 md:pt-4 text-center md:text-left">
+                            <h4 class="text-white text-[16px] md:text-[17px] font-normal tracking-tight">Bruno Guerrero</h4>
+                            <p class="text-white/50 text-[12px] md:text-[11px]">CEO / Sócio ROOHTS</p>
                         </div>
                     </div>
                     <!-- Leader 2 -->
-                    <div class="animate-on-scroll flex flex-col gap-3 group cursor-pointer w-[253px] md:w-auto" data-delay="100">
-                        <div class="bg-gradient-to-br from-[#1E2028] to-[#2A2D3A] rounded-[18px] h-[220px] overflow-hidden flex items-end justify-center">
+                    <div class="animate-on-scroll flex flex-col group cursor-pointer w-[253px] md:w-auto bg-white/5 md:bg-transparent border border-white/10 md:border-transparent rounded-[20px] overflow-hidden shadow-lg md:shadow-none" data-delay="100">
+<div class="bg-gradient-to-br from-[#1E2028] to-[#2A2D3A] md:bg-none rounded-t-[20px] md:rounded-[20px] h-[220px] overflow-hidden flex items-end justify-center">
                             <img src="images/lider-victoria-costa.png" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" alt="Victoria Costa">
                         </div>
-                        <div class="flex flex-col gap-1">
-                            <h4 class="text-white text-[17px] font-medium tracking-tight">Victoria Costa</h4>
-                            <p class="text-white/50 text-[11px]">Head de Dados e Tecnologia</p>
+<div class="flex flex-col gap-1 items-center md:items-start justify-center md:justify-start p-5 pb-6 md:px-0 md:pt-4 text-center md:text-left">
+                            <h4 class="text-white text-[16px] md:text-[17px] font-normal tracking-tight">Victoria Costa</h4>
+                            <p class="text-white/50 text-[12px] md:text-[11px]">Head de Dados e Tecnologia</p>
                         </div>
                     </div>
                     <!-- Leader 3 -->
-                    <div class="animate-on-scroll flex flex-col gap-3 group cursor-pointer w-[253px] md:w-auto" data-delay="200">
-                        <div class="bg-gradient-to-br from-[#1E2028] to-[#2A2D3A] rounded-[18px] h-[220px] overflow-hidden flex items-end justify-center">
+                    <div class="animate-on-scroll flex flex-col group cursor-pointer w-[253px] md:w-auto bg-white/5 md:bg-transparent border border-white/10 md:border-transparent rounded-[20px] overflow-hidden shadow-lg md:shadow-none" data-delay="200">
+<div class="bg-gradient-to-br from-[#1E2028] to-[#2A2D3A] md:bg-none rounded-t-[20px] md:rounded-[20px] h-[220px] overflow-hidden flex items-end justify-center">
                             <img src="images/lider-bruno-putz.png" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" alt="Bruno Putz">
                         </div>
-                        <div class="flex flex-col gap-1">
-                            <h4 class="text-white text-[17px] font-medium tracking-tight">Bruno Putz</h4>
-                            <p class="text-white/50 text-[11px]">Head de Estratégia</p>
+<div class="flex flex-col gap-1 items-center md:items-start justify-center md:justify-start p-5 pb-6 md:px-0 md:pt-4 text-center md:text-left">
+                            <h4 class="text-white text-[16px] md:text-[17px] font-normal tracking-tight">Bruno Putz</h4>
+                            <p class="text-white/50 text-[12px] md:text-[11px]">Head de Estratégia</p>
                         </div>
                     </div>
                     <!-- Leader 4 -->
-                    <div class="animate-on-scroll flex flex-col gap-3 group cursor-pointer w-[253px] md:w-auto" data-delay="300">
-                        <div class="bg-gradient-to-br from-[#1E2028] to-[#2A2D3A] rounded-[18px] h-[220px] overflow-hidden flex items-end justify-center">
+                    <div class="animate-on-scroll flex flex-col group cursor-pointer w-[253px] md:w-auto bg-white/5 md:bg-transparent border border-white/10 md:border-transparent rounded-[20px] overflow-hidden shadow-lg md:shadow-none" data-delay="300">
+<div class="bg-gradient-to-br from-[#1E2028] to-[#2A2D3A] md:bg-none rounded-t-[20px] md:rounded-[20px] h-[220px] overflow-hidden flex items-end justify-center">
                             <img src="images/lider-fabricio-nascimento.png" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" alt="Fabricio Nascimento">
                         </div>
-                        <div class="flex flex-col gap-1">
-                            <h4 class="text-white text-[17px] font-medium tracking-tight">Fabricio Nascimento</h4>
-                            <p class="text-white/50 text-[11px]">Head de Mídia</p>
+<div class="flex flex-col gap-1 items-center md:items-start justify-center md:justify-start p-5 pb-6 md:px-0 md:pt-4 text-center md:text-left">
+                            <h4 class="text-white text-[16px] md:text-[17px] font-normal tracking-tight">Fabricio Nascimento</h4>
+                            <p class="text-white/50 text-[12px] md:text-[11px]">Head de Mídia</p>
                         </div>
                     </div>
                     <!-- Leader 5 -->
-                    <div class="animate-on-scroll flex flex-col gap-3 group cursor-pointer w-[253px] md:w-auto" data-delay="400">
-                        <div class="bg-gradient-to-br from-[#1E2028] to-[#2A2D3A] rounded-[18px] h-[220px] overflow-hidden flex items-end justify-center">
+                    <div class="animate-on-scroll flex flex-col group cursor-pointer w-[253px] md:w-auto bg-white/5 md:bg-transparent border border-white/10 md:border-transparent rounded-[20px] overflow-hidden shadow-lg md:shadow-none" data-delay="400">
+<div class="bg-gradient-to-br from-[#1E2028] to-[#2A2D3A] md:bg-none rounded-t-[20px] md:rounded-[20px] h-[220px] overflow-hidden flex items-end justify-center">
                             <img src="images/lider-vinicius-cohin.png" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" alt="Vinicius Cohin">
                         </div>
-                        <div class="flex flex-col gap-1">
-                            <h4 class="text-white text-[17px] font-medium tracking-tight">Vinicius Cohin</h4>
-                            <p class="text-white/50 text-[11px]">Head de Criação</p>
+<div class="flex flex-col gap-1 items-center md:items-start justify-center md:justify-start p-5 pb-6 md:px-0 md:pt-4 text-center md:text-left">
+                            <h4 class="text-white text-[16px] md:text-[17px] font-normal tracking-tight">Vinicius Cohin</h4>
+                            <p class="text-white/50 text-[12px] md:text-[11px]">Head de Criação</p>
                         </div>
                     </div>
                 </div>
@@ -284,56 +320,62 @@
         </section>
 
         <!-- Notícias -->
-        <section class="animate-on-scroll w-full px-6 md:px-[56px] py-16">
-            <div class="animate-on-scroll flex flex-col gap-4 mb-12">
-                <span class="text-black/50 text-sm uppercase tracking-[2.52px]">Notícias</span>
-                <h2 class="text-[40px] leading-[40px] md:text-[45px] md:leading-tight">
+        <section class="animate-on-scroll w-full px-4 md:px-[56px] py-4 md:py-[100px] flex flex-col items-start max-w-[1412px] mx-auto">
+            <div class="animate-on-scroll flex flex-col items-start gap-4 mb-12">
+                <span class="text-black/50 text-xs uppercase tracking-[2px] font-normal">Notícias</span>
+                <h2 class="text-[40px] leading-[40px] md:text-[45px] md:leading-tight text-left">
                     Roohts <span class="text-brand-blue">por aí</span>
                 </h2>
-                <p class="text-black/50 text-lg">Notícias, movimentos e conversas que ampliam nossa presença no mercado.</p>
+                <p class="text-black/50 text-[16px] md:text-[18px] text-left">Notícias, movimentos e conversas que ampliam nossa presença no mercado.</p>
             </div>
-            <div class="flex flex-col md:grid md:grid-cols-3 gap-4 md:gap-6">
-                <!-- Noticia 1 -->
-                <div class="animate-on-scroll bg-[#F4F3E9] rounded-[32px] md:rounded-[42px] border border-black/10 overflow-hidden flex flex-col group hover:shadow-lg transition" data-delay="0">
-                    <div class="h-[200px] md:h-[240px] bg-[#D0D2CF] w-full overflow-hidden">
-                        <img src="images/index_mm.jpg" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="News 1">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 w-full">
+                <!-- Noticia 1: Meio & Mensagem -->
+                <div class="animate-on-scroll bg-[#F4F3E9] rounded-[32px] md:rounded-[36px] border border-black/[0.08] shadow-sm overflow-hidden flex flex-col group hover:shadow-lg transition min-h-[500px] lg:min-h-[530px]" data-delay="0">
+                    <div class="h-[210px] md:h-[230px] lg:h-[245px] w-full overflow-hidden shrink-0">
+                        <img src="images/index_mm.jpg" class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-500" alt="Grupo Dreamers abre operação própria de out-of-home">
                     </div>
-                    <div class="p-6 md:p-8 flex flex-col gap-4 flex-1">
-                        <span class="text-brand-blue text-xs uppercase tracking-[1.32px]">Exame</span>
-                        <h3 class="text-xl flex-1">Sócio do Rock in Rio cria sua 20ª empresa: a aposta é nos outdoors</h3>
-                        <div>
-                            <a href="https://exame.com/negocios/socio-do-rock-in-rio-ele-fatura-r-3-bi-e-acaba-de-criar-sua-20a-empresa-a-aposta-e-nos-outdoors/" target="_blank" rel="noopener noreferrer" class="inline-flex bg-brand-blue text-white text-sm font-bold uppercase tracking-wide px-6 py-3 rounded-full hover:bg-blue-600 transition items-center gap-2">
-                                Ler matéria <span><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline-block w-[1em] h-[1em] ml-1"><path d="M9.91638 9.91638V4.08398H4.08398M9.91638 4.08398L4.08398 9.91638" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+                    <div class="p-6 md:p-8 flex flex-col justify-between flex-1 gap-6">
+                        <div class="flex flex-col gap-3">
+                            <span class="text-brand-blue text-[11px] uppercase tracking-[1.32px] font-normal">Meio & Mensagem</span>
+                            <h3 class="text-[18px] md:text-[19px] lg:text-[20px] font-normal leading-[1.3] text-dark">Grupo Dreamers abre operação própria de out-of-home</h3>
+                        </div>
+                        <div class="pt-2">
+                            <a href="https://www.meioemensagem.com.br/comunicacao/grupo-dreamers-abre-operacao-propria-de-out-of-home" target="_blank" rel="noopener noreferrer" class="inline-flex bg-brand-blue text-white text-[12px] md:text-[13px] font-medium uppercase tracking-[0.78px] px-6 py-3.5 rounded-full hover:bg-blue-600 transition items-center gap-2.5">
+                                LER MATÉRIA <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5"><path d="M9.91638 9.91638V4.08398H4.08398M9.91638 4.08398L4.08398 9.91638" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
                             </a>
                         </div>
                     </div>
                 </div>
-                <!-- Noticia 2 -->
-                <div class="animate-on-scroll bg-[#F4F3E9] rounded-[32px] md:rounded-[42px] border border-black/10 overflow-hidden flex flex-col group hover:shadow-lg transition" data-delay="150">
-                    <div class="h-[200px] md:h-[240px] bg-[#D0D2CF] w-full overflow-hidden">
-                        <img src="images/index_propmark.jpg" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="News 2">
+                <!-- Noticia 2: Exame -->
+                <div class="animate-on-scroll bg-[#F4F3E9] rounded-[32px] md:rounded-[36px] border border-black/[0.08] shadow-sm overflow-hidden flex flex-col group hover:shadow-lg transition min-h-[500px] lg:min-h-[530px]" data-delay="150">
+                    <div class="h-[210px] md:h-[230px] lg:h-[245px] w-full overflow-hidden shrink-0">
+                        <img src="images/index_exame.png" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500" alt="Sócio do Rock in Rio cria sua 20ª empresa: a aposta é nos outdoors">
                     </div>
-                    <div class="p-6 md:p-8 flex flex-col gap-4 flex-1">
-                        <span class="text-brand-blue text-xs uppercase tracking-[1.32px]">Propmark</span>
-                        <h3 class="text-xl flex-1">ROOHTS reforça liderança e amplia aposta em estratégia, dados, mídia e criação</h3>
-                        <div>
-                            <a href="https://propmark.com.br/out-of-home/roohts-reforca-lideranca-com-quatro-executivos-e-amplia-aposta-em-estrategia-dados-midia-e-criacao/" target="_blank" rel="noopener noreferrer" class="inline-flex bg-brand-blue text-white text-sm font-bold uppercase tracking-wide px-6 py-3 rounded-full hover:bg-blue-600 transition items-center gap-2">
-                                Ler matéria <span><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline-block w-[1em] h-[1em] ml-1"><path d="M9.91638 9.91638V4.08398H4.08398M9.91638 4.08398L4.08398 9.91638" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+                    <div class="p-6 md:p-8 flex flex-col justify-between flex-1 gap-6">
+                        <div class="flex flex-col gap-3">
+                            <span class="text-brand-blue text-[11px] uppercase tracking-[1.32px] font-normal">Exame</span>
+                            <h3 class="text-[18px] md:text-[19px] lg:text-[20px] font-normal leading-[1.3] text-dark">Sócio do Rock in Rio cria sua 20ª empresa: a aposta é nos outdoors</h3>
+                        </div>
+                        <div class="pt-2">
+                            <a href="https://exame.com/negocios/socio-do-rock-in-rio-ele-fatura-r-3-bi-e-acaba-de-criar-sua-20a-empresa-a-aposta-e-nos-outdoors/" target="_blank" rel="noopener noreferrer" class="inline-flex bg-brand-blue text-white text-[12px] md:text-[13px] font-medium uppercase tracking-[0.78px] px-6 py-3.5 rounded-full hover:bg-blue-600 transition items-center gap-2.5">
+                                LER MATÉRIA <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5"><path d="M9.91638 9.91638V4.08398H4.08398M9.91638 4.08398L4.08398 9.91638" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
                             </a>
                         </div>
                     </div>
                 </div>
-                <!-- Noticia 3 -->
-                <div class="animate-on-scroll bg-[#F4F3E9] rounded-[32px] md:rounded-[42px] border border-black/10 overflow-hidden flex flex-col group hover:shadow-lg transition" data-delay="300">
-                    <div class="h-[200px] md:h-[240px] bg-[#D0D2CF] w-full overflow-hidden">
-                        <img src="images/index_mm.jpg" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="News 3">
+                <!-- Noticia 3: Propmark -->
+                <div class="animate-on-scroll bg-[#F4F3E9] rounded-[32px] md:rounded-[36px] border border-black/[0.08] shadow-sm overflow-hidden flex flex-col group hover:shadow-lg transition min-h-[500px] lg:min-h-[530px]" data-delay="300">
+                    <div class="h-[210px] md:h-[230px] lg:h-[245px] w-full overflow-hidden shrink-0">
+                        <img src="images/index_propmark.jpg" class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-500" alt="ROOHTS reforça liderança e amplia aposta em estratégia, dados, mídia e criação">
                     </div>
-                    <div class="p-6 md:p-8 flex flex-col gap-4 flex-1">
-                        <span class="text-brand-blue text-xs uppercase tracking-[1.32px]">Meio & Mensagem</span>
-                        <h3 class="text-xl flex-1">Grupo Dreamers abre operação própria de out-of-home</h3>
-                        <div>
-                            <a href="https://www.meioemensagem.com.br/comunicacao/grupo-dreamers-abre-operacao-propria-de-out-of-home" target="_blank" rel="noopener noreferrer" class="inline-flex bg-brand-blue text-white text-sm font-bold uppercase tracking-wide px-6 py-3 rounded-full hover:bg-blue-600 transition items-center gap-2">
-                                Ler matéria <span><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline-block w-[1em] h-[1em] ml-1"><path d="M9.91638 9.91638V4.08398H4.08398M9.91638 4.08398L4.08398 9.91638" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+                    <div class="p-6 md:p-8 flex flex-col justify-between flex-1 gap-6">
+                        <div class="flex flex-col gap-3">
+                            <span class="text-brand-blue text-[11px] uppercase tracking-[1.32px] font-normal">Propmark</span>
+                            <h3 class="text-[18px] md:text-[19px] lg:text-[20px] font-normal leading-[1.3] text-dark">ROOHTS reforça liderança e amplia aposta em estratégia, dados, mídia e criação</h3>
+                        </div>
+                        <div class="pt-2">
+                            <a href="https://propmark.com.br/out-of-home/roohts-reforca-lideranca-com-quatro-executivos-e-amplia-aposta-em-estrategia-dados-midia-e-criacao/" target="_blank" rel="noopener noreferrer" class="inline-flex bg-brand-blue text-white text-[12px] md:text-[13px] font-medium uppercase tracking-[0.78px] px-6 py-3.5 rounded-full hover:bg-blue-600 transition items-center gap-2.5">
+                                LER MATÉRIA <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5"><path d="M9.91638 9.91638V4.08398H4.08398M9.91638 4.08398L4.08398 9.91638" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
                             </a>
                         </div>
                     </div>
@@ -347,9 +389,11 @@
                 <!-- Left -->
                 <div class="w-full lg:flex-1 flex flex-col gap-6 lg:max-w-[420px]">
                     <span class="text-white/45 text-[11px] uppercase tracking-[1.68px] font-medium">Contato</span>
-                    <h2 class="text-4xl md:text-[42px] tracking-tight leading-[1.05] text-white">
-                        Quer mais eficácia<br>e autenticidade pra<br>
-                        <span class="text-brand-blue">suas campanhas<br>de OOH?</span>
+                    <h2 class="text-[30px] sm:text-[35px] md:text-[42px] tracking-tight leading-[28px] md:leading-[1.05] text-white">
+                        Quer mais eficácia<br>
+                        e autenticidade pra<br>
+                        <span class="text-brand-blue">suas campanhas<br>
+                        de OOH?</span>
                     </h2>
                     <p class="text-white/60 text-[18px] leading-[26px]">
                         Conte o seu desafio. A gente começa pelo contexto.

@@ -32,7 +32,26 @@
         }
         .animate-on-scroll.scroll-visible {
             opacity: 1;
-            transform: translateY(0);
+            transform: none;
+        }
+
+        /* Stacking cards for Quatro Perspectivas */
+        .perspective-card {
+            position: sticky;
+            will-change: transform;
+            transform-origin: center top;
+            transition: transform 0.25s cubic-bezier(0.2, 0, 0, 1), box-shadow 0.25s ease;
+        }
+        .perspective-card-1 { top: 80px; z-index: 10; }
+        .perspective-card-2 { top: 140px; z-index: 20; }
+        .perspective-card-3 { top: 200px; z-index: 30; }
+        .perspective-card-4 { top: 260px; z-index: 40; }
+
+        @media (min-width: 768px) {
+            .perspective-card-1 { top: 100px; }
+            .perspective-card-2 { top: 175px; }
+            .perspective-card-3 { top: 250px; }
+            .perspective-card-4 { top: 325px; }
         }
     </style>
 </head>
@@ -59,39 +78,47 @@
         </button>
 </nav>
 
-    <main id="top" class="w-full max-w-[1440px] mx-auto flex flex-col items-center relative pt-32 pb-16">
+    <main id="top" class="w-full max-w-[1412px] mx-auto flex flex-col items-center relative pt-28 md:pt-36 pb-16">
         
         <!-- Hero Section -->
-        <section class="animate-on-scroll w-full px-6 md:px-[56px] py-10 md:py-20 flex flex-col items-center gap-10">
-            <div class="w-full rounded-[40px] overflow-hidden bg-[#DFE2DE] h-[400px] md:h-[487px] relative max-w-[1011px] mx-auto">
-                <img src="images/sobre_img_154_2701.png" alt="Sobre" class="w-full h-full object-cover object-center">
-            </div>
-            
-            <div class="flex flex-col items-center gap-6 mt-10 md:mt-20 max-w-[1011px] mx-auto text-center px-4">
-                <span class="text-black/50 text-xs uppercase tracking-[0.14em] font-medium">Sobre</span>
-                <h1 class="text-4xl md:text-[60px] leading-tight md:leading-[1.1] tracking-tight">
-                    Não nascemos para ocupar um espaço no OOH <span class="text-brand-blue">mas para redefinir o valor dele</span>
+        <section class="animate-on-scroll w-full px-4 md:px-[56px] py-4 md:py-12 flex flex-col items-center">
+            <div class="order-1 md:order-2 flex flex-col items-start text-left md:items-center md:text-center gap-3 md:gap-5 mb-6 md:mb-0 md:mt-12 max-w-[1011px] mx-auto px-1 md:px-4 w-full">
+                <span class="text-black/50 text-[11px] md:text-xs uppercase tracking-[2px] font-medium">Sobre</span>
+                <h1 class="text-[27px] sm:text-[35px] md:text-[52px] lg:text-[60px] leading-[1.15] md:leading-[1.1] tracking-tight font-normal text-dark">
+                    Não nascemos para<br>
+                    ocupar um espaço no OOH<br>
+                    <span class="text-brand-blue">mas para redefinir o valor<br class="block md:hidden"> dele</span>
                 </h1>
+            </div>
+
+            <div class="order-2 md:order-1 w-full rounded-[24px] md:rounded-[40px] overflow-hidden bg-[#DFE2DE] h-[240px] md:h-[480px] lg:h-[520px] relative max-w-[1011px] mx-auto shadow-sm">
+                <img src="images/sobre_img_154_2701.png" alt="Sobre a Roohts" class="w-full h-full object-cover object-center">
             </div>
         </section>
 
         <!-- Statement Block -->
-        <section class="animate-on-scroll w-full px-6 md:px-[56px] py-16">
-            <div class="bg-black rounded-[40px] p-8 md:p-16 lg:p-24 flex flex-col gap-12 w-full">
-                <div class="max-w-[800px]">
-                    <p class="text-white text-lg md:text-xl leading-relaxed font-light">
+        <section class="animate-on-scroll w-full px-4 md:px-[56px] py-4 md:py-10">
+            <div class="bg-dark rounded-[32px] md:rounded-[42px] p-8 md:p-14 lg:p-18 flex flex-col gap-8 md:gap-12 w-full">
+                <div class="flex flex-col gap-5 max-w-[860px]">
+                    <p class="text-white/85 text-[15px] md:text-[18px] lg:text-[19px] leading-[1.65] font-light">
                         O mercado aprendeu a disputar atenção na superfície. formatos, impacto, frequência, cobertura.<br>
                         Mas a cidade não funciona assim. ela carrega uma lógica invisível e humana.<br>
-                        Fluxos, ritmos, comportamentos, tensão, tempo.<br><br>
+                        Fluxos, ritmos, comportamentos, tensão, tempo.
+                    </p>
+                    <p class="text-white/85 text-[15px] md:text-[18px] lg:text-[19px] leading-[1.65] font-light">
                         Ninguém atravessa a cidade da mesma forma, ninguém percebe o espaço da mesma maneira.<br>
-                        E nenhuma mensagem deveria existir, sem carregar o contexto da sua raíz.<br><br>
-                        A Roohts nasce para transformar percepção em inteligência, aplicada ao comportamento humano<br>
-                        e ao ritmo das cidades, pra criar experiências que façam sentido no caminho.<br><br>
+                        E nenhuma mensagem deveria existir, sem carregar o contexto da sua raíz.
+                    </p>
+                    <p class="text-white/85 text-[15px] md:text-[18px] lg:text-[19px] leading-[1.65] font-light">
+                        A Roohts nasce para transformar percepção em inteligência, aplicada ao comportamento humano<br class="hidden md:inline">
+                        e ao ritmo das cidades, pra criar experiências que façam sentido no caminho.
+                    </p>
+                    <p class="text-white/85 text-[15px] md:text-[18px] lg:text-[19px] leading-[1.65] font-light">
                         É profundidade para entender. sensibilidade para conectar. e método para cocriar.
                     </p>
                 </div>
-                <div class="max-w-[700px]">
-                    <p class="text-brand-yellow text-2xl md:text-[25px] leading-snug tracking-tight">
+                <div class="max-w-[760px]">
+                    <p class="text-brand-yellow text-[18px] md:text-[23px] lg:text-[25px] leading-[1.3] font-normal tracking-tight uppercase">
                         PORQUE TUDO O QUE CRIA CONEXÃO DE VERDADE PULSA POR DEBAIXO DO CONCRETO.
                     </p>
                 </div>
@@ -99,19 +126,24 @@
         </section>
 
         <!-- Essência -->
-        <section class="animate-on-scroll w-full px-6 md:px-[56px] py-16 flex flex-col lg:flex-row gap-10 md:gap-20 justify-start max-w-[1128px] mx-auto">
+        <section class="animate-on-scroll w-full px-4 md:px-[56px] py-10 md:py-20 flex flex-col lg:flex-row gap-4 sm:gap-6 md:gap-16 lg:gap-24 justify-between items-start">
             <div class="flex flex-col lg:w-[480px]">
-                <span class="text-black/50 text-[11px] uppercase tracking-[0.2em] font-medium mb-6">Essência</span>
-                <h2 class="text-4xl md:text-[54px] leading-[1.05] tracking-tight text-black">
-                    Somos rebeldes<br>
-                    <span class="text-brand-blue">com causa</span>
-                </h2>
-                <div class="mt-6 ml-6">
-                    <img src="images/sobre_vector_1.svg" alt="Rebelde Vector" class="w-[185px] h-[275px]">
+                <span class="text-black/50 text-[11px] uppercase tracking-[2px] font-medium mb-4">Essência</span>
+                <div class="flex flex-col items-center w-fit">
+                    <h2 class="text-4xl md:text-[54px] lg:text-[60px] leading-[1.05] tracking-tight text-dark font-normal text-left w-full">
+                        Somos rebeldes<br>
+                        <span class="text-brand-blue">com causa</span>
+                    </h2>
+                    <div class="mt-8 hidden lg:flex justify-center w-full">
+                        <img src="images/sobre_vector_1.svg" alt="Rebelde Vector" class="w-[185px] h-[275px]">
+                    </div>
                 </div>
             </div>
-            <div class="lg:w-[500px] pt-12">
-                <p class="text-[17px] leading-relaxed text-black mb-10">
+            <div class="lg:w-[540px] pt-0 lg:pt-8 flex flex-col gap-6">
+                <p class="block md:hidden text-[15px] leading-[1.6] text-black/80 font-light">
+                    Nossa rebeldia é orientada por método, não só<br>por provocação. Questionamos o óbvio para<br>revelar todo o potencial do OOH. Aprofundamos<br>a análise e transformamos conhecimento em<br>direção estratégica. Valorizamos rigor, clareza e<br>pensamento crítico. Preferimos evidências a<br>opiniões e lógica a achismos. Somos diretos ao<br>defender aquilo em que acreditamos, mas<br>sempre com respeito.
+                </p>
+                <p class="hidden md:block text-[16px] md:text-[18px] leading-[1.65] text-black/80 font-light">
                     Nossa rebeldia é orientada por método, não só por<br>
                     provocação. Questionamos o óbvio para revelar<br>
                     todo o potencial do OOH. Aprofundamos a análise<br>
@@ -121,50 +153,54 @@
                     Somos diretos ao defender aquilo em que acreditamos,<br>
                     mas sempre com respeito.
                 </p>
-                <p class="text-[22px] text-brand-blue/70 leading-snug font-medium">
+                <p class="text-[20px] md:text-[24px] text-brand-blue leading-[1.3] font-medium mt-2">
                     Rebeldes na forma de pensar.<br>
                     Consistentes na forma de fazer.
                 </p>
+                <div class="mt-4 flex lg:hidden justify-center w-full">
+                    <img src="images/sobre_vector_1.svg" alt="Rebelde Vector" class="w-[185px] h-[275px]">
+                </div>
             </div>
         </section>
 
-        <!-- Quote 1 -->
-        <section class="animate-on-scroll w-full px-6 md:px-[56px] py-16">
-            <div class="bg-[#EBF1FC] rounded-[42px] p-8 md:p-16 flex flex-col md:flex-row items-center gap-10 md:gap-[100px]">
-                <div class="w-full md:w-auto shrink-0 flex justify-center">
-                    <img src="images/sobre_img_154_2732_788fbd.png" alt="Bruno Guerrero" class="w-[116px] h-[116px] md:w-[150px] md:h-[150px] object-cover rounded-full">
-                </div>
-                <div class="flex flex-col gap-8 flex-1 relative">
-                    <span class="text-brand-blue text-[88px] absolute -top-8 -left-8 opacity-20 leading-none">"</span>
-                    <p class="text-xl md:text-2xl italic leading-relaxed text-black relative z-10">
-                        Traduzimos a complexidade do OOH em vantagem competitiva, conectando inteligência, criatividade e execução precisa para gerar campanhas mais relevantes o negócio das marcas.
+        <!-- Quote 1: Bruno Guerrero -->
+        <section class="animate-on-scroll w-full px-4 md:px-[56px] py-4 md:py-8">
+            <div class="bg-[#EBF1FC] rounded-[32px] md:rounded-[42px] p-6 md:p-12 lg:p-14 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 md:gap-12 w-full">
+                <div class="flex flex-row items-start gap-4 md:gap-5 flex-1 w-full">
+                    <span class="text-brand-blue text-[44px] md:text-[56px] leading-none select-none font-serif shrink-0">“</span>
+                    <p class="text-[16px] md:text-[20px] lg:text-[22px] leading-[1.45] text-dark font-light md:font-normal italic pt-1 w-full">
+                        Traduzimos a complexidade do OOH em vantagem competitiva, conectando<br class="hidden md:inline">
+                        inteligência, criatividade e execução precisa para gerar campanhas mais<br class="hidden md:inline">
+                        relevantes para o negócio das marcas.
                     </p>
-                    <div class="flex flex-col border-l-2 border-brand-blue pl-4">
-                        <span class="text-sm font-semibold">Bruno Guerrero</span>
-                        <span class="text-[10px] uppercase tracking-wider text-black/70">CEO / SÓCIO ROOHTS</span>
+                </div>
+                
+                <div class="flex flex-row md:flex-col items-center gap-3.5 md:gap-3 shrink-0 self-start md:self-center text-left md:text-center">
+                    <img src="images/sobre_img_154_2732_788fbd.png" alt="Bruno Guerrero" class="w-[52px] h-[52px] md:w-[104px] md:h-[104px] object-cover rounded-full shadow-sm">
+                    <div class="border-l-2 border-brand-blue pl-3 py-0.5 flex flex-col justify-center text-left md:text-center">
+                        <span class="text-[13px] md:text-[14px] font-medium text-dark leading-snug">Bruno Guerrero</span>
+                        <span class="text-[10px] uppercase tracking-[1px] text-black/60 font-medium">CEO / SÓCIO ROOHTS</span>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Dados são lei -->
-        <section class="animate-on-scroll w-full px-6 md:px-[56px] py-16">
-            <div class="bg-dark rounded-[42px] p-8 md:p-16 flex flex-col lg:flex-row items-center gap-16 justify-between overflow-hidden">
+        <section class="animate-on-scroll w-full px-4 md:px-[56px] py-4 md:py-8">
+            <div class="bg-dark rounded-[32px] md:rounded-[42px] p-6 sm:p-8 md:p-14 lg:p-16 flex flex-col lg:flex-row items-center gap-8 md:gap-12 lg:gap-16 justify-between overflow-hidden w-full">
                 <div class="flex flex-col gap-6 lg:w-[460px]">
-                    <h2 class="text-4xl md:text-[45px] leading-tight text-white tracking-tight">Dados são lei</h2>
-                    <p class="text-white/60 text-lg leading-relaxed">
-                        Milhares de fontes formam uma camada anterior às decisões. É no Roohts OS, nosso sistema
-                        operacional e data lake, que informações isoladas passam a se conectar e orientar o caminho.
+                    <h2 class="text-4xl md:text-[48px] leading-[1.1] text-white tracking-tight font-normal">Dados são lei</h2>
+                    <p class="text-white/60 text-[16px] md:text-[18px] leading-relaxed">
+                        Milhares de fontes formam uma camada anterior às decisões. É no Roohts OS, nosso sistema operacional e data lake, que informações isoladas passam a se conectar e orientar o caminho.
                     </p>
                 </div>
-                <div class="relative w-[400px] h-[400px] flex items-center justify-center shrink-0 hidden md:flex">
+                <div class="relative w-[340px] h-[340px] md:w-[400px] md:h-[400px] flex items-center justify-center shrink-0 scale-[0.70] sm:scale-90 md:scale-100 origin-center my-[-30px] md:my-0">
                     <!-- Central Node -->
-                    <div class="w-[110px] h-[110px] bg-brand-blue rounded-full flex items-center justify-center z-10 absolute shadow-[0_0_0_21px_rgba(98,114,255,0.1)]">
-                        <img src="images/sobre_vector_2.svg" alt="Roohts Vector" class="w-[51px] h-[76px]">
+                    <div class="w-[100px] h-[100px] md:w-[110px] md:h-[110px] bg-brand-blue rounded-full flex items-center justify-center z-10 absolute shadow-[0_0_0_21px_rgba(98,114,255,0.12)]">
+                        <img src="images/sobre_vector_2.svg" alt="Roohts Vector" class="w-[46px] h-[68px] md:w-[51px] md:h-[76px]">
                     </div>
                     
                     <!-- Bubbles Orbiting -->
-                    <!-- The negative animation-delay offsets them around the circle evenly (30s / 8 = 3.75s apart) -->
                     <div class="absolute top-1/2 left-1/2 -mt-[14px] -ml-[40px] border border-white/10 bg-white/5 rounded-full px-[14px] py-1.5 animate-[orbit_30s_linear_infinite] [animation-delay:-0s] hover:[animation-play-state:paused]"><span class="text-[10px] text-white/60 tracking-[0.1em] uppercase">Cultura</span></div>
                     
                     <div class="absolute top-1/2 left-1/2 -mt-[14px] -ml-[36px] border border-white/10 bg-white/5 rounded-full px-[14px] py-1.5 animate-[orbit_30s_linear_infinite] [animation-delay:-3.75s] hover:[animation-play-state:paused]"><span class="text-[10px] text-white/60 tracking-[0.1em] uppercase">Ativos</span></div>
@@ -184,239 +220,251 @@
             </div>
         </section>
 
-        <!-- Quote 2 -->
-        <section class="animate-on-scroll w-full px-6 md:px-[56px] py-16">
-            <div class="bg-brand-yellow rounded-[42px] p-8 md:p-16 flex flex-col md:flex-row items-center gap-10 md:gap-[100px]">
-                <div class="w-full md:w-auto shrink-0 flex justify-center">
-                    <img src="images/sobre_img_154_2772_788fbd.png" alt="Victoria Costa" class="w-[116px] h-[116px] md:w-[150px] md:h-[150px] object-cover rounded-full">
-                </div>
-                <div class="flex flex-col gap-8 flex-1 relative">
-                    <span class="text-brand-blue text-[88px] absolute -top-8 -left-8 opacity-20 leading-none">"</span>
-                    <p class="text-xl md:text-2xl italic leading-relaxed text-black relative z-10">
-                        Uma nova forma de pensar o OOH nasce quando dados, criatividade e tecnologia passam a trabalhar juntos.
+        <!-- Quote 2: Victoria Costa -->
+        <section class="animate-on-scroll w-full px-4 md:px-[56px] py-4 md:py-8">
+            <div class="bg-brand-yellow rounded-[32px] md:rounded-[42px] p-6 md:p-12 lg:p-14 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 md:gap-12 w-full">
+                <div class="flex flex-row items-start gap-4 md:gap-5 flex-1 w-full">
+                    <span class="text-brand-blue text-[44px] md:text-[56px] leading-none select-none font-serif shrink-0">“</span>
+                    <p class="text-[16px] md:text-[20px] lg:text-[22px] leading-[1.45] text-dark font-light md:font-normal italic pt-1 w-full">
+                        Uma nova forma de pensar o OOH, não apenas pela visibilidade, mas pela<br class="hidden md:inline"> 
+                        comprovação. Abandonamos o achismo para que os dados orientem a estratégia,<br class="hidden md:inline">
+                        a tecnologia qualifique a presença, a criatividade garanta autenticidade e a<br class="hidden md:inline"> 
+                        ciência prove, de fato, o impacto real no ponteiro do seu negócio.
                     </p>
-                    <div class="flex flex-col border-l-2 border-brand-blue pl-4">
-                        <span class="text-sm font-semibold">Victoria Costa</span>
-                        <span class="text-[10px] uppercase tracking-wider text-black/70">HEAD DE DADOS E TECNOLOGIA</span>
+                </div>
+                
+                <div class="flex flex-row md:flex-col items-center gap-3.5 md:gap-3 shrink-0 self-start md:self-center text-left md:text-center">
+                    <img src="images/sobre_img_154_2772_788fbd.png" alt="Victoria Costa" class="w-[52px] h-[52px] md:w-[104px] md:h-[104px] object-cover rounded-full shadow-sm">
+                    <div class="border-l-2 border-brand-blue pl-3 py-0.5 flex flex-col justify-center text-left md:text-center">
+                        <span class="text-[13px] md:text-[14px] font-medium text-dark leading-snug">Victoria Costa</span>
+                        <span class="text-[10px] uppercase tracking-[1px] text-black/60 font-medium">HEAD DE DADOS<br class="hidden md:inline"> E TECNOLOGIA</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Quatro Perspectivas -->
-        <section class="animate-on-scroll w-full px-6 md:px-[56px] py-16">
-            <div class="flex flex-col gap-4 mb-16 max-w-[600px]">
-                <span class="text-black/50 text-[14px] tracking-[0.2em] uppercase">Quatro Perspectivas Conectadas</span>
-                <h2 class="text-4xl md:text-[60px] leading-tight">
+        <!-- Quatro Perspectivas Conectadas -->
+        <section class="w-full px-4 md:px-[56px] py-12 md:py-16">
+            <div class="animate-on-scroll flex flex-col gap-4 mb-12 max-w-[640px]">
+                <span class="text-black/50 text-xs md:text-sm tracking-[2px] uppercase font-medium">Quatro Perspectivas Conectadas</span>
+                <h2 class="text-4xl md:text-[54px] lg:text-[60px] leading-[1.05] tracking-tight font-normal text-dark">
                     Uma cidade.<br>
                     <span class="text-brand-blue">Múltiplas camadas</span>
                 </h2>
-                <p class="text-black/60 text-lg mt-4">
+                <p class="text-black/60 text-[16px] md:text-[18px] mt-2">
                     O que parece uma única paisagem é, na verdade, um sistema vivo de relações.
                 </p>
             </div>
             
-            <div class="flex flex-col gap-6 relative" style="padding-bottom: 20px;">
+            <div class="flex flex-col gap-6 md:gap-8 w-full relative pb-28 md:pb-40">
                 <!-- Mercado -->
-                <div class="sticky top-[120px] z-10 bg-brand-blue rounded-[40px] p-8 md:p-14 flex flex-col gap-4 shadow-sm border border-black/5">
-                    <h3 class="text-white text-3xl md:text-[45px] tracking-tight">Mercado</h3>
-                    <p class="text-white/80 text-lg md:text-xl max-w-[680px]">
-                        Movimentos, tensões e oportunidades que alteram o papel da comunicação.
+                <div class="perspective-card perspective-card-1 bg-brand-blue rounded-[28px] md:rounded-[36px] p-8 md:p-12 lg:p-14 flex flex-col gap-3 shadow-[0_-8px_30px_rgba(0,0,0,0.12),0_15px_30px_rgba(0,0,0,0.06)] border border-black/5">
+                    <h3 class="text-white text-3xl md:text-[42px] tracking-tight font-normal">Mercado</h3>
+                    <p class="text-white/85 text-[16px] md:text-[19px] max-w-[680px] font-light leading-relaxed">
+                        Movimentos, tensões e oportunidades que alteram o papel<br class="hidden md:inline"> da comunicação.
                     </p>
                 </div>
                 <!-- Pessoas -->
-                <div class="sticky top-[150px] z-20 bg-brand-yellow rounded-[40px] p-8 md:p-14 flex flex-col gap-4 shadow-md border border-black/5">
-                    <h3 class="text-dark text-3xl md:text-[45px] tracking-tight">Pessoas</h3>
-                    <p class="text-dark/80 text-lg md:text-xl max-w-[680px]">
-                        Comportamentos, repertórios e estados de atenção que mudam ao longo do dia.
+                <div class="perspective-card perspective-card-2 bg-brand-yellow rounded-[28px] md:rounded-[36px] p-8 md:p-12 lg:p-14 flex flex-col gap-3 shadow-[0_-8px_30px_rgba(0,0,0,0.12),0_15px_30px_rgba(0,0,0,0.06)] border border-black/5">
+                    <h3 class="text-dark text-3xl md:text-[42px] tracking-tight font-normal">Pessoas</h3>
+                    <p class="text-dark/80 text-[16px] md:text-[19px] max-w-[680px] font-light leading-relaxed">
+                        Comportamentos, repertórios e estados de atenção que mudam ao longo<br class="hidden md:inline"> do dia.
                     </p>
                 </div>
                 <!-- Jornada -->
-                <div class="sticky top-[180px] z-30 bg-[#66FF75] rounded-[40px] p-8 md:p-14 flex flex-col gap-4 shadow-md border border-black/5">
-                    <h3 class="text-dark text-3xl md:text-[45px] tracking-tight">Jornada</h3>
-                    <p class="text-dark/80 text-lg md:text-xl max-w-[680px]">
-                        Fluxos, ritmos, permanências e encontros que organizam a experiência urbana.
+                <div class="perspective-card perspective-card-3 bg-[#66FF75] rounded-[28px] md:rounded-[36px] p-8 md:p-12 lg:p-14 flex flex-col gap-3 shadow-[0_-8px_30px_rgba(0,0,0,0.12),0_15px_30px_rgba(0,0,0,0.06)] border border-black/5">
+                    <h3 class="text-dark text-3xl md:text-[42px] tracking-tight font-normal">Jornada</h3>
+                    <p class="text-dark/80 text-[16px] md:text-[19px] max-w-[680px] font-light leading-relaxed">
+                        Fluxos, ritmos, permanências e encontros que organizam a experiência<br class="hidden md:inline"> urbana.
                     </p>
                 </div>
                 <!-- Contexto -->
-                <div class="sticky top-[210px] z-40 bg-[#EBF1FC] rounded-[40px] p-8 md:p-14 flex flex-col gap-4 shadow-md border border-black/5">
-                    <h3 class="text-dark text-3xl md:text-[45px] tracking-tight">Contexto</h3>
-                    <p class="text-dark/80 text-lg md:text-xl max-w-[680px]">
-                        Lugar, luz, distância, velocidade e cultura que dão significado à mensagem.
+                <div class="perspective-card perspective-card-4 bg-[#EBF1FC] rounded-[28px] md:rounded-[36px] p-8 md:p-12 lg:p-14 flex flex-col gap-3 shadow-[0_-8px_30px_rgba(0,0,0,0.12),0_15px_30px_rgba(0,0,0,0.06)] border border-black/5">
+                    <h3 class="text-dark text-3xl md:text-[42px] tracking-tight font-normal">Contexto</h3>
+                    <p class="text-dark/80 text-[16px] md:text-[19px] max-w-[680px] font-light leading-relaxed">
+                        Lugar, luz, distância, velocidade e cultura que dão significado<br class="hidden md:inline"> à mensagem.
                     </p>
                 </div>
             </div>
         </section>
 
-        <!-- Quote 3 -->
-        <section class="animate-on-scroll w-full px-6 md:px-[56px] py-16">
-            <div class="bg-brand-blue rounded-[42px] p-8 md:p-16 flex flex-col md:flex-row items-center gap-10 md:gap-[100px]">
-                <div class="w-full md:w-auto shrink-0 flex justify-center">
-                    <img src="images/sobre_img_154_2831_62942d.png" alt="Bruno Putz" class="w-[116px] h-[116px] md:w-[150px] md:h-[150px] object-cover rounded-full">
-                </div>
-                <div class="flex flex-col gap-8 flex-1 relative">
-                    <span class="text-white text-[88px] absolute -top-8 -left-8 opacity-20 leading-none">"</span>
-                    <p class="text-xl md:text-2xl italic leading-relaxed text-white relative z-10">
-                        Entender o comportamento das pessoas faz o OOH deixar de ser paisagem urbana e gerar resultados de negócio.
+        <!-- Quote 3: Bruno Putz -->
+        <section class="animate-on-scroll w-full px-4 md:px-[56px] py-4 md:py-8">
+            <div class="bg-brand-blue rounded-[32px] md:rounded-[42px] p-6 md:p-12 lg:p-14 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 md:gap-12 w-full">
+                <div class="flex flex-row items-start gap-4 md:gap-5 flex-1 w-full">
+                    <span class="text-white text-[44px] md:text-[56px] leading-none select-none font-serif shrink-0">“</span>
+                    <p class="text-[16px] md:text-[20px] lg:text-[22px] leading-[1.45] text-white font-light md:font-normal italic pt-1 w-full">
+                        Entender o comportamento das pessoas faz o OOH deixar de ser paisagem<br class="hidden md:inline"> urbana e gerar resultados de negócio.
                     </p>
-                    <div class="flex flex-col border-l-2 border-white pl-4">
-                        <span class="text-sm font-semibold text-white">Bruno Putz</span>
-                        <span class="text-[10px] uppercase tracking-wider text-white/70">HEAD DE ESTRATÉGIA</span>
+                </div>
+                
+                <div class="flex flex-row md:flex-col items-center gap-3.5 md:gap-3 shrink-0 self-start md:self-center text-left md:text-center">
+                    <img src="images/sobre_img_154_2831_62942d.png" alt="Bruno Putz" class="w-[52px] h-[52px] md:w-[104px] md:h-[104px] object-cover rounded-full shadow-sm">
+                    <div class="border-l-2 border-white pl-3 py-0.5 flex flex-col justify-center text-left md:text-center">
+                        <span class="text-[13px] md:text-[14px] font-medium text-white leading-snug">Bruno Putz</span>
+                        <span class="text-[10px] uppercase tracking-[1px] text-white/80 font-medium">HEAD DE ESTRATÉGIA</span>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Jornada com borda infinita -->
-        <section class="animate-on-scroll w-full px-6 md:px-[56px] py-16 flex flex-col items-center gap-16">
-            <div class="flex flex-col items-center text-center gap-6 max-w-[800px]">
-                <span class="text-black/50 text-[14px] tracking-[0.2em] uppercase">CONEXÃO AO BRASIL PROFUNDO</span>
-                <h2 class="text-4xl md:text-[60px] leading-tight">
-                    Jornada com <span class="text-brand-blue">borda infinita</span>
+        <section class="animate-on-scroll w-full px-6 md:px-[88px] lg:px-[120px] py-12 md:py-16 flex flex-col items-start gap-8 md:gap-12">
+            <div class="flex flex-col items-start text-left gap-4 max-w-[800px]">
+                <span class="text-black/50 text-xs md:text-sm tracking-[2px] uppercase font-medium">CONEXÃO AO BRASIL PROFUNDO</span>
+                <h2 class="text-4xl md:text-[54px] lg:text-[60px] leading-[1.05] tracking-tight font-normal text-dark">
+                    Jornada com<br class="block md:hidden"> <span class="text-brand-blue">borda infinita</span>
                 </h2>
-                <p class="text-black/60 text-lg md:text-xl leading-relaxed max-w-[640px]">
+                <p class="text-black/70 text-[16px] md:text-[18px] leading-relaxed max-w-[680px]">
                     Do grande eixo à cidade do interior, a mídia ganha precisão quando entende a granularidade de cada território. Cruzamos cobertura, comportamento e contexto para alcançar a diversidade de públicos do Brasil com relevância local.
                 </p>
             </div>
-            <div class="w-full max-w-[962px] rounded-[40px] overflow-hidden">
+            <div class="w-full rounded-[32px] md:rounded-[40px] overflow-hidden shadow-sm">
                 <img src="images/sobre_img_154_2841_45b288.png" alt="Mapa de conexões" class="w-full h-auto">
             </div>
         </section>
 
-        <!-- Quote 4 -->
-        <section class="animate-on-scroll w-full px-6 md:px-[56px] py-16">
-            <div class="bg-brand-yellow rounded-[42px] p-8 md:p-16 flex flex-col md:flex-row items-center gap-10 md:gap-[100px]">
-                <div class="w-full md:w-auto shrink-0 flex justify-center">
-                    <img src="images/sobre_img_154_2852_1a0a83.png" alt="Fabricio Nascimento" class="w-[116px] h-[116px] md:w-[150px] md:h-[150px] object-cover rounded-full">
-                </div>
-                <div class="flex flex-col gap-8 flex-1 relative">
-                    <span class="text-brand-blue text-[88px] absolute -top-8 -left-8 opacity-20 leading-none">"</span>
-                    <p class="text-xl md:text-2xl italic leading-relaxed text-black relative z-10">
-                        Partimos da jornada e da qualificação da audiência para construir uma arquitetura de mídia mais precisa, que reduz desperdícios e potencializa os resultados de cada projeto.
+        <!-- Quote 4: Fabricio Nascimento -->
+        <section class="animate-on-scroll w-full px-4 md:px-[56px] py-4 md:py-8">
+            <div class="bg-brand-yellow rounded-[32px] md:rounded-[42px] p-6 md:p-12 lg:p-14 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 md:gap-12 w-full">
+                <div class="flex flex-row items-start gap-4 md:gap-5 flex-1 w-full">
+                    <span class="text-brand-blue text-[44px] md:text-[56px] leading-none select-none font-serif shrink-0">“</span>
+                    <p class="text-[16px] md:text-[20px] lg:text-[22px] leading-[1.45] text-dark font-light md:font-normal italic pt-1 w-full">
+                        Partimos da jornada e da qualificação da audiência para construir uma<br class="hidden md:inline">
+                        arquitetura de mídia mais precisa, que reduz desperdícios e potencializa<br class="hidden md:inline">
+                        os resultados de cada projeto.
                     </p>
-                    <div class="flex flex-col border-l-2 border-brand-blue pl-4">
-                        <span class="text-sm font-semibold">Fabricio Nascimento</span>
-                        <span class="text-[10px] uppercase tracking-wider text-black/70">HEAD DE MÍDIA</span>
+                </div>
+                
+                <div class="flex flex-row md:flex-col items-center gap-3.5 md:gap-3 shrink-0 self-start md:self-center text-left md:text-center">
+                    <img src="images/sobre_img_154_2852_1a0a83.png" alt="Fabricio Nascimento" class="w-[52px] h-[52px] md:w-[104px] md:h-[104px] object-cover rounded-full shadow-sm">
+                    <div class="border-l-2 border-brand-blue pl-3 py-0.5 flex flex-col justify-center text-left md:text-center">
+                        <span class="text-[13px] md:text-[14px] font-medium text-dark leading-snug">Fabricio Nascimento</span>
+                        <span class="text-[10px] uppercase tracking-[1px] text-black/60 font-medium">HEAD DE MÍDIA</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Uma campanha -->
-        <section class="animate-on-scroll w-full px-6 md:px-[56px] py-16">
-            <div class="bg-[#EBF1FC] rounded-[40px] p-8 md:p-16 flex flex-col gap-16">
-                <div class="flex flex-col gap-6 max-w-[939px]">
-                    <span class="text-black/50 text-[14px] tracking-[0.12em] uppercase">ONDE A CRIAÇÃO GANHA PRECISÃO</span>
-                    <h2 class="text-4xl md:text-[60px] leading-tight">
-                        Uma campanha.<br>
-                        <span class="text-brand-blue">Múltiplos contextos</span>
-                    </h2>
-                    <p class="text-black/80 text-lg md:text-xl leading-relaxed max-w-[686px] mt-6">
-                        Da integração entre Dados, Estratégia e Mídia nasce uma criação mais eficaz e autêntica. Com a Roohts UX, nossa metodologia proprietária, unimos design, neurociência e experiência do usuário para criar campanhas que se integram à jornada das pessoas fortalecendo a presença e reputação das marcas.
-                    </p>
-                </div>
-                <div class="w-full rounded-[40px] overflow-hidden">
-                    <img src="images/sobre_img_154_2863_7caf08.png" alt="Festival" class="w-full h-auto">
-                </div>
+        <!-- Uma campanha: Múltiplos contextos -->
+        <section class="animate-on-scroll w-full px-6 md:px-[88px] lg:px-[120px] py-12 md:py-16 flex flex-col gap-8 md:gap-12">
+            <div class="flex flex-col items-start text-left gap-4 max-w-[800px]">
+                <span class="text-black/50 text-xs md:text-sm tracking-[2px] uppercase font-medium">ONDE A CRIAÇÃO GANHA PRECISÃO</span>
+                <h2 class="text-4xl md:text-[54px] lg:text-[60px] leading-[1.05] tracking-tight font-normal text-dark">
+                    Uma campanha.<br>
+                    <span class="text-brand-blue">Múltiplos contextos</span>
+                </h2>
+                <p class="text-black/70 text-[16px] md:text-[18px] leading-relaxed max-w-[700px]">
+                    Da integração entre Dados, Estratégia e Mídia nasce uma criação mais eficaz e autêntica. Com a Roohts UX, nossa metodologia proprietária, unimos design, neurociência e experiência do usuário para criar campanhas que se integram à jornada das pessoas fortalecendo a presença e reputação das marcas.
+                </p>
+            </div>
+            <div class="w-full rounded-[32px] md:rounded-[40px] overflow-hidden shadow-sm">
+                <img src="images/sobre_img_154_2863_7caf08.png" alt="Uma campanha, múltiplos contextos" class="w-full h-auto">
             </div>
         </section>
 
-        <!-- Quote 5 -->
-        <section class="animate-on-scroll w-full px-6 md:px-[56px] py-16">
-            <div class="bg-[#D2E0FB] rounded-[42px] p-8 md:p-16 flex flex-col md:flex-row items-center gap-10 md:gap-[100px]">
-                <div class="w-full md:w-auto shrink-0 flex justify-center">
-                    <img src="images/sobre_img_154_2874_282efd.png" alt="Vinicius Cohin" class="w-[116px] h-[116px] md:w-[150px] md:h-[150px] object-cover rounded-full">
-                </div>
-                <div class="flex flex-col gap-8 flex-1 relative">
-                    <span class="text-brand-blue text-[88px] absolute -top-8 -left-8 opacity-20 leading-none">"</span>
-                    <p class="text-xl md:text-2xl italic leading-relaxed text-black relative z-10">
-                        Quando a criação estabelece critérios claros de design e considera a experiência das pessoas, as ideias ganham mais força e se transformam em campanhas mais relevantes.
+        <!-- Quote 5: Vinicius Cohin -->
+        <section class="animate-on-scroll w-full px-4 md:px-[56px] py-4 md:py-8">
+            <div class="bg-[#EBF1FC] rounded-[32px] md:rounded-[42px] p-6 md:p-12 lg:p-14 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 md:gap-12 w-full">
+                <div class="flex flex-row items-start gap-4 md:gap-5 flex-1 w-full">
+                    <span class="text-brand-blue text-[44px] md:text-[56px] leading-none select-none font-serif shrink-0">“</span>
+                    <p class="text-[16px] md:text-[20px] lg:text-[22px] leading-[1.45] text-dark font-light md:font-normal italic pt-1 w-full">
+                        Quando a criação estabelece critérios claros de design e considera a experiência<br class="hidden md:inline">
+                        das pessoas, as ideias ganham mais força e se transformam em campanhas<br class="hidden md:inline">
+                        mais relevantes.
                     </p>
-                    <div class="flex flex-col border-l-2 border-brand-blue pl-4">
-                        <span class="text-sm font-semibold">Vinicius Cohin</span>
-                        <span class="text-[10px] uppercase tracking-wider text-black/70">HEAD DE CRIAÇÃO</span>
+                </div>
+                
+                <div class="flex flex-row md:flex-col items-center gap-3.5 md:gap-3 shrink-0 self-start md:self-center text-left md:text-center">
+                    <img src="images/sobre_img_154_2874_282efd.png" alt="Vinicius Cohin" class="w-[52px] h-[52px] md:w-[104px] md:h-[104px] object-cover rounded-full shadow-sm">
+                    <div class="border-l-2 border-brand-blue pl-3 py-0.5 flex flex-col justify-center text-left md:text-center">
+                        <span class="text-[13px] md:text-[14px] font-medium text-dark leading-snug">Vinicius Cohin</span>
+                        <span class="text-[10px] uppercase tracking-[1px] text-black/60 font-medium">HEAD DE CRIAÇÃO</span>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- +100 Variáveis -->
-        <section class="animate-on-scroll w-full px-6 md:px-[56px] py-16">
-            <div class="bg-brand-blue rounded-[40px] p-8 md:p-16 flex flex-col lg:flex-row items-center justify-between gap-16 overflow-hidden">
-                <div class="flex flex-col gap-6 max-w-[460px]">
-                    <span class="text-white/50 text-[11px] uppercase tracking-[0.15em] font-medium">MAIS PROFUNDIDADE</span>
-                    <h2 class="text-4xl md:text-[56px] font-bold leading-tight text-white tracking-tight">
+        <section class="animate-on-scroll w-full px-4 md:px-[56px] py-4 md:py-8">
+            <div class="bg-brand-blue rounded-[32px] md:rounded-[42px] px-8 md:px-14 lg:px-20 py-12 md:py-20 lg:py-24 min-h-[380px] md:min-h-[450px] flex flex-col md:flex-row items-start md:items-center justify-between gap-10 md:gap-16 w-full overflow-hidden shadow-sm">
+                <div class="flex flex-col gap-4 max-w-[540px] text-left items-start">
+                    <span class="text-white/60 text-[11px] uppercase tracking-[2px] font-medium">MAIS PROFUNDIDADE</span>
+                    <h3 class="text-3xl md:text-[46px] lg:text-[54px] font-normal leading-[1.1] text-white tracking-tight text-left">
                         Analisamos mais<br>
-                        de <span class="text-brand-yellow">+100 variáveis</span><br>
+                        de <span class="text-brand-yellow font-normal">100 variáveis</span><br>
                         antes de criar<br>
                         o primeiro layout.
+                    </h3>
+                </div>
+                <div class="relative w-[220px] h-[220px] md:w-[270px] md:h-[270px] lg:w-[290px] lg:h-[290px] shrink-0 my-4 md:my-0 self-center md:self-auto">
+                    <!-- Lua preta atrás -->
+                    <div class="absolute inset-0 bg-black rounded-full translate-x-2.5 translate-y-2.5 md:translate-x-3.5 md:translate-y-3.5"></div>
+                    <!-- Círculo amarelo -->
+                    <div class="relative w-full h-full bg-brand-yellow rounded-full flex flex-col items-center justify-center z-10 select-none">
+                        <span class="text-black text-[68px] md:text-[84px] lg:text-[94px] font-bold leading-none tracking-tight">+100</span>
+                        <span class="text-black text-[13px] md:text-[15px] lg:text-[16px] font-bold uppercase tracking-[2px] mt-1 md:mt-2">VARIÁVEIS</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Metodologia: Quatro Disciplinas Conectadas -->
+        <section class="animate-on-scroll w-full px-4 md:px-[56px] py-4 md:py-8">
+            <div class="bg-[#EBF1FC] rounded-[32px] md:rounded-[42px] w-full flex flex-col lg:flex-row items-stretch justify-between overflow-hidden shadow-sm">
+                <div class="flex flex-col justify-center gap-6 w-full lg:w-1/2 p-6 md:p-10 lg:p-14 lg:py-16">
+                    <span class="text-black/50 text-xs md:text-sm uppercase tracking-[2px] font-medium">Quatro Disciplinas Conectadas</span>
+                    <h3 class="text-3xl md:text-[45px] leading-[1.1] tracking-tight font-normal text-dark">
+                        Campanhas mais<br>
+                        <span class="text-brand-blue">eficazes e autênticas</span>
+                    </h3>
+                    <p class="text-black/70 text-[15px] md:text-[17px] leading-relaxed max-w-[460px]">
+                        Um fluxo mais claro, mais ágil e mais estratégico para transformar insights em ação.
+                    </p>
+                    <div class="flex flex-col gap-2.5 w-full max-w-[520px] mt-4">
+                        <div class="flex items-center gap-3.5 bg-white rounded-2xl px-4 py-3 shadow-sm">
+                            <span class="w-6 h-6 rounded-full bg-brand-blue text-white flex items-center justify-center font-bold text-[10px] shrink-0">01</span>
+                            <span class="text-brand-blue font-bold uppercase tracking-wider text-[11px]">MONITORAR</span>
+                        </div>
+                        <div class="flex items-center gap-3.5 bg-white rounded-2xl px-4 py-3 shadow-sm">
+                            <span class="w-6 h-6 rounded-full bg-brand-blue text-white flex items-center justify-center font-bold text-[10px] shrink-0">02</span>
+                            <span class="text-brand-blue font-bold uppercase tracking-wider text-[11px]">OTIMIZAR</span>
+                        </div>
+                        <div class="flex items-center gap-3.5 bg-white rounded-2xl px-4 py-3 shadow-sm">
+                            <span class="w-6 h-6 rounded-full bg-brand-blue text-white flex items-center justify-center font-bold text-[10px] shrink-0">03</span>
+                            <span class="text-brand-blue font-bold uppercase tracking-wider text-[11px]">MENSURAR</span>
+                        </div>
+                        <div class="flex items-center gap-3.5 bg-white rounded-2xl px-4 py-3 shadow-sm">
+                            <span class="w-6 h-6 rounded-full bg-brand-blue text-white flex items-center justify-center font-bold text-[10px] shrink-0">04</span>
+                            <span class="text-brand-blue font-bold uppercase tracking-wider text-[11px]">RETROALIMENTAR</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 h-[360px] md:h-[480px] lg:h-auto self-stretch overflow-hidden">
+                    <img src="images/sobre_img_154_2979_23f982.png" alt="Metodologia Roohts UX" class="w-full h-full object-cover object-center rounded-[24px] md:rounded-[32px] lg:rounded-none lg:rounded-l-[36px]">
+                </div>
+            </div>
+        </section>
+
+        <!-- Powered by Dreamers -->
+        <section class="animate-on-scroll w-full px-4 md:px-[56px] py-4 md:py-8">
+            <div class="bg-dark rounded-[32px] md:rounded-[42px] p-8 md:p-14 lg:p-16 flex flex-col md:flex-row items-start md:items-center justify-between gap-10 md:gap-16 w-full shadow-sm">
+                <div class="flex flex-col gap-5 md:w-1/2">
+                    <span class="text-white/50 text-[11px] uppercase tracking-[2px] font-medium">ORIGEM</span>
+                    <h2 class="text-white text-3xl md:text-[46px] lg:text-[50px] leading-[1.05] tracking-tight uppercase font-normal">
+                        POWERED<br>
+                        BY DREAMERS.<br>
+                        <span class="text-brand-blue">EMPOWERING<br>THE ECOSYSTEM.</span>
                     </h2>
                 </div>
-                <div class="relative w-[300px] h-[300px] md:w-[420px] md:h-[420px] flex items-center justify-center shrink-0">
-                    <div class="absolute w-[80%] h-[80%] bg-black rounded-full mix-blend-multiply opacity-50"></div>
-                    <div class="absolute w-[80%] h-[80%] bg-brand-yellow rounded-full ml-10 mt-10 mix-blend-screen opacity-90"></div>
-                    <div class="relative z-10 flex flex-col items-center">
-                        <span class="text-black text-[80px] md:text-[120px] font-semibold leading-none tracking-tighter">+100</span>
-                        <span class="text-black text-xl md:text-[25px] font-semibold tracking-wide">VARIÁVEIS</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Metodologia -->
-        <section class="animate-on-scroll w-full px-6 md:px-[56px] py-16 flex flex-col lg:flex-row gap-16 justify-between items-center">
-            <div class="flex flex-col gap-8 w-full lg:w-[426px]">
-                <span class="text-black/50 text-[14px] uppercase tracking-[0.18em] font-semibold">Quatro Disciplinas Conectadas</span>
-                <h2 class="text-4xl md:text-[45px] leading-tight">
-                    Campanhas mais<br>
-                    <span class="text-brand-blue">eficazes e autênticas</span>
-                </h2>
-                <p class="text-black/60 text-lg leading-relaxed mt-4">
-                    Um fluxo mais claro, mais ágil e mais estratégico para transformar insights em ação.
-                </p>
-                <div class="flex flex-col gap-3 mt-6">
-                    <div class="flex items-center gap-4 bg-white border border-black/10 rounded-[20px] p-4 shadow-sm">
-                        <div class="w-9 h-9 rounded-full bg-brand-blue flex items-center justify-center text-white font-bold text-sm">01</div>
-                        <span class="text-brand-blue font-semibold uppercase tracking-wider text-[12px]">Monitorar</span>
-                    </div>
-                    <div class="flex items-center gap-4 bg-white border border-black/10 rounded-[20px] p-4 shadow-sm">
-                        <div class="w-9 h-9 rounded-full bg-brand-blue flex items-center justify-center text-white font-bold text-sm">02</div>
-                        <span class="text-brand-blue font-semibold uppercase tracking-wider text-[12px]">Otimizar</span>
-                    </div>
-                    <div class="flex items-center gap-4 bg-white border border-black/10 rounded-[20px] p-4 shadow-sm">
-                        <div class="w-9 h-9 rounded-full bg-brand-blue flex items-center justify-center text-white font-bold text-sm">03</div>
-                        <span class="text-brand-blue font-semibold uppercase tracking-wider text-[12px]">Mensurar</span>
-                    </div>
-                    <div class="flex items-center gap-4 bg-white border border-black/10 rounded-[20px] p-4 shadow-sm">
-                        <div class="w-9 h-9 rounded-full bg-brand-blue flex items-center justify-center text-white font-bold text-sm">04</div>
-                        <span class="text-brand-blue font-semibold uppercase tracking-wider text-[12px]">Retroalimentar</span>
-                    </div>
-                </div>
-            </div>
-            <div class="w-full lg:w-1/2">
-                <img src="images/sobre_img_154_2979_23f982.png" alt="Metodologia Roohts UX" class="w-full h-auto rounded-[40px]">
-            </div>
-        </section>
-
-        <!-- Powered by -->
-        <section class="animate-on-scroll w-full px-6 md:px-[56px] py-16">
-            <div class="bg-black rounded-[40px] p-8 md:p-16 flex flex-col md:flex-row items-center gap-16 justify-between">
                 <div class="flex flex-col gap-6 md:w-1/2">
-                    <span class="text-white/70 text-xs uppercase tracking-[0.15em]">origem</span>
-                    <h2 class="text-white text-4xl md:text-[55px] leading-[1.1] tracking-tight uppercase">
-                        Powered<br>
-                        by dreamers.<br>
-                        <span class="text-brand-blue">empowering<br>the ecosyStem.</span>
-                    </h2>
-                </div>
-                <div class="flex flex-col gap-8 md:w-1/2">
-                    <p class="text-white text-base md:text-lg leading-relaxed">
+                    <p class="text-white/70 text-[15px] md:text-[17px] leading-relaxed">
                         O Grupo Dreamers é o maior ecossistema independente de comunicação e entretenimento do Brasil. Reúne empresas especialistas e competências complementares, transformando desafios de negócio em soluções integradas e vantagens competitivas para seus clientes.<br><br>
                         É dessa potência que nasce a ROOHTS.
                     </p>
                     <div>
-                        <a href="#" class="inline-flex bg-brand-blue text-white text-[13px] uppercase tracking-wider font-semibold px-6 py-3 rounded-full hover:bg-brand-blue/80 transition items-center gap-2">
-                            Saiba mais <span><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline-block w-[1em] h-[1em] ml-1"><path d="M9.91638 9.91638V4.08398H4.08398M9.91638 4.08398L4.08398 9.91638" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+                        <a href="https://grupodreamers.com.br" target="_blank" rel="noopener noreferrer" class="inline-flex bg-brand-blue text-white text-[12px] md:text-[13px] font-medium uppercase tracking-[1px] px-6 py-3.5 rounded-full hover:bg-blue-600 transition items-center gap-2.5">
+                            SAIBA MAIS <span><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5"><path d="M9.91638 9.91638V4.08398H4.08398M9.91638 4.08398L4.08398 9.91638" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
                         </a>
                     </div>
                 </div>
@@ -462,6 +510,49 @@
             animatedElements.forEach(el => {
                 observer.observe(el);
             });
+
+            // Efeito dinâmico de profundidade para os cards empilhados
+            const perspectiveCards = document.querySelectorAll('.perspective-card');
+            if (perspectiveCards.length > 0) {
+                let ticking = false;
+                const updateStack = () => {
+                    perspectiveCards.forEach((card, i) => {
+                        if (i === perspectiveCards.length - 1) return;
+                        const nextCard = perspectiveCards[i + 1];
+                        const cardRect = card.getBoundingClientRect();
+                        const nextRect = nextCard.getBoundingClientRect();
+                        
+                        const overlap = cardRect.bottom - nextRect.top;
+                        if (overlap > 0) {
+                            const progress = Math.min(1, Math.max(0, overlap / cardRect.height));
+                            const scale = 1 - (progress * 0.03 * (perspectiveCards.length - 1 - i));
+                            const brightness = 1 - (progress * 0.05);
+                            card.style.transform = `scale(${scale.toFixed(4)})`;
+                            card.style.filter = `brightness(${brightness.toFixed(4)})`;
+                        } else {
+                            card.style.transform = 'scale(1)';
+                            card.style.filter = 'brightness(1)';
+                        }
+                    });
+                    ticking = false;
+                };
+
+                window.addEventListener('scroll', () => {
+                    if (!ticking) {
+                        requestAnimationFrame(updateStack);
+                        ticking = true;
+                    }
+                }, { passive: true });
+
+                window.addEventListener('resize', () => {
+                    if (!ticking) {
+                        requestAnimationFrame(updateStack);
+                        ticking = true;
+                    }
+                }, { passive: true });
+
+                updateStack();
+            }
         });
     </script>
 
