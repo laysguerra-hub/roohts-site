@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://roohts.com.br/sitemap.xml
